@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en-AU"><head>
+<meta charset="utf-8">
+<title>Family Life-Stage Map</title>
+<!--
+  Fonts: Bricolage Grotesque and Instrument Sans, SIL Open Font License 1.1.
+  Copyright 2022 The Bricolage Grotesque Project Authors; Copyright 2022 The Instrument Sans Project Authors.
+  See assets/fonts/OFL.txt and https://openfontlicense.org
+  React 18.3.1 (MIT) is served from assets/ so no CDN is needed.
+-->
+<script src="assets/react.production.min.js"></script>
+<script src="assets/react-dom.production.min.js"></script>
+<script src="assets/dc-runtime.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/bricolage-grotesque-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/bricolage-grotesque-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/bricolage-grotesque-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/bricolage-grotesque-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/bricolage-grotesque-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/bricolage-grotesque-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/fonts/instrument-sans-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+body{margin:0;background:#F1F5F3}
+button{font-family:inherit;cursor:pointer}
+button:hover{filter:brightness(0.96)}
+button:disabled{cursor:not-allowed}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #0B6A61;outline-offset:2px}
+a{color:#0B6A61}a:hover{color:#08463F}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(11,106,97,.45)}100%{box-shadow:0 0 0 14px rgba(11,106,97,0)}}
+.pulse{animation:ring 2.4s ease-out infinite}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}}
+</style>
+</helmet>
+<div style="box-sizing:border-box;padding:28px 32px 48px;background:#F1F5F3;color:#10302C;font-family:'Instrument Sans',system-ui,sans-serif;display:flex;flex-direction:column;gap:20px">
+
+<header style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:6px;max-width:780px">
+<div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#44605B">Australian Life-Stage Planner · Family map · ages 0 to 99</div>
+<h1 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:40px;line-height:1.05;font-weight:700">Your stage, and the people connected to it</h1>
+<p style="margin:0;font-size:16px;line-height:1.5;color:#44605B">Add as many parents, grandparents, a partner, children and grandchildren as your household has. Each sits at their own two-year age band and living arrangement. Where lives overlap, a linked node appears. Figures come from coeconomics.com and are shown for whoever you select.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<div style="padding:8px 14px;border-radius:999px;background:#DDEFEA;color:#08463F;font-size:14px;font-weight:600">Private to this household</div>
+<div style="padding:8px 14px;border-radius:999px;background:#F7E6D5;color:#7A3A08;font-size:14px;font-weight:600">General information, not personal advice</div>
+</div>
+</header>
+
+<section aria-label="Controls" style="display:flex;flex-wrap:wrap;gap:16px;align-items:stretch">
+<div style="flex:1 1 440px;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:14px 16px">
+<div style="font-size:14px;font-weight:600;color:#44605B">How do you want to explore?</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<button type="button" aria-pressed="{{quickOn}}" sc-camel-on-click="{{setQuick}}" style="flex:1 1 200px;min-height:56px;text-align:left;padding:8px 14px;border-radius:10px;border:1.5px solid #0B6A61;background:{{quickBg}};color:{{quickFg}};font-size:15px;font-weight:600;line-height:1.3">Quick path<br><span style="font-weight:400;font-size:13px">Jump straight to specifics</span></button>
+<button type="button" aria-pressed="{{guidedOn}}" sc-camel-on-click="{{setGuided}}" style="flex:1 1 200px;min-height:56px;text-align:left;padding:8px 14px;border-radius:10px;border:1.5px solid #0B6A61;background:{{guidedBg}};color:{{guidedFg}};font-size:15px;font-weight:600;line-height:1.3">Guided path<br><span style="font-weight:400;font-size:13px">Start broad, narrow gently</span></button>
+</div>
+<div style="font-size:13px;color:#44605B;line-height:1.4">Both paths reach the same topics at the same depth. Switching keeps your place.</div>
+</div>
+<div style="flex:0 1 240px;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:14px 16px">
+<label for="st" style="font-size:14px;font-weight:600;color:#44605B">Where you live</label>
+<sc-raw-select id="st" value="{{st}}" sc-camel-on-change="{{onSt}}" style="min-height:44px;border-radius:10px;border:1.5px solid #6F8A84;padding:0 10px;font-size:15px;font-family:inherit;background:#fff;color:#10302C">
+<sc-for list="{{stateOpts}}" as="o" hint-placeholder-count="8"><option value="{{o.k}}">{{o.label}}</option></sc-for>
+</sc-raw-select>
+<div style="font-size:13px;color:#44605B;line-height:1.4">Sets state law notes, revenue office and support services.</div>
+</div>
+<div style="flex:0 1 300px;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:14px 16px">
+<div style="font-size:14px;font-weight:600;color:#44605B">Let years pass for everyone</div>
+<div style="display:flex;gap:10px">
+<button type="button" sc-camel-on-click="{{back2}}" style="flex:1;min-height:44px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:15px;font-weight:600">Back 2 years</button>
+<button type="button" sc-camel-on-click="{{fwd2}}" style="flex:1;min-height:44px;border-radius:10px;border:1.5px solid #0B6A61;background:#0B6A61;color:#fff;font-size:15px;font-weight:600">Forward 2 years</button>
+</div>
+<div style="font-size:13px;color:#44605B;line-height:1.4">Watch the pills, emphasis and figures shift.</div>
+</div>
+</section>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+
+<section aria-label="Relationship map" style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<div style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:22px;font-weight:700">Household map</h2>
+<div style="font-size:13px;color:#44605B;max-width:340px;line-height:1.4">Solid pills fit your current emphasis most. Dashed pills are still here, just less typical for now.</div>
+</div>
+<div style="overflow-x:auto;border-radius:10px;border:1px solid #C9D6D1;background:#F8FAF9">
+<div style="position:relative;width:720px;height:{{stageH}}px;background-image:radial-gradient(#C9D6D1 1.2px,transparent 1.2px);background-size:24px 24px">
+<sc-for list="{{edges}}" as="e" hint-placeholder-count="6"><div style="position:absolute;left:{{e.x}}px;top:{{e.y}}px;width:{{e.len}}px;height:{{e.h}}px;background:#0B6A61;opacity:{{e.op}};transform-origin:0 50%;transform:rotate({{e.deg}}deg)"></div></sc-for>
+<sc-for list="{{people}}" as="p" hint-placeholder-count="4"><button type="button" sc-camel-on-click="{{p.go}}" aria-label="{{p.aria}}" style="position:absolute;left:{{p.x}}px;top:{{p.y}}px;width:{{p.d}}px;height:{{p.d}}px;margin:{{p.m}}px 0 0 {{p.m}}px;border-radius:50%;padding:0 4px;background:{{p.bg}};border:{{p.bd}};box-shadow:{{p.ring}};color:#10302C;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;z-index:2;overflow:hidden"><span style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:14px;font-weight:700;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{p.name}}</span><span style="font-size:12px;font-weight:500">{{p.band}}</span><span style="font-size:11px;font-weight:600;color:#44605B">{{p.homeShort}}</span></button></sc-for>
+<sc-for list="{{pills}}" as="o" hint-placeholder-count="6"><button type="button" class="pill {{o.pulse}}" sc-camel-on-click="{{o.go}}" style="position:absolute;left:{{o.x}}px;top:{{o.y}}px;width:{{o.w}}px;min-height:52px;margin:-26px 0 0 {{o.mx}}px;padding:6px 8px;border-radius:12px;background:{{o.bg}};color:{{o.fg}};border:{{o.bd}};box-shadow:{{o.ring}};font-size:{{o.fs}}px;font-weight:600;line-height:1.25;text-align:center;z-index:3">{{o.label}}</button></sc-for>
+</div>
+</div>
+<sc-if value="{{hasExtra}}" hint-placeholder-val="{{false}}">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font-size:14px;font-weight:600;color:#44605B">More links not drawn, to keep the map readable</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{extra}}" as="x" hint-placeholder-count="2"><button type="button" sc-camel-on-click="{{x.go}}" style="min-height:44px;padding:6px 12px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:14px;font-weight:600;text-align:left">{{x.label}}</button></sc-for>
+</div>
+</div>
+</sc-if>
+<div style="display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:#44605B">
+<span>Ochre: parents and grandparents</span><span>Teal: you and a partner</span><span>Blue: children and grandchildren</span><span>Click a person to centre the paths and figures on them</span>
+</div>
+</div>
+
+<div style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:20px;font-weight:700">Who is in the household</h2>
+<div style="font-size:14px;color:#44605B;line-height:1.45">You enter your family yourself. Nobody else's account is read, and nothing here is shared unless you invite them. Pick a label, an age band and where each person lives.</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{adders}}" as="a" hint-placeholder-count="5"><button type="button" disabled="{{a.dis}}" sc-camel-on-click="{{a.go}}" style="min-height:44px;padding:6px 12px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600;opacity:{{a.op}}">{{a.label}} <span style="font-weight:500;color:#44605B">{{a.sub}}</span></button></sc-for>
+</div>
+<sc-for list="{{fam}}" as="f" hint-placeholder-count="4">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px;padding:12px 0;border-top:1px solid #E3EAE7">
+<div style="flex:1 1 150px;display:flex;flex-direction:column;gap:3px">
+<span style="font-size:12px;font-weight:600;color:#44605B">{{f.relName}}</span>
+<sc-if value="{{f.editable}}" hint-placeholder-val="{{true}}"><input type="text" maxlength="14" aria-label="{{f.nameLabel}}" value="{{f.label}}" sc-camel-on-input="{{f.onLabel}}" style="min-height:44px;border-radius:10px;border:1.5px solid #6F8A84;padding:0 10px;font-size:15px;font-family:inherit;color:#10302C;background:#fff;min-width:0"></sc-if>
+<sc-if value="{{f.isMe}}" hint-placeholder-val="{{false}}"><span style="min-height:44px;display:flex;align-items:center;font-size:16px;font-weight:600">You</span></sc-if>
+</div>
+<div style="display:flex;align-items:center;gap:6px">
+<button type="button" sc-camel-on-click="{{f.dec}}" aria-label="{{f.decLabel}}" style="width:44px;height:44px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:20px;font-weight:600">−</button>
+<div style="min-width:84px;text-align:center;font-size:15px;font-weight:600">{{f.band}} yrs</div>
+<button type="button" sc-camel-on-click="{{f.inc}}" aria-label="{{f.incLabel}}" style="width:44px;height:44px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:20px;font-weight:600">+</button>
+</div>
+<div style="flex:1 1 150px;display:flex;flex-direction:column;gap:3px">
+<span style="font-size:12px;font-weight:600;color:#44605B">Lives</span>
+<sc-raw-select aria-label="{{f.homeLabel}}" value="{{f.home}}" sc-camel-on-change="{{f.onHome}}" style="min-height:44px;border-radius:10px;border:1.5px solid #6F8A84;padding:0 8px;font-size:14px;font-family:inherit;background:#fff;color:#10302C">
+<sc-for list="{{f.opts}}" as="h" hint-placeholder-count="8"><option value="{{h.v}}">{{h.t}}</option></sc-for>
+</sc-raw-select>
+</div>
+<sc-if value="{{f.editable}}" hint-placeholder-val="{{true}}"><button type="button" sc-camel-on-click="{{f.remove}}" aria-label="{{f.removeLabel}}" style="min-height:44px;padding:0 12px;border-radius:10px;border:1.5px solid #9A4A0C;background:#fff;color:#7A3A08;font-size:14px;font-weight:600">Remove</button></sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section aria-label="Explore" style="flex:1 1 420px;min-width:0;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px">
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:22px;font-weight:700">Explore</h2>
+<sc-if value="{{guidedOn}}" hint-placeholder-val="{{true}}"><div style="font-size:13px;font-weight:600;color:#08463F;background:#DDEFEA;border-radius:999px;padding:6px 12px">Layer {{layer}} of 4</div></sc-if>
+</div>
+
+<sc-if value="{{quickOn}}" hint-placeholder-val="{{false}}">
+<div style="display:flex;flex-direction:column;gap:6px">
+<label for="q" style="font-size:14px;font-weight:600;color:#44605B">Jump to any topic</label>
+<input id="q" type="text" value="{{q}}" sc-camel-on-input="{{onQ}}" placeholder="For example: testamentary, retirement village, rent assistance" style="min-height:44px;border-radius:10px;border:1.5px solid #6F8A84;padding:0 12px;font-size:15px;font-family:inherit;color:#10302C;background:#fff">
+</div>
+</sc-if>
+<sc-if value="{{guidedOn}}" hint-placeholder-val="{{true}}">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:14px;color:#44605B">Already know what you need? <button type="button" sc-camel-on-click="{{setQuick}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">Switch to quick path</button></div>
+</sc-if>
+
+<sc-if value="{{showSearch}}" hint-placeholder-val="{{false}}">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font-size:14px;font-weight:600;color:#44605B">{{resultCount}}</div>
+<sc-for list="{{results}}" as="r" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{r.go}}" style="min-height:44px;text-align:left;padding:10px 14px;border-radius:10px;border:1px solid #C9D6D1;background:#fff;color:#10302C;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">{{r.title}}</span><span style="font-size:13px;color:#44605B">{{r.path}}</span></button></sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{showStep1}}" hint-placeholder-val="{{false}}">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:19px;font-weight:700">Whose stage are you thinking about?</div>
+<div style="font-size:14px;color:#44605B;line-height:1.45">Pick one person in the household. You can change this at any time.</div>
+<sc-for list="{{whoOpts}}" as="w" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{w.go}}" style="min-height:56px;text-align:left;padding:10px 14px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:600">{{w.name}}, {{w.band}}</span><span style="font-size:13px;color:#44605B">{{w.stage}}</span></button></sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{showStep2}}" hint-placeholder-val="{{false}}">
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="background:#F1F5F3;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px">
+<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#44605B">{{whoName}}, {{whoBand}} · {{stage.name}}</div>
+<div style="font-size:14px;line-height:1.45"><strong>Family:</strong> {{stage.rel}}</div>
+<div style="font-size:14px;line-height:1.45"><strong>Money:</strong> {{stage.fin}}</div>
+<div><button type="button" sc-camel-on-click="{{clearWho}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:14px;font-weight:600">Choose someone else</button></div>
+</div>
+<div style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:19px;font-weight:700">What is on your mind?</div>
+<sc-for list="{{domCards}}" as="k" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{k.go}}" style="min-height:56px;text-align:left;padding:12px 14px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;display:flex;flex-direction:column;gap:4px"><span style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:16px;font-weight:600">{{k.title}}</span><sc-if value="{{k.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:{{k.badgeBg}};color:#08463F">{{k.badge}}</span></sc-if><sc-if value="{{k.visited}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;color:#44605B">Opened</span></sc-if></span><span style="font-size:14px;color:#44605B;line-height:1.4">{{k.short}}</span></button></sc-for>
+<sc-if value="{{domMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleAll}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">{{allLabel}}</button></sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{showQuickHome}}" hint-placeholder-val="{{false}}">
+<div style="display:flex;flex-direction:column;gap:4px">
+<div style="font-size:14px;font-weight:600;color:#44605B">All topics, in order of the tree</div>
+<div style="max-height:520px;overflow-y:auto;display:flex;flex-direction:column;gap:4px;padding-right:4px">
+<sc-for list="{{allTopics}}" as="t" hint-placeholder-count="8"><button type="button" sc-camel-on-click="{{t.go}}" style="min-height:44px;text-align:left;padding:8px 12px 8px {{t.pad}}px;border-radius:8px;border:1px solid #E3EAE7;background:{{t.bg}};color:#10302C;font-size:{{t.fs}}px;font-weight:{{t.fw}}">{{t.title}}<sc-if value="{{t.visited}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;color:#44605B"> · opened</span></sc-if></button></sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{hasFocus}}" hint-placeholder-val="{{true}}">
+<div style="display:flex;flex-direction:column;gap:14px">
+<nav aria-label="Where you are" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px">
+<button type="button" sc-camel-on-click="{{goHome}}" style="min-height:44px;padding:0 10px;border-radius:8px;border:none;background:transparent;color:#0B6A61;font-size:14px;font-weight:600;text-decoration:underline">All areas</button>
+<sc-for list="{{crumbs}}" as="c" hint-placeholder-count="3"><span style="display:flex;align-items:center;gap:4px"><span aria-hidden="true" style="color:#44605B">›</span><button type="button" sc-camel-on-click="{{c.go}}" style="min-height:44px;padding:0 10px;border-radius:8px;border:none;background:transparent;color:{{c.fg}};font-size:14px;font-weight:600;text-decoration:{{c.deco}}">{{c.t}}</button></span></sc-for>
+</nav>
+
+<h3 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:26px;line-height:1.1;font-weight:700">{{node.t}}</h3>
+
+<sc-if value="{{viaCard}}" hint-placeholder-val="{{false}}">
+<div style="border:1.5px solid #0B6A61;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;background:#F4FAF8">
+<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#08463F">Why these lives connect</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:4px"><div style="font-size:14px;font-weight:700;color:#7A3A08">{{via.aHead}}</div><div style="font-size:14px;line-height:1.5">{{via.aText}}</div></div>
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:4px"><div style="font-size:14px;font-weight:700;color:#08463F">{{via.bHead}}</div><div style="font-size:14px;line-height:1.5">{{via.bText}}</div></div>
+</div>
+</div>
+</sc-if>
+
+<p style="margin:0;font-size:16px;line-height:1.55">{{node.s}}</p>
+
+<sc-if value="{{hasStateNote}}" hint-placeholder-val="{{false}}">
+<div style="border-radius:12px;padding:12px 14px;background:#E0EAF8;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#1F4580">In {{stateName}}</div>
+<div style="font-size:14px;line-height:1.5">{{stateNote}}</div>
+</div>
+</sc-if>
+
+<sc-if value="{{hasResume}}" hint-placeholder-val="{{false}}">
+<button type="button" sc-camel-on-click="{{resume.go}}" style="min-height:56px;text-align:left;padding:10px 14px;border-radius:10px;border:1.5px solid #9A4A0C;background:#FBF1E6;color:#10302C;display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;font-weight:600;color:#7A3A08">Return to the branch you were on</span><span style="font-size:14px;line-height:1.4">{{resume.path}}</span></button>
+</sc-if>
+
+<sc-if value="{{hasKids}}" hint-placeholder-val="{{true}}">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font-size:14px;font-weight:700;color:#44605B">Narrow it down</div>
+<sc-for list="{{kidCards}}" as="k" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{k.go}}" style="min-height:56px;text-align:left;padding:12px 14px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;display:flex;flex-direction:column;gap:4px"><span style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:16px;font-weight:600">{{k.title}}</span><sc-if value="{{k.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:{{k.badgeBg}};color:#08463F">{{k.badge}}</span></sc-if><sc-if value="{{k.visited}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;color:#44605B">Opened</span></sc-if></span><span style="font-size:14px;color:#44605B;line-height:1.4">{{k.short}}</span></button></sc-for>
+<sc-if value="{{kidsMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleAll}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">{{allLabel}}</button></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{isLeaf}}" hint-placeholder-val="{{false}}">
+<div style="font-size:14px;color:#44605B;line-height:1.5;background:#F1F5F3;border-radius:10px;padding:12px 14px">This is the narrowest level for this branch. The paths below sit beside it.</div>
+</sc-if>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font-size:14px;font-weight:700;color:#44605B">Paths next to this one</div>
+<sc-for list="{{adj}}" as="a" hint-placeholder-count="4"><button type="button" sc-camel-on-click="{{a.go}}" style="min-height:44px;text-align:left;padding:10px 14px;border-radius:10px;border:1px solid #C9D6D1;background:#fff;color:#10302C;display:flex;flex-direction:column;gap:2px"><span style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:15px;font-weight:600">{{a.title}}</span><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:{{a.tagBg}};color:#10302C">{{a.tag}}</span></span><span style="font-size:13px;color:#44605B">{{a.path}}</span></button></sc-for>
+</div>
+
+<div style="border-radius:12px;padding:12px 14px;background:#FFF3E0;border:1px solid #E7C79A;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#7A3A08"><svg aria-hidden="true" width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="#7A3A08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"></path><path d="M5 4h12l-2 4 2 4H5"></path></svg>Needs human verification</div>
+<sc-if value="{{hasV}}" hint-placeholder-val="{{true}}">
+<sc-for list="{{vItems}}" as="v" hint-placeholder-count="2"><div style="font-size:14px;line-height:1.45"><strong>{{v.src}}:</strong> {{v.what}}</div></sc-for>
+</sc-if>
+<div style="font-size:13px;color:#44605B;line-height:1.45">General information only. Confirm figures and eligibility with the source before anyone acts on them. <a href="register.html">See the needs-checking register</a>.</div>
+</div>
+</div>
+</sc-if>
+</section>
+</div>
+
+<section aria-label="Figures for this age band" style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end">
+<div style="display:flex;flex-direction:column;gap:4px;max-width:780px">
+<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#44605B">{{figKicker}}</div>
+<h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:26px;line-height:1.1;font-weight:700">{{figTitle}}</h2>
+<div style="font-size:14px;color:#44605B;line-height:1.5">{{figNote}}</div>
+</div>
+<a href="{{figUrl}}" style="font-size:14px;font-weight:600">{{figLinkText}}</a>
+</div>
+<div role="group" aria-label="Show figures for" style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{figWho}}" as="w" hint-placeholder-count="4"><button type="button" aria-pressed="{{w.on}}" sc-camel-on-click="{{w.go}}" style="min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid #0B6A61;background:{{w.bg}};color:{{w.fg}};font-size:14px;font-weight:600">{{w.label}}, {{w.band}}</button></sc-for>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start">
+
+<div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-size:18px;font-weight:700">What people at this age weigh up</h3>
+<sc-if value="{{hasCons}}" hint-placeholder-val="{{true}}">
+<ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.45">
+<sc-for list="{{cons}}" as="c" hint-placeholder-count="5"><li><strong>{{c.t}}.</strong> {{c.s}} <span style="color:#44605B;font-size:13px">({{c.src}})</span></li></sc-for>
+</ol>
+</sc-if>
+<sc-if value="{{noCons}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;color:#44605B;line-height:1.5;background:#F1F5F3;border-radius:10px;padding:12px 14px">{{noConsText}}</div></sc-if>
+<sc-if value="{{consDraft}}" hint-placeholder-val="{{false}}"><div style="font-size:13px;color:#7A3A08;font-weight:600;line-height:1.45">{{consDraftText}}</div></sc-if>
+</div>
+
+<div style="flex:1.4 1 380px;min-width:0;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-size:18px;font-weight:700">Three income scenarios</h3>
+<sc-if value="{{hasInc}}" hint-placeholder-val="{{true}}">
+<div style="font-size:13px;color:#44605B;line-height:1.45">{{incGroup}} who lodged a 2022–23 return. Annual taxable income in 2022–23 dollars. Percentiles are interpolated, and tax-free super payments from 60 are not counted. The highlighted scenario is the one closest to the current emphasis; the planner never asks for income.</div>
+<sc-for list="{{scen}}" as="s" hint-placeholder-count="3">
+<div style="border:{{s.bd}};background:{{s.bg}};border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:16px;font-weight:700">{{s.name}}</span><span style="font-size:13px;color:#44605B">{{s.pct}}</span><sc-if value="{{s.best}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:#0B6A61;color:#fff">Closest to current emphasis</span></sc-if></div>
+<div style="font-size:18px;font-weight:700;font-family:'Bricolage Grotesque',system-ui,sans-serif">{{s.range}}</div>
+<sc-if value="{{s.hasFocus}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;line-height:1.45">{{s.focus}}</div></sc-if>
+<div style="font-size:13px;color:#44605B;line-height:1.45"><strong>Who to ask:</strong> {{s.pros}}</div>
+</div>
+</sc-for>
+</sc-if>
+<sc-if value="{{noInc}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;color:#44605B;line-height:1.5;background:#F1F5F3;border-radius:10px;padding:12px 14px">coeconomics.com gives no income scenario for ages under 12. Household income is what shapes most options at this age.</div></sc-if>
+</div>
+
+<div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-size:18px;font-weight:700">Figures for this age group</h3>
+<sc-if value="{{hasFigs}}" hint-placeholder-val="{{true}}">
+<div style="display:flex;flex-direction:column;gap:0">
+<sc-for list="{{figs}}" as="f" hint-placeholder-count="8">
+<div style="padding:8px 0;border-top:1px solid #E3EAE7;display:flex;flex-direction:column;gap:2px">
+<sc-if value="{{f.showTopic}}" hint-placeholder-val="{{true}}"><div style="font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#08463F">{{f.topic}}</div></sc-if>
+<div style="font-size:14px;line-height:1.45"><strong>{{f.group}}:</strong> {{f.text}}</div>
+<div style="font-size:12px;color:#44605B">{{f.src}}</div>
+</div>
+</sc-for>
+</div>
+<sc-if value="{{figMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleFigs}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">{{figsLabel}}</button></sc-if>
+</sc-if>
+<sc-if value="{{noFigs}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;color:#44605B;line-height:1.5;background:#F1F5F3;border-radius:10px;padding:12px 14px">coeconomics.com lists no figures for this age group.</div></sc-if>
+</div>
+</div>
+<div style="font-size:13px;color:#7A3A08;font-weight:600;line-height:1.5">Copied from coeconomics.com, which says it checked them on 23 October 2026 and describes groups, not individuals. We have not checked them against ABS, AIHW, ATO, ASFA or Services Australia. See the register.</div>
+</section>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+
+<section aria-label="Your branches" style="flex:1 1 380px;min-width:0;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:20px;font-weight:700">Your branches</h2>
+<div style="font-size:14px;color:#44605B;line-height:1.45">Every area stays listed. Return to where you left off, or open one you have not touched.</div>
+<sc-for list="{{trail}}" as="t" hint-placeholder-count="8">
+<div style="display:flex;flex-direction:column;gap:6px;padding:10px 0;border-top:1px solid #E3EAE7">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px"><div style="font-size:16px;font-weight:600">{{t.title}}</div><div style="font-size:13px;color:#44605B">{{t.count}}</div></div>
+<sc-if value="{{t.hasResume}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{t.goResume}}" style="min-height:44px;text-align:left;padding:8px 12px;border-radius:10px;border:1.5px solid #9A4A0C;background:#FBF1E6;color:#10302C;font-size:14px;line-height:1.4">Resume: {{t.path}}</button></sc-if>
+<sc-if value="{{t.notOpened}}" hint-placeholder-val="{{true}}"><button type="button" sc-camel-on-click="{{t.goTop}}" style="min-height:44px;text-align:left;padding:8px 12px;border-radius:10px;border:1px solid #C9D6D1;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">Not opened yet. Start here</button></sc-if>
+</div>
+</sc-for>
+</section>
+
+<section aria-label="What the map emphasises" style="flex:1 1 380px;min-width:0;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:20px;font-weight:700">What the map is emphasising</h2>
+<div style="font-size:14px;color:#44605B;line-height:1.45">{{empWhy}} It only changes the order and weight of topics. Nothing is removed, and it fades as you move through life stages.</div>
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;justify-content:space-between;gap:8px;font-size:14px;font-weight:600"><span>{{b.n}}</span><span style="color:#44605B;font-weight:500">{{b.hint}}</span></div>
+<div role="img" aria-label="{{b.aria}}" style="height:12px;border-radius:6px;background:#E3EAE7;overflow:hidden"><div style="height:12px;width:{{b.w}}%;background:#0B6A61"></div></div>
+<button type="button" sc-camel-on-click="{{b.boost}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:14px;font-weight:600">Show me more {{b.nl}}</button>
+</div>
+</sc-for>
+<button type="button" sc-camel-on-click="{{resetBeh}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">Reset to age-band default</button>
+</section>
+
+<section aria-label="Support and referrals" style="flex:1 1 380px;min-width:0;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:20px;font-weight:700">Support for this concern</h2>
+<div style="font-size:14px;color:#44605B;line-height:1.45">{{refIntro}}</div>
+<sc-for list="{{refs}}" as="r" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:4px;padding:10px 0;border-top:1px solid #E3EAE7">
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:15px;font-weight:600">{{r.name}}</span><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:#EEF1F0">{{r.kind}}</span></div>
+<div style="font-size:14px;color:#44605B;line-height:1.45">{{r.note}}</div>
+<sc-if value="{{r.hasPh}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;font-weight:600">{{r.ph}}</div></sc-if>
+<div style="font-size:12px;font-weight:600;color:#7A3A08">Verify details before use · last checked [DATE]</div>
+</div>
+</sc-for>
+<sc-if value="{{refsMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleRefs}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">{{refsLabel}}</button></sc-if>
+</section>
+</div>
+
+<footer style="font-size:13px;color:#44605B;line-height:1.5;max-width:900px">Prototype: everything on this page lives in the browser's memory and nothing is saved or sent. The weights, age priors and linked-node rules are design assumptions. Figures and band notes for ages 12 to 81 come from coeconomics.com; ages 0 to 11 and 82 to 99 have no band page there. See <a href="model.html">the model</a> and <a href="register.html">the register</a>.</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1360,&quot;height&quot;:4000}}">
+class Component extends DCLogic {
+constructor(props){
+  super(props);
+  this.state={mode:'guided',st:'NSW',meAge:40,meHome:'',
+    members:[{id:'m1',rel:'parent',label:'Mum',age:68,home:''},{id:'m2',rel:'parent',label:'Dad',age:70,home:''},{id:'m3',rel:'child',label:'Child 1',age:12,home:'with-you'}],
+    nid:4,who:null,focus:null,via:null,beh:[0,0,0,0],visited:{},deepest:{},showAll:false,q:'',allRefs:false,figAll:false};
+}
+
+getData(){
+  if(this._d) return this._d;
+  const T=(id,p,t,s,tg,v,x,st)=>({id:id,p:p,t:t,s:s,tg:tg,v:v||'',x:x||[],st:st||''});
+  const nodes=[
+   T('d_est','','Estate planning','What happens to your assets, and who decides for you, if you die or lose capacity. Documents and succession rules are mostly state law, while tax rules are federal.',[.2,.4,.7,.9],'Legal|Succession and trust rules differ by state; a lawyer should confirm anything for a real situation'),
+   T('e_will','d_est','Wills and who inherits','A valid will says who receives what and who administers the estate. Without one, state intestacy rules decide.',[.3,.6,.8,.7]),
+   T('e_will_make','e_will','Making a valid will','Signing and witnessing rules are set by each state. Simple wills can be low cost, while blended families, businesses or trusts usually need a lawyer.',[.4,.7,.7,.5],'Legal|Witnessing rules and electronic signing options differ by state'),
+   T('e_will_fp','e_will','Challenges: family provision claims','Eligible people can ask a court for provision from an estate. Who is eligible, the time limit and which assets can be reached differ by state.',[.3,.4,.7,.8],'Legal|Statute names, eligible classes and time limits',['e_tt_state'],'fp'),
+   T('e_trust','d_est','Trusts in an estate','A will can direct assets into a trust instead of straight to a person, for protection, control or tax reasons.',[.05,.2,.6,1]),
+   T('e_tt','e_trust','Testamentary trusts','Created by a will and starting only on death. A trustee controls distributions to beneficiaries such as children, a spouse or a person who may be vulnerable.',[.05,.2,.6,1],'',['s_tax','a_estate']),
+   T('e_tt_tax','e_tt','Tax on income paid to minors','Income a testamentary trust pays to children is generally taxed at adult rates, unlike the higher minors rates that apply to most other trusts. Conditions apply.',[0,.1,.5,1],'ATO|Excepted trust income rules and conditions'),
+   T('e_tt_state','e_tt','State-specific variations','Trust law, trustee powers, duration limits, land tax treatment and family provision reach all differ between states.',[0,.1,.4,1],'Legal|State trust law and land tax treatment',['p_land','e_will_fp'],'tt'),
+   T('e_ds','e_trust','Family (discretionary) trusts','Trusts used while alive for investing, running a business or sharing income. They are costly and complex to run, and how they meet an estate needs specialist advice.',[0,.05,.4,1],'ATO|Family trust distribution and tax rules',['p_land']),
+   T('e_poa','d_est','Powers of attorney and guardianship','Who can make financial and health decisions for you if you cannot. Forms, names and rules vary by state.',[.6,.6,.6,.5],'Legal|State forms, witnessing and registration rules',['a_estate','e_acd']),
+   T('e_acd','d_est','Advance care directives','A written record of health wishes that sits beside powers of attorney. Share it with family and doctors. Forms and legal status differ by state.',[.7,.6,.6,.5],'Legal|State forms and legal status',['e_poa']),
+   T('e_exec','d_est','Acting as an executor','Executors and families may need practical guidance: where the will is, what the role involves, and when to get legal help. Each state has its own probate process.',[.4,.5,.8,.8],'Legal|State probate process and executor duties',['e_will','e_gift']),
+   T('e_gift','d_est','Gifts, charity and legacy','Later in life people review gifts, charity and legacy decisions. Large gifts can count under pension rules, and charity bequests belong in the will.',[.2,.3,.8,.9],'ATO|Deductibility of gifts and record keeping',['i_gift','e_will']),
+   T('d_agedcare','','Aged care','How the system works for older people: assessment, support at home, and residential care, including the costs.',[.8,.6,.6,.6],'Services Australia|Aged care rules are being reformed, so program names and fees may have changed'),
+   T('a_start','d_agedcare','Getting started: assessment','The entry point is My Aged Care, which arranges an assessment of what support someone is eligible for.',[.9,.7,.6,.5],'Services Australia|Current assessment steps and program names',['f_carer','l_own']),
+   T('a_home','d_agedcare','Support at home','Services that help someone stay in their own home, with contributions that depend on the program and the persons means.',[.8,.6,.6,.5],'Services Australia|Program structure and contribution rules',['l_own']),
+   T('a_res','d_agedcare','Residential care and costs','Moving into a care home involves means-tested fees and an accommodation payment.',[.6,.6,.7,.8]),
+   T('a_cost','a_res','How fees are means-tested','Services Australia assesses income and assets to set what the person contributes. In some situations the family home is counted.',[.7,.6,.7,.7],'Services Australia|Means test thresholds, caps and home treatment'),
+   T('a_rad','a_res','Accommodation payment: lump sum or daily','Homes offer a refundable lump sum, a daily payment, or a mix. The choice changes cash flow, the pension assessment and what remains in the estate.',[.4,.5,.8,.9],'Services Australia|Payment limits and refund rules',['e_poa','i_gift']),
+   T('a_estate','a_res','Aged care costs and the estate','How a parent pays can shape what is left, and who has authority to manage their money. Linking both peoples plans avoids surprises.',[.3,.5,.9,.9],'Legal|Authority to act and estate effects',['e_poa','e_tt','a_rad']),
+   T('d_super','','Superannuation','Contributions, concessions and what happens to super over a lifetime and after death.',[.5,.9,.8,.8]),
+   T('s_low','d_super','Low-income super concessions','Government supports for lower earners, such as a tax offset on contributions and a co-contribution on personal after-tax contributions. Eligibility depends on income and other tests.',[.9,.8,.2,0],'ATO|Income thresholds and maximum amounts, which change each year'),
+   T('s_grow','d_super','Contributions and catch-ups','Employer contributions plus optional extras, with annual caps on concessionally taxed amounts. Unused cap can sometimes be carried forward.',[.2,.6,.9,.7],'ATO|Contribution caps, carry-forward balance limit, high-income extra tax threshold'),
+   T('s_couple','d_super','Couples: splitting and spouse contributions','Couples can split contributions or add to a spouses super, and plan around different ages. Each partner needs a will and a nominated beneficiary.',[.3,.6,.8,.7],'ATO|Spouse contribution and splitting rules',['e_will','s_death']),
+   T('s_death','d_super','Super when someone dies','Super is usually not part of a will. It is paid under the funds rules and any valid nomination, to dependants or to the estate.',[.3,.5,.9,.9],'',['e_will']),
+   T('s_nom','s_death','Death benefit nominations','A nomination tells the trustee who to pay. Some are binding, some lapse after a period, and some funds allow non-lapsing ones. The fund and its trust deed set the rules.',[.3,.5,.9,.9],'Fund|Each fund differs; read its product disclosure statement and trust deed'),
+   T('s_tax','s_death','Tax on benefits paid to adult children','Adult children are generally not tax dependants, so part of a benefit can be taxed. Paying a spouse, or paying via the estate or a testamentary trust, can change the outcome.',[.1,.3,.9,1],'ATO|Death benefit tax rates and components',['e_tt']),
+   T('s_ret','d_super','Drawing down in retirement','Moving from saving to a pension phase, minimum drawdowns, and how this feeds Age Pension assessments.',[.4,.5,.8,.8],'ATO|Minimum drawdown rates and transfer balance cap'),
+   T('d_income','','Income support and concessions','Payments and concessions that help with living costs, for different ages and circumstances.',[1,.5,.1,0],'Services Australia|Rates and tests are indexed on set dates'),
+   T('i_youth','d_income','Youth Allowance and ABSTUDY','Support for young people studying or training. Parents income and independence tests can affect eligibility, which links a young persons support to the familys finances.',[1,.4,0,0],'Services Australia|Rates, age rules and the parental income test'),
+   T('i_job','d_income','JobSeeker and mutual obligations','Income support while looking for work, with activity requirements. Rules depend on age, partner income and assets.',[1,.3,0,0],'Services Australia|Rates, waiting periods and obligations'),
+   T('i_pension','d_income','Age Pension','Income support for people who reach pension age and pass the income and assets tests.',[.9,.6,.4,.2],'Services Australia|Pension age and payment rates'),
+   T('i_assets','i_pension','Income and assets tests','Both tests apply and the one giving the lower payment is used. Homeowner status changes the assets threshold.',[.9,.6,.4,.2],'Services Australia|Thresholds and taper rates, indexed twice a year'),
+   T('i_gift','i_pension','Gifting and deprivation rules','Giving away assets above set limits can still be counted for pension tests for a period. This matters when helping children or grandchildren early, or paying for aged care.',[.6,.5,.7,.6],'Services Australia|Gifting limits and the counting period',['a_rad','e_will','e_gift']),
+   T('i_conc','d_income','Concession cards and state concessions','Health and seniors cards open up discounts. Extra concessions on transport, energy and rates vary by state.',[1,.6,.2,0],'State|State concession rules and eligibility'),
+   T('i_disab','d_income','Disability supports','Supports for people living with disability, including the NDIS for eligible people. Eligibility depends on age at entry and the level of impairment; older people usually use the aged care system.',[.9,.5,.3,.2],'NDIA|NDIS eligibility and age rules',['f_carer','a_start']),
+   T('d_property','','Property and investing','Buying, holding and passing on property and other investments.',[0,.5,.8,1]),
+   T('p_home','d_property','First home buyers','Federal schemes plus state concessions on transfer duty and grants. Rules differ in each state and change with budgets.',[.3,.9,.5,.1],'State revenue office|Thresholds, concessions and grants',['l_rent'],'rev'),
+   T('p_ng','d_property','Negative gearing and investment property','When rental costs exceed rental income the loss may reduce other taxable income. It depends on growth and carries risk, so it suits some people and not others.',[0,.2,.8,1],'ATO|Tax treatment and current policy settings'),
+   T('p_cgt','d_property','Capital gains tax and inherited property','Inherited property can carry the deceased persons cost base, with special rules for a main residence. Timing of a sale matters.',[0,.3,.8,1],'ATO|Capital gains rules for deceased estates',['e_will']),
+   T('p_land','d_property','Land tax and trusts','State land tax can treat trust-held land differently from land held personally, through surcharges and thresholds.',[0,0,.5,1],'State revenue office|Land tax thresholds and trust surcharges',['e_tt_state','e_ds'],'rev'),
+   T('d_family','','Family and caring','Costs and support as children grow and parents age, often at the same time.',[.7,.7,.6,.5]),
+   T('f_kids','d_family','Costs of kids and teens','Family payments, child care subsidies, education costs, and how these shift as children move into their teens.',[.8,.7,.5,.2],'Services Australia|Payment rates and income tests'),
+   T('f_carer','d_family','Caring for a parent or relative','Carer payments and allowances, carer leave and respite. Caring can reduce paid work and super, so plan for both.',[.9,.6,.3,.1],'Services Australia|Carer payment and allowance rules',['a_start','i_disab']),
+   T('d_early','','Early years and school','Costs and choices from birth through primary school, mostly carried by parents with help from grandparents.',[.8,.7,.5,.3]),
+   T('y_care','d_early','Child care and early learning','The Child Care Subsidy offsets part of the cost based on family income, and paid parental leave softens the income dip. Hours worked can change the result.',[.7,.7,.5,.3],'Services Australia|Child Care Subsidy rates, income tests and activity test',['f_kids']),
+   T('y_school','d_early','School costs and starting school','Uniform, devices, stationery and excursions often fall in the same year. Some states offer school-cost and sport voucher schemes.',[.8,.7,.5,.2],'State|State school-cost and sport voucher schemes',['f_kids']),
+   T('y_save','d_early','Pocket money and saving for a child','A youth savings account linked to a parent is a common first step. Income earned in a childs name may be taxed differently from an adults, so keep records.',[.5,.7,.6,.6],'ATO|Tax on income earned by minors',['f_kids']),
+   T('d_living','','Where and how you live','Living arrangements shape costs, support and legal protection: your own home, living with family, renting, sharing, a retirement village or a care home.',[.7,.6,.6,.5]),
+   T('l_own','d_living','Staying in your own home','Home modifications, support at home and family help let many people stay put. An assessment through My Aged Care is the usual starting point for older people.',[.7,.6,.7,.6],'Services Australia|Home support program names and fees',['a_start','a_home']),
+   T('l_family','d_living','Living with family','Moving in together, or paying for a room or granny flat in a family home, can change pension, tax and what each person owns. A written agreement and legal advice protect everyone.',[.6,.6,.7,.7],'Services Australia|Treatment of payments for a right to live in a family home',['i_gift','e_poa']),
+   T('l_alone','d_living','Living alone','Living alone becomes more common with age. Check home safety, regular contact, a plan if health changes, and who can act on your behalf.',[.7,.6,.6,.5],'',['e_poa','a_home']),
+   T('l_rent','d_living','Renting','Rent is often the largest cost for renters. Commonwealth Rent Assistance and state tenancy rules and concessions may help.',[1,.6,.1,0],'Services Australia|Rent Assistance rates and rules',['p_home','i_conc']),
+   T('l_share','d_living','Share house and leaving home','Bond, upfront costs and shared bills come with leaving home. Know your tenancy rights and keep records of who owes what.',[.8,.7,.1,0],'State|Tenancy law and bond rules',['i_youth','p_home']),
+   T('l_down','d_living','Downsizing and retirement villages','Downsizing can free equity, and downsizer super contributions may be allowed from age 55. Retirement village contracts can carry exit fees and affect pension tests, so get independent advice first.',[.4,.5,.8,.8],'ATO|Downsizer contribution rules',['s_grow','a_res','p_cgt'])
+  ];
+  const by={}; nodes.forEach(n=>{by[n.id]=n;});
+  const kids={}; nodes.forEach(n=>{ if(n.p){ if(!kids[n.p]) kids[n.p]=[]; kids[n.p].push(n.id); } });
+  const depth=id=>{let d=0,n=by[id];while(n&&n.p){d++;n=by[n.p];}return d;};
+  const dom=id=>{let n=by[id];while(n.p){n=by[n.p];}return n.id;};
+  const isAnc=(a,b)=>{let n=by[b];while(n&&n.p){ if(n.p===a) return true; n=by[n.p]; } return false;};
+  const chain=id=>{const out=[];let n=by[id];while(n){out.unshift(n.id);n=n.p?by[n.p]:null;}return out;};
+  const doms=nodes.filter(n=>!n.p).map(n=>n.id);
+  const flat=[]; const walk=id=>{flat.push(id);(kids[id]||[]).forEach(walk);}; doms.forEach(walk);
+
+  const O=(id,n,sk,kind,d,tg,note,ph)=>({id:id,n:n,sk:sk,kind:kind,dom:d,tg:tg,note:note,ph:ph||''});
+  const orgs=[
+   O('legal','','legal','Legal',['*'],[1,.6,.2,0],'Free or low-cost legal help. Eligibility is means-tested and priorities vary by state.'),
+   O('clc','Community legal centres (via Community Legal Centres Australia)','','Legal',['d_est','d_agedcare','d_income','d_family','d_living'],[.9,.7,.3,0],'Free legal advice for people who cannot afford a lawyer. Services differ by area.'),
+   O('seniors','','seniors','Advocacy',['d_agedcare','d_est','d_income','d_living'],[.9,.6,.4,.2],'Advice and advocacy for older people, including powers of attorney and aged care rights.'),
+   O('opan','Older Persons Advocacy Network (OPAN)','','Advocacy',['d_agedcare'],[.9,.7,.5,.4],'Free, independent aged care advocacy.','1800 700 600'),
+   O('myac','My Aged Care','','Government',['d_agedcare','d_living'],[.9,.8,.7,.6],'Starting point for assessment, home support and residential care.','1800 200 422'),
+   O('elder','1800 ELDERHelp','','Advocacy',['d_agedcare','d_est','d_living'],[.9,.7,.5,.4],'Free call about elder abuse, including misuse of powers of attorney. Connects to your state service.','1800 353 374'),
+   O('cota','','cota','Advocacy',['d_living','d_agedcare'],[.8,.6,.5,.4],'Information, advocacy and social connection for older people in your state.'),
+   O('trustee','','trustee','Specialist',['d_est'],[.6,.6,.7,.5],'Public trustees can prepare wills and enduring documents and act as executor. Fees apply.'),
+   O('lawsoc','State law society: accredited specialists in wills and estates','','Specialist',['d_est','d_property','d_living'],[.1,.4,.8,1],'For complex estates, trusts, blended families and family-home arrangements.'),
+   O('taxhelp','ATO Tax Help volunteers','','Tax',['d_income','d_super','d_early'],[1,.6,0,0],'Free tax help for people on low incomes. Check current eligibility.'),
+   O('agent','Registered tax agent or accountant with trust and estate experience','','Tax',['d_property','d_est','d_super','d_early'],[0,.1,.6,1],'For trusts, investment property, estate tax and income earned in a childs name. Check their registration.'),
+   O('adviser','Licensed financial adviser (ASIC Financial Advisers Register)','','Financial',['d_super','d_property','d_est','d_living'],[.1,.4,.9,1],'Personal advice, which this planner does not give.'),
+   O('moneysmart','MoneySmart (ASIC)','','Government',['d_super','d_property','d_income','d_early','d_living'],[.6,1,.6,.2],'Free, independent guides and calculators.'),
+   O('ndh','National Debt Helpline','','Financial',['d_income','d_family','d_living'],[1,.7,.1,0],'Free financial counselling.','1800 007 007'),
+   O('afca','Australian Financial Complaints Authority (AFCA)','','Financial',['d_super','d_property','d_income'],[.8,.7,.6,.5],'Free dispute resolution with banks, super funds and insurers.'),
+   O('carer','Carer Gateway','','Government',['d_family','d_agedcare'],[.8,.7,.5,.3],'Support, counselling and respite planning for carers.','1800 422 737'),
+   O('ndis','National Disability Insurance Scheme (NDIS)','','Government',['d_family','d_income'],[.8,.5,.3,.2],'Supports for eligible people with permanent disability. Age-at-entry and other rules apply.'),
+   O('revenue','','revenue','Government',['d_property','d_est'],[.2,.8,.7,.8],'Transfer duty, land tax and concessions for your state.'),
+   O('fair','','fair','Government',['d_living','d_property'],[.7,.6,.5,.4],'Tenancy rules, bonds and retirement village contracts in your state.'),
+   O('raa','Services Australia: Commonwealth Rent Assistance','','Government',['d_living'],[1,.6,0,0],'Extra payment for eligible renters receiving some income support or family payments.'),
+   O('childcare','Services Australia: Child Care Subsidy and parental leave','','Government',['d_early','d_family'],[.8,.7,.5,.3],'Subsidy for approved child care and paid parental leave information.'),
+   O('edu','Your school or state education department','','Government',['d_early'],[1,.6,.2,0],'School-cost help, subsidised activities and voucher schemes.'),
+   O('fwo','Fair Work Ombudsman','','Government',['d_early','d_income'],[.9,.7,.2,0],'Pay and conditions questions for young and casual workers.'),
+   O('lostsuper','ATO: find and combine super accounts (via myGov)','','Government',['d_super'],[.6,.9,.6,.4],'Check balances, find lost super and combine accounts.'),
+   O('fis','Services Australia Financial Information Service','','Government',['d_income','d_super','d_agedcare','d_living'],[.9,.7,.4,.2],'Free information on payments and retirement planning.')
+  ];
+  const S={
+   NSW:{n:'New South Wales',legal:'Legal Aid NSW',trustee:'NSW Trustee and Guardian',revenue:'Revenue NSW',seniors:'Seniors Rights Service',cota:'COTA NSW',fair:'NSW Fair Trading',fp:'Succession Act 2006 (NSW). It can reach "notional estate" assets that were moved out of the estate.'},
+   VIC:{n:'Victoria',legal:'Victoria Legal Aid',trustee:'State Trustees Victoria',revenue:'State Revenue Office Victoria',seniors:'Seniors Rights Victoria',cota:'COTA Victoria',fair:'Consumer Affairs Victoria',fp:'Administration and Probate Act 1958 (Vic), Part IV.'},
+   QLD:{n:'Queensland',legal:'Legal Aid Queensland',trustee:'Public Trustee of Queensland',revenue:'Queensland Revenue Office',seniors:'OPAN member service (1800 700 600)',cota:'COTA Queensland',fair:'Queensland Office of Fair Trading',fp:'Succession Act 1981 (Qld), Part 4.'},
+   WA:{n:'Western Australia',legal:'Legal Aid WA',trustee:'Public Trustee WA',revenue:'RevenueWA',seniors:'Advocare',cota:'COTA WA',fair:'Consumer Protection (WA)',fp:'Family Provision Act 1972 (WA).'},
+   SA:{n:'South Australia',legal:'Legal Services Commission of SA',trustee:'Public Trustee SA',revenue:'RevenueSA',seniors:'Aged Rights Advocacy Service',cota:'COTA SA',fair:'Consumer and Business Services (SA)',fp:'Inheritance (Family Provision) Act 1972 (SA).'},
+   TAS:{n:'Tasmania',legal:'Legal Aid Commission of Tasmania',trustee:'Public Trustee (Tasmania)',revenue:'State Revenue Office Tasmania',seniors:'OPAN member service (1800 700 600)',cota:'COTA Tasmania',fair:'Consumer, Building and Occupational Services (Tas)',fp:'Testators Family Maintenance Act 1912 (Tas).'},
+   ACT:{n:'Australian Capital Territory',legal:'Legal Aid ACT',trustee:'Public Trustee and Guardian ACT',revenue:'ACT Revenue Office',seniors:'ADACAS',cota:'COTA ACT',fair:'Access Canberra',fp:'Family Provision Act 1969 (ACT).'},
+   NT:{n:'Northern Territory',legal:'NT Legal Aid Commission',trustee:'Public Trustee NT',revenue:'Territory Revenue Office',seniors:'OPAN member service (1800 700 600)',cota:'COTA NT',fair:'Consumer Affairs (NT)',fp:'Family Provision Act 1970 (NT).'}
+  };
+  const stages=[
+   {from:0,to:5,name:'Early years',rel:'Parents are usually in their late twenties to thirties, and grandparents often help with care and gifts.',fin:'Child care and parental leave, a first savings account, and family income shaping most options.'},
+   {from:6,to:11,name:'School years',rel:'Parents are mid-career and grandparents may be nearing retirement.',fin:'School costs, clubs and hobbies, pocket money and the first lessons about saving.'},
+   {from:12,to:17,name:'Dependent years',rel:'Parents are usually mid-career, so household income shapes what support you can reach.',fin:'First tax file number, part-time work, school costs. Super starts with your first employer contributions.'},
+   {from:18,to:23,name:'Leaving home',rel:'Parents income can still count for student payments. Grandparents may start needing support.',fin:'Youth Allowance or ABSTUDY, HELP debt, first full-time pay, low-income super offsets.'},
+   {from:24,to:29,name:'Establishing',rel:'Independence tests are mostly met. Parents are in their fifties.',fin:'Rent or buy, first home concessions, keeping track of super across jobs.'},
+   {from:30,to:37,name:'Building',rel:'A partner and children bring first wills and guardianship questions. Parents approach retirement.',fin:'Mortgage, family payments, salary sacrifice, insurance inside super.'},
+   {from:38,to:47,name:'Peak load',rel:'Sandwich years: children costs and parents ageing needs overlap.',fin:'Higher earnings, investment property choices, super catch-ups, wills and powers of attorney become urgent.'},
+   {from:48,to:57,name:'Pre-retirement',rel:'Parents often face aged care decisions while your own estate plan matures. Adult children may leave or return.',fin:'Contribution caps, trust structures, transition planning, gifting questions.'},
+   {from:58,to:63,name:'Transition',rel:'Inheritances may arrive and you may be caring.',fin:'Accessing super, transition to retirement, Age Pension tests ahead.'},
+   {from:64,to:75,name:'Drawdown',rel:'You may be the one navigating aged care, with adult children and grandchildren in your plan.',fin:'Pension phase, Age Pension tests, downsizing, estate instruments.'},
+   {from:76,to:85,name:'Later life',rel:'Family help and communication become central, and executors and families may need practical guidance.',fin:'Aged care costs, village or home care choices, settling the estate, gifts and legacy.'},
+   {from:86,to:99,name:'Advanced age',rel:'Family or professionals often manage decisions, so documents and attorneys matter most.',fin:'Aged care fees and accommodation payments, estate and legacy. coeconomics.com has no band page above 81.'}
+  ];
+
+  const SRC={MS:'MoneySmart (ASIC)',ATO:'ATO',SA:'Services Australia',DoH:'Department of Health',FWO:'Fair Work Ombudsman',MAC:'My Aged Care',HA:'Housing Australia',AG:'australia.gov.au',SW:'Smartraveller',JSA:'Jobs and Skills Australia',SAs:'Study Assist',DoE:'Department of Education',SC:'Scamwatch (ACCC)',AEC:'Australian Electoral Commission',AA:'Australian Apprenticeships',ACCC:'ACCC',ABS:'ABS',ABR:'Australian Business Register'};
+
+  const B={
+   12:{c:[['First bike','A bike or scooter is usually a family purchase, plus a helmet and repairs.','MS'],['Pocket money','Chores and gifts provide the first income and the first choice between saving and spending.','MS'],['Clubs and hobbies','Sport fees, uniforms and gear are often the first regular cost per child.','AG'],['Online life','Games and apps bring in-app purchases and first exposure to online scams.','SC'],['Starting high school','Uniform, laptop, stationery and excursions often fall in the same year.','DoE']],f:['Pocket money, gifts and small jobs for family.','Pocket money and occasional paid jobs such as lawn mowing or pet minding.','Earnings from small jobs or online activity can exceed pocket money, and may be taxed differently from an adult’s.']},
+   14:{c:[['First casual job','Many states allow work at 14 or 15 in set roles, at junior rates.','FWO'],['First bank account','Youth account, debit card and a Tax File Number to avoid top-rate withholding.','ATO'],['Own phone and plan','Parents usually still pay for handset, plan and accessories.','MS'],['Spending money','Clothes, food and social outings start to come from own earnings.','MS'],['Subject choices','Subject and vocational course choices start pointing toward later pay.','JSA']],f:['Small casual pay; a TFN and phone plan are the first real money decisions.','Regular shifts cover phone, clothes and outings; little or no tax usually.','Well above most teens; may get super if working over 30 hours weekly.']},
+   16:{c:[['Learner licence','Learner permit, lessons and logbook hours cost money before a car does.','AG'],['Part-time work','Weekend and after-school shifts pay junior rates that rise with each birthday.','FWO'],['Tax and TFN','Earnings below the tax-free threshold often mean a refund if a return is lodged.','ATO'],['First savings goal','Saving for a car, a trip or a laptop builds the savings habit.','MS'],['Choosing a pathway','Year 11 and 12 choices lead to university, TAFE, an apprenticeship or work.','JSA']],f:['Part-time hours are limited by school; family support is the safety net.','Regular part-time pay covers transport and a phone; first tax return and super begin.','Strong casual or tutoring earnings; self-employed income needs tax set aside and an ABN.']},
+   18:{c:[['Adult rights','Enrolling to vote begins; contracts, loans and phone plans become one’s own.','AEC'],['University, TAFE or work','Course fees, HELP loans, or a first full-time wage.','SAs'],['Student support','Youth Allowance or Austudy may help, depending on income and parental tests.','SA'],['P plates','Provisional licence period when young-driver insurance costs peak.','AG'],['Credit and buy now pay later','Easy credit appears; early missed payments can affect credit scores for years.','MS']],f:['Study, casual shifts or time out of work keep income low.','Steady casual or entry-level full-time pay covers a share house or car.','Apprenticeship with overtime or full-time work can reach the top tenth.']},
+   20:{c:[['First car','Vehicle purchase plus registration, compulsory insurance and fuel costs add up.','MS'],['Moving out','Share-house rent, bond and utility connections need upfront cash.','MS'],['Trade wages','Apprentice pay climbs with each training year, alongside tools and training costs.','AA'],['Study debt','HELP debt indexes yearly; repayments begin once income passes the threshold.','SAs'],['First super','Employer super, 12% of ordinary earnings, builds from the first job.','ATO']],f:['Rent, car and study costs can absorb all income; watch credit and buy now pay later.','Steady work allows saving alongside rent and car; HELP repayments may begin.','Trades, mining, sales or business income; set aside tax as it arrives faster.']},
+   22:{c:[['Graduate job','First full-time salary is taxed at higher marginal rates than part-time pay.','ATO'],['Super builds','Employer super is paid on top of wages; early years have the longest compounding time.','ATO'],['HELP repayments','Collected through the tax system once income is above the repayment threshold.','SAs'],['Own rental','Rent takes a large share of take-home pay, especially in capital cities.','MS'],['Travel','Working holidays and travel are common before larger financial commitments.','SW']],f:['Low pay or part-time work leaves little after rent; debts compete for each dollar.','Graduate or trade wage covers rent with room to save; HELP and super start building.','Specialised graduate roles, overtime trades or a business; early investing grows longest.']},
+   24:{c:[['Step up','Changing jobs often brings the biggest pay increases over a career.','JSA'],['Emergency fund','Aim for about three months of expenses in easy-access savings.','MS'],['Insurance basics','Consider health, income protection and car cover; Medicare levy surcharge rules matter.','DoH'],['Debt habits','Clear credit card and buy now pay later balances monthly to protect savings.','MS'],['Relationships','Partners often start sharing rent and everyday costs.','MS']],f:['Interrupted work or casual hours keep income lean; rent takes a large share.','Steady full-time wage supports independent renting, a car and some saving.','High early-career pay lets a deposit build in a few years if spending stays flat.']},
+   26:{c:[['Mid-level role','Specialised skills can lift pay and move you into a higher tax bracket.','JSA'],['Health cover','Choosing private health cover before age loading applies may reduce long-term costs.','DoH'],['Deposit saving','Saving a house deposit typically takes years, and longer in capital cities.','HA'],['First investments','Some people start with shares, index funds or extra super contributions.','MS'],['Tax deductions','Recording work expenses carefully supports a first full tax return.','ATO']],f:['Part-time work, caring or study; explore the Home Guarantee Scheme and state first home buyer help.','Renting and a car leave room to save; buying with a partner or scheme becomes realistic.','Larger deposit or single-income purchase; tax and investing choices start to matter.']},
+   28:{c:[['Deposit goal','Low-deposit government schemes may cut the savings needed for a first home.','HA'],['Partner moves in','Combined incomes may boost borrowing capacity and split living costs.','MS'],['Pay growth','Pay often rises fastest before 35, mainly through job or employer changes.','ABS'],['Tax planning','Salary packaging, offsets and deductions start becoming important to manage.','ATO'],['Legal basics','Wills, enduring powers of attorney and super death beneficiaries start to matter.','MS']],f:['Low single income may only support a small purchase with help; renting while saving is common.','Suits a first home with a sizeable mortgage, often with a partner; repayments need a buffer.','Higher income can borrow more and save faster, often as a dual-income couple.']},
+   30:{c:[['First home','Many buyers start around 30 to 35; plan for stamp duty, mortgage and legal fees.','HA'],['Weddings and partnerships','Plan for wedding costs, shared accounts and combining households.','MS'],['Life insurance','Consider cover for the mortgage and any dependants.','MS'],['First will','Once you own assets, set up a will and nominate beneficiaries.','MS'],['Interest rates','Small rate changes can shift repayments by hundreds of dollars monthly.','MS']],f:['A partner, scheme or cheaper region may be needed; childcare and variable work strain budgets.','Typical first home with a sizeable mortgage; repayments take a large income share, so keep a buffer.','Larger deposit lowers repayments; offset accounts, extra repayments and tax planning matter.']},
+   32:{c:[['First child','Gear, health costs and lost income arrive together with a first baby.','SA'],['Parental leave','Government Paid Parental Leave and employer leave soften the income dip.','SA'],['A bigger home','An extra bedroom puts pressure on the mortgage.','HA'],['Income protection','Cover matters more once others depend on the income.','MS'],['Work flexibility','Part-time work affects super and promotions; rights to request flexibility apply.','FWO']],f:['A parent may go back to work early to meet rent or mortgage costs.','Costs of a first child, leave and childcare reshape the household budget for a time.','High earnings can fund a bigger home and childcare, yet may cut family payments.']},
+   34:{c:[['Childcare costs','Peak childcare costs; the Child Care Subsidy offsets part based on income.','SA'],['Return to work','Often part-time at first, affecting super and pay progression.','FWO'],['Family car','Bigger or second car adds loan, insurance and running costs.','MS'],['Mortgage repayments','Usually the single largest regular expense.','MS'],['Super check','Check balances, consolidate accounts and look at fees.','ATO']],f:['Compare Child Care Subsidy outcomes for different working days.','Childcare, school costs and mortgage repayments compete with super top-ups and savings.','Discuss an investment loan with an adviser before borrowing.']},
+   36:{c:[['Mortgage at its heaviest','Repayments often take a large share of income, and rate changes bite hardest.','MS'],['Promotion','Management roles lift income, often with more hours or responsibility.','JSA'],['Second child','A second child repeats childcare and leave costs.','SA'],['Kids’ activities','Sport, music and school costs grow with every child.','AG'],['Cost of living','Utilities, groceries and insurance grow with household size.','ACCC']],f:['Rising bills and rates can force cuts; seek lender and utility hardship support.','Mortgage, children’s costs and some saving; top up super and review insurance.','Senior or professional income; tax and investment ownership choices matter.']},
+   38:{c:[['Kids’ sport and school','School fees, kit, trips and tutoring costs build up every term.','DoE'],['Senior role','Salary keeps rising, though extra earnings are usually taxed more heavily.','ATO'],['Insurance review','Match income, life, home and contents policies to current family needs.','MS'],['Investing beyond super','Offsets, shares and property begin competing for leftover savings.','MS'],['Ageing parents','Early signs of parental need prompt initial planning conversations.','MAC']],f:['School costs strain budgets; school-card schemes and concession cards can ease them.','Schooling and mortgage payments absorb most of the budget; save for each need separately.','Private school, travel and investing goals are affordable; review wills and attorneys.']},
+   40:{c:[['Earnings climb','Earnings keep rising toward their peak for many people.','ATO'],['Renovations','Funded from savings or the mortgage.','MS'],['Extra repayments','Paying down the mortgage reduces interest cost over the loan.','MS'],['Study again','Reskilling through TAFE, university or short courses is possible at any age.','SAs'],['Health checks','Checks and screening matter more as the cost of ill health rises.','DoH']],f:['Fee-free or subsidised training and income support may help.','Mortgage, children’s costs and some saving; full super contributions matter.','Senior roles, professional practice or business income; consider trust or company structures.']},
+   42:{c:[['School costs rise','Secondary school brings devices, tutoring and bigger activity costs.','DoE'],['Replacement car','The family car is often replaced, which is a major unplanned expense.','MS'],['Parents’ care','Helping ageing parents becomes a real time and money question.','MAC'],['Higher tax bracket','More income means higher marginal rates. Deductions matter more.','ATO'],['Family holidays','Bigger holidays compete with other goals.','SW']],f:['Teenage costs rise faster than pay. Cost-of-living support and cheaper activities help.','Teenage costs and slow pay rises compete with mortgage reduction and super top-ups.','Investment, super caps and planning for children’s study or trades costs.']},
+   44:{c:[['Teenage costs','Costs for phones, food, travel and socialising rise per teen.','MS'],['Leadership or own business','Leadership roles or side businesses can change income and tax position.','ATO'],['Business set-up','Side businesses need an ABN, GST registration and proper records.','ABR'],['Health costs rise','Dental, physio and specialist visits become more frequent.','DoH'],['Investing','Two decades of compounding to retirement still offers meaningful growth.','MS']],f:['Side work may help, but irregular income needs tax and super understood first.','Near the middle earners, juggling mortgage, family and retirement.','Top-tenth income makes super caps, tax planning and investment structure increasingly material.']},
+   46:{c:[['Peak earning begins','Earnings often peak from the mid-40s onward.','ABS'],['Child at university','Parents frequently assist with university fees, rent or living expenses.','SAs'],['Mortgage shrinking','Mortgage balance declines over time as home equity grows.','MS'],['Super top-ups','Unused concessional caps may carry forward if the super balance is under the threshold.','ATO'],['Estate review','Wills, powers of attorney and beneficiaries need periodic review.','MS']],f:['Modest super balances; small top-ups matter. The Age Pension is a possible safety net.','Peak earning years; mortgage, children and super compete for funds.','Salary, bonuses and investments; tax, super caps and estate planning matter.']},
+   48:{c:[['Peak saving','Saving capacity often rises as children’s costs decline.','MS'],['Kids move out, or back','Adult children may leave home or return temporarily.','MS'],['Insurance and estate','Cover needs shift as children gain financial independence.','MS'],['Bigger travel','Longer trips become more affordable with added time and money.','SW'],['Health','Preventive care matters more as health costs rise.','DoH']],f:['Lower cash flow, but falling costs allow small, steady retirement savings steps.','Stable income; shorter time to build super, so use it wisely.','Peak earnings; prioritise catch-up super, investments and a work wind-down plan.']},
+   50:{c:[['Highest average income','Many people reach their peak average income around this stage.','ABS'],['Mortgage near paid off','Many households are nearly finished paying off their home loan.','MS'],['Supporting adult kids','Helping children with deposits or rent competes with retirement saving.','MS'],['Retirement planning','Super balance and retirement income projections become increasingly useful.','MS'],['Investments','Review portfolio risk as retirement draws closer.','MS']],f:['Super may need a catch-up; stay in work, avoid new debt, check the Age Pension.','Balance extra mortgage payments against super top-ups and a retirement plan.','Catch-up super, investment income and tax structure shape strategy.']},
+   52:{c:[['Peak income years','Pay stays strong, and super contributions grow alongside it.','ATO'],['Catch-up super','Extra contributions can help close a retirement savings gap.','ATO'],['Mortgage payoff','Clearing the home loan marks a major retirement milestone.','MS'],['Adult children','Financial support for adult children may keep going.','MS'],['Health','Rising health costs make cover decisions more important.','DoH']],f:['Focus on clearing debts and any available catch-up contributions.','Peak working years. Mortgage payoff, super catch-up and support for adult children often compete.','High income allows catch-up contributions and investments; plan drawdown timing.']},
+   54:{c:[['Empty nest','Households often downsize their spending when children leave.','MS'],['Super growth','Super balances often grow fastest in the last decade before retirement.','ATO'],['Travel budget','More time and income for travel.','SW'],['Insurance review','Needs change as dependants leave and wealth grows.','MS'],['Parents’ care','Care for ageing parents may peak.','MAC']],f:['Costs fall after children leave, so extra repayments or super contributions may be possible.','Empty-nest years free up cash flow for extra super and mortgage payments.','Choices about drawing on super, investing outside it and cutting work hours.']},
+   56:{c:[['Downsizing','Selling a larger home frees equity; downsizer super contributions may be allowed from 55.','ATO'],['Reduced hours','Some move to part-time work to ease gradually into retirement.','FWO'],['Advice','A licensed adviser can help shape a retirement strategy.','MS'],['Risk review','Rebalancing investment risk as retirement gets closer.','MS'],['Health costs','Dental, eye and medical expenses keep climbing.','DoH']],f:['Stay in work as long as possible and avoid new debt.','Focus on super and savings; a few extra working years matter.','Watch the transfer balance cap; consider catch-up contributions and gradual retirement.']},
+   58:{c:[['Super access','Preservation age is 60, but a condition of release is needed.','ATO'],['Retirement approaches','Many people begin planning the last few years of full-time work.','MS'],['Health costs','Out-of-pocket health costs become noticeable.','DoH'],['Transition planning','Moving from full-time work to part-time or retirement.','MS'],['Estate documents','Wills and powers of attorney need to be current.','MS']],f:['Super and Age Pension entitlement shape the retirement date; working longer helps a small balance.','Planning last working years; super, home and downsizing decisions are close.','Choices centre on tax, structure and legacy; super withdrawal timing shapes tax paid.']},
+   60:{c:[['Super preservation age','Super can be accessed on retirement for people born after 1 July 1964.','ATO'],['Many cut back or retire','Some people reduce work or retire at this stage of life.','MS'],['Health spending','Health costs rise, so private health cover should be reviewed.','DoH'],['Transition to retirement','Drawing a super pension while still working can support tax planning.','ATO'],['Home equity','The family home is often the largest asset at this stage.','HA']],f:['Super may give limited income, so the Age Pension will play a larger role.','Many people reduce hours or retire around now.','Continued higher earnings, business income or investments.']},
+   62:{c:[['Retirement for many','Paid work ends and super plus savings take over as income.','MS'],['Super pension or lump sum','Income stream versus lump sum changes tax and pension outcomes.','ATO'],['Travel years','Early retirement is often the most active period for travel.','SW'],['Health costs','Out-of-pocket health costs tend to rise at this stage.','DoH'],['Home decisions','Choose whether to stay, downsize or renovate for later life.','HA']],f:['Super is small; the Age Pension at 67 matters. Budget carefully until then.','Decide how much super to keep invested, when to claim a pension and home use.','Tax, super structure and estate planning dominate at this income level.']},
+   64:{c:null,f:null},
+   66:{c:[['Age Pension age','The age is 67. Claims can usually be lodged shortly before eligibility.','SA'],['Medicare costs','Medicare covers many costs, but out-of-pocket expenses grow.','DoH'],['Home equity','The family home is exempt from the pension assets test but is a key asset.','SA'],['Assets and income tests','Pension is reduced as income and assets rise above set limits.','SA'],['Claim ahead','Lodging early avoids gaps in income.','SA']],f:['The Age Pension may be the main income; Rent Assistance may apply to renters.','A part Age Pension may be paid depending on assets and income; super drawdowns and the pension may combine.','Income and assets are often too high for the pension; review estate planning, including super death benefits.']},
+   68:{c:[['Pension plus super','Age Pension and super drawdowns combine to form income.','SA'],['Health costs rise','Specialist, dental and optical costs are growing.','DoH'],['Grandchildren','Gifts and childcare help for grandchildren become part of the budget.','MS'],['Grey nomad travel','Caravans and long road trips are a typical retirement spend.','SW'],['Investment income','Dividends and interest add to retirement income.','ATO']],f:['Track income carefully to stay within pension limits; travel is often low cost.','Income mixes part pension, super and small investments; thresholds affect payments.','Investment income tax and estate planning are the main issues.']},
+   70:{c:[['Minimum drawdown','Super pensions require a minimum payment each year.','ATO'],['Maintenance costs','Home upkeep costs rise; some people choose to downsize.','HA'],['Driving less','Fewer trips, and licence checks begin in some states.','AG'],['Medication','Regular medication and health visits become a fixed cost.','DoH'],['Estate planning','Keep wills and enduring powers of attorney up to date.','MS']],f:['Fixed income calls for careful budgeting; concessions on health, transport and energy help.','Steady pension or super income; check bills and cover yearly as costs rise.','Investment and super income; focus on minimum drawdowns, tax and estate planning.']},
+   72:{c:[['Specialist care','Specialist and hospital visits become more frequent.','DoH'],['Helping family','Gifts to children and grandchildren are common.','SA'],['Steady income','Pension payments stay regular but do not keep pace with price rises.','SA'],['Energy costs','Heating and cooling costs strain fixed incomes.','ACCC'],['Safety net','Concessions and emergency funds guard against unexpected costs.','SA']],f:['Rising bills hurt most; seek concession and hardship support.','Covers daily costs; plan for health, home and future care.','Flexibility for family and travel; review estate and aged care plans.']},
+   74:{c:[['Home modifications','Handrails, ramps and bathroom changes help people remain at home.','MAC'],['Hospital and dental','Hospital and dental costs can be large.','DoH'],['Fixed-income budget','Budgeting on a fixed income requires care.','MS'],['Power of attorney','Powers of attorney and medical directives should be set up.','AG'],['Family support','Family help is often needed for decisions.','MAC']],f:['Government-funded home support may be available; start with a My Aged Care assessment.','Support at Home funding can help; get an aged care assessment before it becomes urgent.','Plan aged care costs, the family home and estate; get specialist advice before moving.']},
+   76:{c:[['Estate and attorney','Keep estate documents and attorney arrangements current and shared with family.','MS'],['Health services','Use of health services tends to rise at this stage.','DoH'],['Retirement living','Some people move to retirement villages or downsize to smaller homes.','MAC'],['Care planning','Planning ahead for possible aged care costs is a practical step.','MAC'],['Family conversations','Talking with family about wishes and finances helps later on.','MS']],f:['Review village contracts with free advice; check exit fees.','Get independent advice on village contracts and Age Pension effects.','Combine legal and financial advice; check powers of attorney before major moves.']},
+   78:{c:[['Village or home care','Retirement village or in-home care become real choices.','MAC'],['Home Care Package','Government-funded home care is assessed and prioritised.','MAC'],['Aged care means test','Contributions toward aged care depend on income and assets.','MAC'],['Respite','Short stays give carers and families a break.','MAC'],['Family support','Family often handles the paperwork and decisions.','SA']],f:['Subsidised care covers most costs, but waiting times can be long. Early assessment helps.','Care at home or in a facility is the main cost; fees depend on means.','Higher income and assets mean higher fees; accommodation payment choices matter most.']},
+   80:{c:[['Aged care costs','Daily fees, accommodation payments and means-tested contributions.','MAC'],['Family support','Family help and communication become central.','SA'],['Settling the estate','Executors and families may need practical guidance.','AG'],['Health','Ongoing medical, pharmacy and allied health costs.','DoH'],['Legacy gifts','Gifts, charity and legacy decisions are reviewed.','ATO']],f:['Government support covers most care costs.','Income and assets often fund care and health costs.','Larger assets mean higher care contributions; estate and legacy planning.']}
+  };
+  const EARLY=[['Child care','The Child Care Subsidy offsets part of the cost based on family income.','SA'],['Parental leave','Government Paid Parental Leave and employer leave soften the income dip.','SA'],['First savings','A youth savings account linked to a parent is a common first step.','MS'],['Health costs','Medicare covers many costs, but out-of-pocket expenses add up.','DoH'],['Help from grandparents','Grandparents often help with care and gifts.','MS']];
+  const SCHOOL=[['Starting school','Uniform, devices, stationery and excursions often fall in the same year.','DoE'],['Clubs and hobbies','Sport fees, uniforms and gear are often the first regular cost per child.','AG'],['Pocket money','Chores and gifts provide a first choice between saving and spending.','MS'],['Online life','Games and apps bring in-app purchases and first exposure to online scams.','SC'],['Savings account','A youth savings account linked to a parent is common.','MS']];
+  const LATE=B[80].c;
+
+  const TOP={order:['work','inc','earn','sup','nw','own','fhb','alone','parents','births','life','carer','dis','ret','retint','pen','exp','pay','scam','diff','online'],title:{work:'Work and study',inc:'Median personal income',earn:'Median weekly earnings',sup:'Super account balance (per account)',nw:'Household net worth and income',own:'Home ownership',fhb:'Share of first home buyers',alone:'Living alone',parents:'Living with parents',births:'Births per 1,000 women',life:'Parents, marriage and divorce',carer:'Unpaid carers',dis:'Living with disability',ret:'Retired at this age',retint:'Intended retirement age',pen:'Age Pension',exp:'Life expectancy',pay:'How people pay',scam:'Scam losses reported',diff:'Financial difficulty',online:'Online life'}};
+  const FIG=[
+   ['online',8,12,'84% had used at least one social media or messaging service since the start of the year','eSafety Commissioner, September 2024'],
+   ['work',15,19,'86.7% fully engaged in work and/or study; 81.1% currently enrolled in study','ABS Education and Work 2025'],
+   ['work',20,24,'76.7% fully engaged in work and/or study; 45.0% currently enrolled in study','ABS Education and Work 2025'],
+   ['work',15,24,'Just under half of all 2.4 million casual employees are aged 15 to 24','ABS Casual work 2025','Casual work, ages 15–24'],
+   ['work',65,99,'15% still working, up from 6.1% in 2001','AIHW using ABS, 2021','65 and over'],
+   ['inc',15,19,'$25 a week; 44% had nil or negative income','ABS Census 2021'],
+   ['inc',35,44,'$1,318 a week, one of the two highest groups','ABS Census 2021'],
+   ['inc',45,54,'$1,289 a week','ABS Census 2021'],
+   ['earn',45,54,'$1,750 a week, the highest median of any age group','ABS 2025'],
+   ['sup',12,17,'$307 median, $6,890 average (men $408, women $238)','ASFA using ATO data, 30 June 2024','Under 18'],
+   ['sup',18,24,'$6,071 median, $9,783 average (men $6,380, women $5,784)','ASFA using ATO data, 30 June 2024'],
+   ['sup',25,29,'$21,395 median, $27,822 average (men $21,742, women $21,048)','ASFA using ATO data, 30 June 2024'],
+   ['sup',30,34,'$40,426 median, $54,009 average (men $42,962, women $38,070)','ASFA using ATO data, 30 June 2024'],
+   ['sup',35,39,'$69,200 median, $91,265 average (men $78,289, women $61,022)','ASFA using ATO data, 30 June 2024'],
+   ['sup',40,44,'$100,330 median, $134,054 average (men $116,076, women $85,804)','ASFA using ATO data, 30 June 2024'],
+   ['sup',45,49,'$131,705 median, $182,866 average (men $154,751, women $110,864)','ASFA using ATO data, 30 June 2024'],
+   ['sup',50,54,'$161,375 median, $238,616 average (men $192,196, women $134,309)','ASFA using ATO data, 30 June 2024'],
+   ['sup',55,59,'$185,120 median, $301,151 average (men $220,560, women $154,732)','ASFA using ATO data, 30 June 2024'],
+   ['sup',60,64,'$203,326 median, $371,379 average (men $236,126, women $174,655)','ASFA using ATO data, 30 June 2024'],
+   ['sup',65,69,'$218,631 median, $437,422 average (men $230,766, women $207,187)','ASFA using ATO data, 30 June 2024'],
+   ['sup',70,74,'$227,982 median, $492,903 average (men $227,027, women $228,978)','ASFA using ATO data, 30 June 2024'],
+   ['sup',75,99,'$197,878 median, $525,439 average (men $200,477, women $195,201)','ASFA using ATO data, 30 June 2024','75 and over'],
+   ['nw',20,24,'$82,000 net worth; $1,768 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',25,29,'$242,000 net worth; $2,304 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',30,34,'$441,000 net worth; $2,588 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',35,39,'$555,000 net worth; $2,728 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',40,44,'$841,000 net worth; $2,961 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',45,49,'$1,055,000 net worth; $3,058 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',50,54,'$1,212,000 net worth; $3,017 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',55,59,'$1,453,000 net worth; $2,822 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',60,64,'$1,601,000 net worth; $2,245 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',65,69,'$1,835,000 net worth; $1,564 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',70,74,'$1,509,000 net worth; $1,330 gross household income a week','ABS Household Income and Wealth 2019–20'],
+   ['nw',75,99,'$1,167,000 net worth; $1,045 gross household income a week','ABS Household Income and Wealth 2019–20','75 and over'],
+   ['own',25,34,'43% of households owned their home, down from 50% in 1996','ABS Census 2021 via The Conversation','Households headed by ages 25–34'],
+   ['own',65,99,'79.4% own their home, up from 78.4% in 2016','ABS Census 2021 via The Conversation','65 and over'],
+   ['fhb',15,24,'5.3% of first home buyers','ABS Housing Occupancy and Costs 2019–20'],
+   ['fhb',25,34,'56.1% of first home buyers','ABS Housing Occupancy and Costs 2019–20'],
+   ['fhb',35,44,'25.6% of first home buyers','ABS Housing Occupancy and Costs 2019–20'],
+   ['fhb',45,54,'9.7% of first home buyers','ABS Housing Occupancy and Costs 2019–20'],
+   ['fhb',55,64,'3.4% of first home buyers','ABS Housing Occupancy and Costs 2019–20'],
+   ['alone',15,19,'1.2% lived alone','AIFS using ABS Census 2021'],
+   ['alone',20,24,'5.5% lived alone','AIFS using ABS Census 2021'],
+   ['alone',25,29,'8.6% lived alone','AIFS using ABS Census 2021'],
+   ['alone',30,34,'8.7% lived alone','AIFS using ABS Census 2021'],
+   ['alone',35,39,'7.9% lived alone','AIFS using ABS Census 2021'],
+   ['alone',40,44,'7.8% lived alone','AIFS using ABS Census 2021'],
+   ['alone',45,49,'8.9% lived alone','AIFS using ABS Census 2021'],
+   ['alone',50,54,'11.1% lived alone','AIFS using ABS Census 2021'],
+   ['alone',55,59,'14.2% lived alone','AIFS using ABS Census 2021'],
+   ['alone',60,64,'17.1% lived alone','AIFS using ABS Census 2021'],
+   ['alone',65,69,'19.4% lived alone','AIFS using ABS Census 2021'],
+   ['alone',70,74,'21.5% lived alone','AIFS using ABS Census 2021'],
+   ['alone',75,79,'24.5% lived alone','AIFS using ABS Census 2021'],
+   ['alone',80,84,'28.8% lived alone','AIFS using ABS Census 2021'],
+   ['parents',20,24,'Women 43%, men 51% lived with parents','AIFS using ABS Census 2021'],
+   ['births',15,19,'6.0 births per 1,000 women','ABS Births 2024'],
+   ['births',20,24,'30.6 births per 1,000 women','ABS Births 2024'],
+   ['births',25,29,'71.3 births per 1,000 women','ABS Births 2024'],
+   ['births',30,34,'106.0 births per 1,000 women','ABS Births 2024'],
+   ['births',35,39,'66.6 births per 1,000 women','ABS Births 2024'],
+   ['births',40,44,'15.5 births per 1,000 women','ABS Births 2024'],
+   ['births',45,49,'1.4 births per 1,000 women','ABS Births 2024'],
+   ['life',26,36,'Median age of mothers 32.1, fathers 33.9','ABS Births 2024','All births, 2024'],
+   ['life',28,36,'Median age at marriage: men 32.7, women 31.2','ABS 2025','All marriages, 2025'],
+   ['life',42,50,'Median age at divorce: men 47.3, women 44.4','ABS 2025','All divorces, 2025'],
+   ['carer',0,14,'Men 2.1%, women 2.3% were unpaid carers','ABS Disability, Ageing and Carers 2022','Under 15'],
+   ['carer',15,24,'Men 8.9%, women 9.5% were unpaid carers','ABS Disability, Ageing and Carers 2022'],
+   ['carer',25,34,'Men 8.6%, women 8.4% were unpaid carers','ABS Disability, Ageing and Carers 2022'],
+   ['carer',35,44,'Men 11.5%, women 15.8% were unpaid carers','ABS Disability, Ageing and Carers 2022'],
+   ['carer',45,54,'Men 14.1%, women 20.5% were unpaid carers','ABS Disability, Ageing and Carers 2022'],
+   ['carer',55,64,'Men 16.0%, women 19.5% were unpaid carers','ABS Disability, Ageing and Carers 2022'],
+   ['carer',65,74,'Men 19.7%, women 18.6% were unpaid carers','ABS Disability, Ageing and Carers 2022'],
+   ['carer',75,99,'Men 20.1%, women 13.8% were unpaid carers','ABS Disability, Ageing and Carers 2022','75 and over'],
+   ['dis',5,14,'13.5% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['dis',15,24,'13.9% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['dis',25,34,'10.3% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['dis',35,44,'11.5% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['dis',45,54,'17.8% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['dis',55,59,'26.4% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['dis',60,64,'33.2% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['dis',65,69,'40.3% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['dis',70,74,'44.9% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['dis',75,79,'53.4% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['dis',80,84,'67.6% had a disability','ABS Disability, Ageing and Carers 2022'],
+   ['ret',50,54,'Men 9.3%, women 11.8% retired','ABS Retirement and Retirement Intentions 2024–25'],
+   ['ret',55,59,'Men 16.8%, women 18.6% retired','ABS Retirement and Retirement Intentions 2024–25'],
+   ['ret',60,64,'Men 25.7%, women 23.1% retired','ABS Retirement and Retirement Intentions 2024–25'],
+   ['ret',65,69,'Men 24.3%, women 15.5% retired','ABS Retirement and Retirement Intentions 2024–25'],
+   ['ret',70,74,'Men 8.0%, women 4.5% retired','ABS Retirement and Retirement Intentions 2024–25'],
+   ['ret',75,79,'Men 2.6%, women 1.2% retired','ABS Retirement and Retirement Intentions 2024–25'],
+   ['retint',45,70,'Average intended retirement age 65.6 (men 65.9, women 65.3)','ABS Retirement and Retirement Intentions 2024–25','Ages 45 and over'],
+   ['pen',65,69,'30% received the Age Pension','AIHW Income support for older Australians, 2023'],
+   ['pen',70,74,'60% received the Age Pension','AIHW Income support for older Australians, 2023'],
+   ['exp',58,64,'Men another 24.2 years, women another 27.1 years','ABS life tables 2021–23','Life expectancy at 60'],
+   ['exp',64,72,'Men another 20.2 years, women another 22.8 years','AIHW using ABS, 2020–22','Life expectancy at 65'],
+   ['pay',18,29,'About 80% of payments made by card','RBA Consumer Payments Survey 2025'],
+   ['pay',65,99,'About 60% of payments made by card','RBA Consumer Payments Survey 2025','65 and over'],
+   ['scam',12,17,'Shopping scams ($926,636), then investment scams ($56,469)','National Anti-Scam Centre 2025','Under 18'],
+   ['scam',18,24,'Threat-based scams ($8.2 million), then job scams ($2.2 million)','National Anti-Scam Centre 2025'],
+   ['scam',25,34,'Investment scams ($10.8 million), then job scams ($5.9 million)','National Anti-Scam Centre 2025'],
+   ['diff',18,24,'85% had experienced financial difficulties to some extent; 28% often or very often','Roy Morgan Youth Barometer 2025']
+  ];
+  const INC=[
+   [12,17,'Up to about $1,500','$6,200 to $10,000','Above about $23,500','Under 18'],
+   [18,24,'Up to about $8,900','$28,000 to $40,500','Above about $71,500','Ages 18 to 24'],
+   [25,29,'Up to about $15,500','$48,500 to $65,500','Above about $108,000','Ages 25 to 29'],
+   [30,34,'Up to about $16,000','$53,500 to $75,500','Above about $134,000','Ages 30 to 34'],
+   [35,39,'Up to about $17,000','$58,000 to $83,500','Above about $157,000','Ages 35 to 39'],
+   [40,44,'Up to about $18,500','$61,500 to $89,500','Above about $174,000','Ages 40 to 44'],
+   [45,49,'Up to about $19,500','$63,000 to $91,500','Above about $180,000','Ages 45 to 49'],
+   [50,54,'Up to about $19,000','$61,000 to $88,000','Above about $178,000','Ages 50 to 54'],
+   [55,59,'Up to about $16,500','$55,500 to $81,000','Above about $169,000','Ages 55 to 59'],
+   [60,64,'Up to about $7,900','$43,000 to $66,000','Above about $146,000','Ages 60 to 64'],
+   [65,69,'Up to about $4,600','$28,000 to $47,500','Above about $121,000','Ages 65 to 69'],
+   [70,74,'Up to about $3,500','$22,000 to $35,500','Above about $105,000','Ages 70 to 74'],
+   [75,99,'Up to about $3,000','$21,000 to $33,000','Above about $98,000','Ages 75 and over']
+  ];
+  const FG='Financial counsellor (National Debt Helpline)';
+  const PROS={
+   teen:[['School careers adviser','Youth worker','Fair Work Ombudsman'],['School careers adviser','Bank youth-account staff','Registered tax agent'],['Registered tax agent or accountant','Licensed financial adviser']],
+   young:[[FG,'ATO Tax Help volunteer','Services Australia Financial Information Service officer'],['Registered tax agent','Super fund member adviser','Mortgage broker'],['Licensed financial adviser','Accountant','Mortgage broker']],
+   fam:[[FG,'Services Australia Financial Information Service officer','Community legal centre'],['Mortgage broker','Registered tax agent','Licensed financial adviser','Insurance broker','Estate planning lawyer'],['Licensed financial adviser (CFP)','Accountant (CA or CPA)','Tax specialist','Estate planning lawyer']],
+   mid:[[FG,'Services Australia Financial Information Service officer','Community legal centre'],['Licensed financial adviser (retirement planning)','Registered tax agent','Mortgage broker','Super fund member adviser'],['Licensed financial adviser (CFP)','Accountant (CA or CPA)','SMSF specialist','Estate planning lawyer']],
+   ret:[['Services Australia Financial Information Service officer','Financial counsellor','Seniors legal or rights service'],['Licensed financial adviser (retirement income)','Registered tax agent','Estate planning lawyer','My Aged Care assessor'],['Licensed financial adviser (retirement and aged care)','Accountant','Elder law or estate planning lawyer']],
+   old:[['My Aged Care assessor','Older Persons Advocacy Network','Services Australia Financial Information Service officer','Seniors legal or rights service'],['Specialist aged care financial adviser','Elder law solicitor','My Aged Care assessor','Registered tax agent'],['Specialist aged care financial adviser','Elder law and estate planning lawyer','Accountant','Licensed financial adviser']]
+  };
+  this._d={nodes:nodes,by:by,kids:kids,depth:depth,dom:dom,isAnc:isAnc,chain:chain,doms:doms,flat:flat,orgs:orgs,S:S,stages:stages,SRC:SRC,B:B,EARLY:EARLY,SCHOOL:SCHOOL,LATE:LATE,TOP:TOP,FIG:FIG,INC:INC,PROS:PROS};
+  return this._d;
+}
+
+go(id,via){
+  const D=this.getData(); const s=this.state; const n=D.by[id];
+  const visited=Object.assign({},s.visited); visited[id]=(visited[id]||0)+1;
+  const beh=s.beh.map((b,i)=>b+n.tg[i]);
+  const dom=D.dom(id); const deepest=Object.assign({},s.deepest); const cur=deepest[dom];
+  if(!(cur && D.isAnc(id,cur))) deepest[dom]=id;
+  this.setState({focus:id,via:via||null,visited:visited,beh:beh,deepest:deepest,showAll:false,q:'',allRefs:false});
+}
+
+shift(d){
+  const s=this.state; const c=v=>Math.max(0,Math.min(98,v+2*d));
+  this.setState({meAge:c(s.meAge),members:s.members.map(m=>Object.assign({},m,{age:c(m.age)})),beh:s.beh.map(b=>b*0.85)});
+}
+
+stepAge(id,d){
+  const s=this.state; const c=v=>Math.max(0,Math.min(98,v+2*d));
+  if(id==='me'){ this.setState({meAge:c(s.meAge)}); return; }
+  this.setState({members:s.members.map(m=>m.id===id?Object.assign({},m,{age:c(m.age)}):m)});
+}
+
+patchMember(id,patch){
+  const s=this.state;
+  this.setState({members:s.members.map(m=>m.id===id?Object.assign({},m,patch):m)});
+}
+
+removeMember(id){
+  const s=this.state;
+  this.setState({members:s.members.filter(m=>m.id!==id),who:s.who===id?null:s.who});
+}
+
+addMember(rel){
+  const s=this.state; const A=s.meAge; const ev=v=>Math.max(0,Math.min(98,v-(v%2)));
+  const same=s.members.filter(m=>m.rel===rel);
+  const defs={parent:['Mum','Dad','Parent 3','Parent 4'],grandparent:['Nan','Pop','Grandparent 3','Grandparent 4']};
+  let label;
+  if(defs[rel]){ label=defs[rel].find(x=>!same.some(m=>m.label===x))||('Parent '+(same.length+1)); }
+  else if(rel==='partner'){ label='Partner'; }
+  else if(rel==='child'){ label='Child '+(same.length+1); }
+  else { label='Grandchild '+(same.length+1); }
+  const ages={parent:ev(A+28),grandparent:ev(A+56),partner:ev(A),child:ev(A-28),grandchild:ev(A-56)};
+  const m={id:'m'+s.nid,rel:rel,label:label,age:ages[rel],home:''};
+  this.setState({members:s.members.concat([m]),nid:s.nid+1});
+}
+
+renderVals(){
+  const D=this.getData(); const s=this.state; const by=D.by; const S=D.S[s.st];
+  const A=s.meAge;
+  const bl=a=>a+'–'+(a+1);
+  const stageOf=a=>D.stages.find(x=>a>=x.from&&a<=x.to)||D.stages[D.stages.length-1];
+  const HOME=[{v:'',t:'Not set',short:''},{v:'with-you',t:'With you',short:'with you'},{v:'own',t:'Own home',short:'own home'},{v:'alone',t:'Living alone',short:'alone'},{v:'renting',t:'Renting',short:'renting'},{v:'share',t:'Share house',short:'share house'},{v:'village',t:'Retirement village',short:'village'},{v:'care',t:'Aged care home',short:'care home'}];
+  const homeShort=h=>{ const x=HOME.find(o=>o.v===h); return x?x.short:''; };
+  const REL={me:'You',parent:'Parent',grandparent:'Grandparent',partner:'Partner',child:'Child',grandchild:'Grandchild'};
+  const all=[{id:'me',rel:'me',label:'You',age:A,home:s.meHome}].concat(s.members);
+  const subj=(s.who&&all.find(m=>m.id===s.who))||all[0];
+  const fAge=subj.age;
+
+  const BR=['Safety net','Building','Established','Structuring'];
+  const BRL=['safety-net topics','building topics','established topics','structuring topics'];
+  const prior=a=>{ if(a<22) return [.55,.33,.09,.03]; if(a<30) return [.25,.5,.2,.05]; if(a<45) return [.1,.35,.4,.15]; if(a<60) return [.08,.25,.37,.3]; if(a<75) return [.25,.2,.28,.27]; return [.35,.2,.22,.23]; };
+  const pr=prior(A);
+  const tot=s.beh.reduce((a,b)=>a+b,0);
+  const lam=tot/(tot+4)*0.75;
+  let W=pr.map((p,i)=>(1-lam)*p+lam*(tot>0?s.beh[i]/tot:0));
+  W=W.map(w=>Math.max(w,0.06));
+  const wsum=W.reduce((a,b)=>a+b,0); W=W.map(w=>w/wsum);
+  const dot=tg=>tg.reduce((a,t,i)=>a+t*W[i],0);
+  const rel=(d,a)=>{
+    if(d==='d_income') return a<25?1:(a<60?.5:.9);
+    if(d==='d_super') return a<16?.2:(a<24?.6:.9);
+    if(d==='d_est') return a<28?.1:(a<40?.5:.9);
+    if(d==='d_agedcare') return a>=62?1:(a>=44?.55:.1);
+    if(d==='d_property') return a<22?.1:(a<58?.9:.45);
+    if(d==='d_family') return a<18?.2:(a<56?.9:.5);
+    if(d==='d_early') return a<12?1:(a<18?.5:(a<45?.35:.15));
+    if(d==='d_living') return a<20?.5:(a<30?.8:(a<60?.5:.9));
+    return .5;
+  };
+  const score=n=>0.6*dot(n.tg)+0.4*rel(D.dom(n.id),fAge);
+  const firstSentence=t=>{ const i=t.indexOf('. '); return i>0?t.slice(0,i+1):t; };
+  const pathOf=id=>D.chain(id).map(i=>by[i].t).join(' › ');
+  const card=id=>{ const n=by[id]; return {id:id,title:n.t,short:firstSentence(n.s),score:score(n),match:dot(n.tg),visited:!!s.visited[id],go:()=>this.go(id,null)}; };
+  const rank=ids=>{
+    const arr=ids.map(card).sort((a,b)=>b.score-a.score);
+    arr.forEach((c,i)=>{
+      c.badge=(i===0&&arr.length>1)?'Most relevant now':(c.match<0.2?'Less typical for now, still here':'');
+      c.hasBadge=!!c.badge; c.badgeBg=i===0?'#DDEFEA':'#EEF1F0';
+    });
+    return arr;
+  };
+  const limit=arr=>(s.mode==='guided'&&!s.showAll)?arr.slice(0,3):arr;
+
+  // ----- household layout
+  const gp=s.members.filter(m=>m.rel==='grandparent'), par=s.members.filter(m=>m.rel==='parent'), kid=s.members.filter(m=>m.rel==='child'), gk=s.members.filter(m=>m.rel==='grandchild'), pt=s.members.filter(m=>m.rel==='partner');
+  const elders=gp.concat(par);
+  const ROWS=[]; if(gp.length) ROWS.push('gp'); if(par.length) ROWS.push('par'); ROWS.push('me'); if(kid.length) ROWS.push('kid'); if(gk.length) ROWS.push('gk');
+  const rowY={}; ROWS.forEach((r,i)=>{rowY[r]=64+i*170;});
+  const stageH=64+(ROWS.length-1)*170+84;
+  const pos={me:{x:90,y:rowY.me}};
+  const place=(arr,row)=>{ arr.forEach((m,i)=>{ pos[m.id]={x:Math.round((i+0.5)*720/arr.length),y:rowY[row]}; }); };
+  place(gp,'gp'); place(par,'par'); place(kid,'kid'); place(gk,'gk');
+  pt.forEach(m=>{ pos[m.id]={x:250,y:rowY.me}; });
+  const rowOf=m=>({grandparent:'gp',parent:'par',child:'kid',grandchild:'gk',partner:'me',me:'me'})[m.rel];
+  const meIdx=ROWS.indexOf('me');
+  const laneY=row=>{ const i=ROWS.indexOf(row); const j=i<meIdx?i+1:i-1; return Math.round((rowY[row]+rowY[ROWS[j]])/2); };
+  const nmL=ms=>{ const n=ms.map(m=>m.label); return n.length<2?n.join(''):n.slice(0,-1).join(', ')+' and '+n[n.length-1]; };
+
+  const ovs=[];
+  const mk=(id,label,root,tg,ms,aT,bT,solo)=>{
+    if(!ms.length) return;
+    const others=ms.filter(m=>m.id!=='me');
+    const first=others[0]||ms[0];
+    ovs.push({id:id,label:label,root:root,tg:tg,ms:ms,others:others,aT:aT||'',bT:bT||'',solo:!!solo||others.length===0,row:rowOf(first),age:Math.max.apply(null,ms.map(m=>m.age))});
+  };
+  const adult=A>=25;
+  mk('care','Aged care ↔ your estate plan','a_estate',[.5,.5,.8,.7],adult?elders.filter(m=>m.age>=62):[],'Assessment through My Aged Care, then means-tested fees and an accommodation payment. How these are paid shapes what remains in the estate.','Your own will, powers of attorney and who manages money for {n} should be planned together, so one decision does not undercut the other.');
+  mk('bequest','Super death benefit ↔ your bequest','s_death',[.2,.4,.9,.9],adult?elders.filter(m=>m.age>=54):[],'Super is usually paid under the fund rules and any nomination on file, not under a will.','Part of a benefit paid to an adult child can be taxed. Your own super choices today decide what you could pass on later.');
+  mk('pension','Age Pension and gifting','i_gift',[.8,.5,.4,.3],adult?elders.filter(m=>m.age>=58):[],'Age Pension income and assets tests apply, and gifts and care fees can change the result.','Helping you early can trigger gifting rules, so timing matters for their payments and for your own plans.');
+  mk('carer','Caring for family ↔ your work','f_carer',[.8,.6,.3,.1],(adult&&A<72)?elders.filter(m=>m.age>=72):[],'Care needs usually rise with age and health, and respite and carer supports exist.','Caring can cut paid work and super, so plan for both. Talk early with {n} and the rest of the family.');
+  mk('living','Living together ↔ money and housing','l_family',[.6,.6,.7,.7],all.filter(m=>m.home==='with-you'&&m.id!=='me'&&m.rel!=='partner'&&(m.rel==='parent'||m.rel==='grandparent'||m.age>=18)),'Living in a family home can change pension, tax and who owns what. A written agreement protects everyone.','Settle shared costs, any payment for a room or granny flat, and what happens if the arrangement ends.');
+  mk('alone','Living alone ↔ support at home','l_alone',[.7,.6,.6,.5],all.filter(m=>m.home==='alone'),'Living alone raises the value of home support, safety checks and a plan if health changes.','Staying in touch and knowing who holds authority to act helps when {n} needs support.');
+  mk('village','Retirement village ↔ contracts and pension','l_down',[.4,.5,.8,.8],all.filter(m=>m.home==='village'),'Village contracts can carry exit fees and affect the Age Pension. Get independent advice first.','Family often helps review contracts and should know where the documents are.');
+  mk('resid','Residential care ↔ family finances','a_cost',[.6,.6,.7,.8],all.filter(m=>m.home==='care'),'Residential care fees are means-tested, with a choice of accommodation payment.','How the fees are paid affects the estate and any help you give.');
+  mk('rent','Renting ↔ support and costs','l_rent',[1,.6,.1,0],all.filter(m=>m.home==='renting'),'Rent takes a large share of income, and Rent Assistance or concessions may help.','If you help with rent, note the gifting rules and your own cash flow.');
+  mk('share','Share house ↔ costs of leaving home','l_share',[.8,.7,.1,0],all.filter(m=>m.home==='share'),'Bond, upfront costs and shared bills arrive together. Know your tenancy rights.','If you help with the bond or rent, agree what is a gift and what is a loan.');
+  mk('pfam',A>=16?'Youth payments ↔ family income':'Family costs ↔ your household',A>=16?'i_youth':(A>=12?'f_kids':'y_school'),[.8,.6,.3,.1],A<25?par:[],'Parents income can count for youth and student payments until independence tests are met.','Your own earnings and savings start here: a tax file number, a first account and pocket money.');
+  mk('teen','Youth payments ↔ your income','i_youth',[.6,.5,.4,.2],kid.filter(m=>m.age>=16&&m.age<=24),'Youth Allowance and similar payments can depend on parents income until independence tests are met.','Your income and cash flow decide what support the household can reach, and what to set aside.');
+  mk('kids','Costs of kids ↔ your cash flow','f_kids',[.6,.6,.4,.2],kid.filter(m=>m.age>=6&&m.age<=15),'School, devices and activities cost more each year, and costs rise again in the teens.','Family payments and subsidies depend on household income and hours worked.');
+  mk('early','Child care and early years ↔ your work','y_care',[.6,.6,.4,.2],kid.filter(m=>m.age<6),'Early years bring child care costs, leave and a first savings account.','The Child Care Subsidy and parental leave interact with your work hours.');
+  mk('firstjob','First job, tax file number and super','s_low',[.8,.7,.1,0],kid.filter(m=>m.age>=15),'','',true);
+  mk('grand','Gifts and help for grandchildren','i_gift',[.5,.5,.6,.5],A>=40?gk:[],'Gifts for school, savings or a first car are common.','Large gifts can count under pension rules, and money in a child name can be taxed differently.');
+  mk('couple','Couple finances: super and wills','s_couple',[.3,.6,.8,.7],pt,'Their super, will and powers of attorney matter as much as yours.','Keep both sets of documents in step: wills, nominations and who decides if one of you cannot.');
+  mk('selfme',A<12?'Pocket money and first savings':(A<24?'Your first jobs, tax and super':(A<60?'Your super and tax position':(A<75?'Your retirement income':'Your own aged care options'))),A<12?'y_save':(A<24?'s_low':(A<60?'s_grow':(A<75?'s_ret':'a_start'))),[.5,.6,.7,.6],[all[0]],'','',true);
+  ovs.forEach(o=>{ o.sc=0.6*dot(o.tg)+0.4*rel(D.dom(o.root),o.age); });
+
+  const lanes={};
+  ovs.forEach(o=>{ const key=o.row==='me'?'M':String(laneY(o.row)); if(!lanes[key]) lanes[key]=[]; lanes[key].push(o); });
+  const drawn=[]; const extraList=[];
+  Object.keys(lanes).forEach(key=>{
+    const list=lanes[key].slice().sort((a,b)=>b.sc-a.sc);
+    const cap=key==='M'?2:4;
+    const top=list.slice(0,cap);
+    list.slice(cap).forEach(o=>extraList.push(o));
+    if(key==='M'){
+      top.sort((a,b)=>b.sc-a.sc).forEach((o,i)=>{ o.x=[450,630][i]; o.y=rowY.me; o.w=170; o.fs=12; drawn.push(o); });
+    } else {
+      const avgX=o=>o.ms.reduce((a,m)=>a+pos[m.id].x,0)/o.ms.length;
+      top.sort((a,b)=>avgX(a)-avgX(b));
+      const n=top.length;
+      top.forEach((o,i)=>{ o.x=Math.round((i+0.5)*720/n); o.y=Number(key); o.w=n>=4?160:200; o.fs=n>=4?12:13; drawn.push(o); });
+    }
+  });
+  const order=drawn.slice().sort((a,b)=>b.sc-a.sc);
+  const pills=drawn.map(o=>{
+    const r=order.indexOf(o); const kind=r<2?'hi':(r<4?'mid':'lo');
+    const sel=s.via===o.id;
+    const st={hi:{bg:'#0B6A61',fg:'#FFFFFF',bd:'2px solid #0B6A61'},mid:{bg:'#FFFFFF',fg:'#10302C',bd:'2px solid #0B6A61'},lo:{bg:'#F8FAF9',fg:'#44605B',bd:'2px dashed #6F8A84'}}[kind];
+    return {x:o.x,y:o.y,w:o.w,mx:-o.w/2,fs:o.fs,label:o.label,bg:st.bg,fg:st.fg,bd:st.bd,pulse:r===0?'pulse':'',ring:sel?'0 0 0 4px #F7E6D5, 0 0 0 6px #9A4A0C':'none',go:()=>this.go(o.root,o.solo?null:o.id)};
+  });
+  const edges=[];
+  drawn.forEach(o=>{
+    const targets=o.ms.slice(); if(!o.solo && !targets.some(m=>m.id==='me')) targets.push(all[0]);
+    targets.forEach(t=>{
+      const p=pos[t.id]; const dx=o.x-p.x, dy=o.y-p.y; const h=s.via===o.id?4:2;
+      edges.push({x:p.x,y:p.y-h/2,len:Math.round(Math.hypot(dx,dy)),deg:(Math.atan2(dy,dx)*180/Math.PI).toFixed(2),h:h,op:s.via===o.id?1:0.45});
+    });
+  });
+  const colour=m=>{
+    if(m.rel==='parent'||m.rel==='grandparent') return {bg:'#F7E6D5',bd:'2.5px solid #9A4A0C'};
+    if(m.rel==='child'||m.rel==='grandchild') return {bg:'#E0EAF8',bd:'2.5px solid #2A5AA6'};
+    return {bg:'#DDEFEA',bd:'3px solid #0B6A61'};
+  };
+  const people=all.map(m=>{
+    const c=colour(m); const d=m.id==='me'?96:84;
+    return {x:pos[m.id].x,y:pos[m.id].y,d:d,m:-d/2,name:m.label,band:bl(m.age),homeShort:homeShort(m.home),bg:c.bg,bd:c.bd,ring:s.who===m.id?'0 0 0 4px #fff, 0 0 0 7px #0B6A61':'none',aria:m.label+', age band '+bl(m.age)+'. Centre the paths and figures on this person.',go:()=>this.setState({who:m.id})};
+  });
+  const extra=extraList.map(o=>({label:o.label+(o.others.length?' ('+nmL(o.others)+')':''),go:()=>this.go(o.root,o.solo?null:o.id)}));
+
+  const CAP={parent:4,grandparent:4,partner:1,child:6,grandchild:6};
+  const adders=[['parent','Add parent'],['grandparent','Add grandparent'],['partner','Add partner'],['child','Add child'],['grandchild','Add grandchild']].map(a=>{
+    const n=s.members.filter(m=>m.rel===a[0]).length; const dis=n>=CAP[a[0]];
+    return {label:a[1],sub:n+' of '+CAP[a[0]],dis:dis,op:dis?0.5:1,go:()=>this.addMember(a[0])};
+  });
+  const fam=all.map(m=>{
+    const isMe=m.id==='me';
+    return {relName:REL[m.rel],label:m.label,isMe:isMe,editable:!isMe,nameLabel:'Name for this '+REL[m.rel].toLowerCase(),
+      onLabel:e=>this.patchMember(m.id,{label:e.target.value}),
+      band:bl(m.age),dec:()=>this.stepAge(m.id,-1),inc:()=>this.stepAge(m.id,1),
+      decLabel:'Make '+m.label+' two years younger',incLabel:'Make '+m.label+' two years older',
+      home:m.home,homeLabel:'Where '+m.label+' lives',opts:HOME,
+      onHome:e=>{ if(isMe){ this.setState({meHome:e.target.value}); } else { this.patchMember(m.id,{home:e.target.value}); } },
+      remove:()=>this.removeMember(m.id),removeLabel:'Remove '+m.label};
+  });
+
+  // ----- panel flags
+  const q=s.q.trim().toLowerCase();
+  const guided=s.mode==='guided';
+  const showSearch=q.length>0;
+  const noFocus=!s.focus&&!showSearch;
+  const hasFocus=!!s.focus&&!showSearch;
+  const showStep1=guided&&noFocus&&!s.who;
+  const showStep2=guided&&noFocus&&!!s.who;
+  const showQuickHome=!guided&&noFocus;
+
+  const matches=showSearch?D.nodes.filter(n=>(n.t+' '+n.s).toLowerCase().indexOf(q)>=0):[];
+  const results=matches.map(n=>({title:n.t,path:pathOf(n.id),go:()=>this.go(n.id,null)}));
+  const resultCount=matches.length===0?'No topic matches. Try a shorter word, or clear the box to see every topic.':(matches.length+(matches.length===1?' topic matches':' topics match'));
+
+  const whoOpts=all.map(m=>({name:m.label,band:bl(m.age),stage:stageOf(m.age).name,go:()=>this.setState({who:m.id})}));
+  const allDom=rank(D.doms);
+  const domCards=limit(allDom);
+  const domMore=allDom.length>3&&guided;
+  const allLabel=s.showAll?'Show fewer options':'Show all options';
+  const allTopics=D.flat.map(id=>{ const d=D.depth(id); return {title:by[id].t,pad:12+d*18,bg:d===0?'#EEF1F0':'#fff',fs:d===0?15:14,fw:d===0?700:500,visited:!!s.visited[id],go:()=>this.go(id,null)}; });
+
+  const n=s.focus?by[s.focus]:by[D.doms[0]];
+  const crumbIds=s.focus?D.chain(s.focus):[];
+  const crumbs=crumbIds.map((id,i)=>{ const last=i===crumbIds.length-1; return {t:by[id].t,fg:last?'#10302C':'#0B6A61',deco:last?'none':'underline',go:()=>this.go(id,s.via)}; });
+  const allKids=rank(D.kids[n.id]||[]);
+  const kidCards=limit(allKids);
+  const hasKids=allKids.length>0;
+  const kidsMore=allKids.length>3&&guided;
+  const isLeaf=!hasKids;
+  const cross=n.x||[];
+  const sibs=(n.p?D.kids[n.p]:D.doms).filter(i=>i!==n.id);
+  const adjIds=[];
+  cross.concat(sibs).forEach(i=>{ if(i!==n.id&&adjIds.indexOf(i)<0) adjIds.push(i); });
+  const adj=adjIds.map(i=>({title:by[i].t,path:pathOf(i),visited:!!s.visited[i],tag:s.visited[i]?'Opened':(cross.indexOf(i)>=0?'Linked topic, not opened':'Not opened'),tagBg:s.visited[i]?'#EEF1F0':'#F7E6D5',go:()=>this.go(i,null)}));
+  adj.sort((a,b)=>(a.visited?1:0)-(b.visited?1:0));
+  const adjShown=adj.slice(0,6);
+  const dm=s.focus?D.dom(s.focus):'';
+  const rId=s.deepest[dm];
+  const hasResume=!!(s.focus&&rId&&rId!==s.focus&&D.isAnc(s.focus,rId));
+  const resume=hasResume?{path:pathOf(rId),go:()=>this.go(rId,s.via)}:{path:'',go:()=>{}};
+  const ovVia=ovs.find(o=>o.id===s.via);
+  const viaCard=!!(ovVia&&ovVia.root===s.focus&&!ovVia.solo);
+  const via=viaCard?{aHead:'For '+nmL(ovVia.others),bHead:'For you',aText:ovVia.aT.split('{n}').join(nmL(ovVia.others)),bText:ovVia.bT.split('{n}').join(nmL(ovVia.others))}:{aHead:'',bHead:'',aText:'',bText:''};
+  const stateNote=(()=>{
+    if(n.st==='fp') return S.fp+' Claim time limits and which assets count are state-specific.';
+    if(n.st==='tt') return 'Family provision: '+S.fp+' Ask '+S.revenue+' how land tax treats trust-held property, and note that how long a trust can last differs by state.';
+    if(n.st==='rev') return 'Check current thresholds and concessions with '+S.revenue+'.';
+    return '';
+  })();
+  const hasStateNote=!!(s.focus&&stateNote);
+  const vItems=(n.v?[n.v]:[]).concat(s.focus&&dm&&by[dm].v&&dm!==n.id?[by[dm].v]:[]).map(t=>{ const p=t.split('|'); return {src:p[0],what:p[1]}; });
+  const hasV=vItems.length>0;
+
+  // ----- coeconomics figures for the selected person
+  const a0=fAge;
+  const hasPage=a0>=12&&a0<=80;
+  const rowName=hasPage?['Mountain View','Bronze','Khaki','Stormy Weather','Dusty Cedar','Ocean Depths','Silver Birch'][Math.floor((a0-12)/10)]:'';
+  const figUrl=hasPage?('https://coeconomics.com/age-'+a0+'-'+(a0+1)+'.html'):'https://coeconomics.com/';
+  const figLinkText=hasPage?'Open this band on coeconomics.com':'Open coeconomics.com';
+  const figKicker='Figures for '+subj.label+' · '+stageOf(a0).name+(hasPage?' · '+rowName+' row on coeconomics.com':'');
+  const figTitle='Ages '+bl(a0);
+  const figNote=hasPage?'Considerations, scenarios and figures below are from the matching coeconomics.com band page. Several figures cover a wider age group than the two-year band; the group is named on each line.':'coeconomics.com has no band page for this age. Figures shown are the wider age groups that include it, and the considerations are carried over from the nearest page and marked as drafts.';
+  const figWho=all.map(m=>({label:m.label,band:bl(m.age),on:subj.id===m.id,bg:subj.id===m.id?'#0B6A61':'#fff',fg:subj.id===m.id?'#fff':'#10302C',go:()=>this.setState({who:m.id,figAll:false})}));
+  let consRaw=null, consDraft=false, consDraftText='', noConsText='';
+  const bd=D.B[a0];
+  if(bd&&bd.c){ consRaw=bd.c; }
+  else if(a0===64){ noConsText='The coeconomics.com page for ages 64–65 could not be read on 28 October 2026, so its five considerations are missing here. Figures and income scenarios below still apply.'; }
+  else if(a0<6){ consRaw=D.EARLY; consDraft=true; consDraftText='Planner draft, adapted from the 12–13 page. Not on coeconomics.com. Verify before use.'; }
+  else if(a0<12){ consRaw=D.SCHOOL; consDraft=true; consDraftText='Planner draft, adapted from the 12–13 page. Not on coeconomics.com. Verify before use.'; }
+  else { consRaw=D.LATE; consDraft=true; consDraftText='Carried forward from the 80–81 page. coeconomics.com has no page above 81. Verify before use.'; }
+  const cons=(consRaw||[]).map(c=>({t:c[0],s:c[1],src:D.SRC[c[2]]||c[2]}));
+  const hasCons=cons.length>0; const noCons=!hasCons;
+
+  const inc=D.INC.find(r=>a0+1>=r[0]&&a0+1<=r[1]);
+  const hasInc=!!inc; const noInc=!inc;
+  const proKey=a0<18?'teen':(a0<30?'young':(a0<45?'fam':(a0<60?'mid':(a0<75?'ret':'old'))));
+  const fit=[W[0]+0.5*W[1],0.5*W[1]+0.5*W[2],0.5*W[2]+W[3]];
+  const bestIdx=fit.indexOf(Math.max.apply(null,fit));
+  const sc=[['Lower income','bottom 10%'],['Middle income','40th to 60th percentile'],['Higher income','top 10%']];
+  const scen=inc?[0,1,2].map(i=>{
+    const f=bd&&bd.f?bd.f[i]:'';
+    return {name:sc[i][0],pct:sc[i][1],range:inc[2+i],focus:f,hasFocus:!!f,pros:D.PROS[proKey][i].join('; '),best:i===bestIdx,bg:i===bestIdx?'#F4FAF8':'#fff',bd:i===bestIdx?'2px solid #0B6A61':'1px solid #C9D6D1'};
+  }):[];
+  const incGroup=inc?inc[5]:'';
+
+  const lab=(lo,hi)=>lo===0?('Under '+(hi+1)):('Ages '+lo+'–'+hi);
+  const hit=D.FIG.filter(f=>f[1]<=a0+1&&f[2]>=a0).sort((x,y)=>(D.TOP.order.indexOf(x[0])-D.TOP.order.indexOf(y[0]))||(x[1]-y[1]));
+  const figsAll=hit.map((f,i)=>({topic:D.TOP.title[f[0]],showTopic:i===0||hit[i-1][0]!==f[0],group:f[5]||lab(f[1],f[2]),text:f[3],src:f[4]}));
+  const figs=s.figAll?figsAll:figsAll.slice(0,12);
+  const hasFigs=figsAll.length>0; const noFigs=!hasFigs;
+  const figMore=figsAll.length>12;
+  const figsLabel=s.figAll?'Show fewer figures':'Show all '+figsAll.length+' figures';
+
+  // ----- trail, emphasis, referrals
+  const countAll=id=>1+(D.kids[id]||[]).reduce((a,c)=>a+countAll(c),0);
+  const countOpen=id=>(s.visited[id]?1:0)+(D.kids[id]||[]).reduce((a,c)=>a+countOpen(c),0);
+  const trail=D.doms.map(d=>{
+    const o=countOpen(d), t=countAll(d), r=s.deepest[d];
+    return {title:by[d].t,count:o+' of '+t+' topics opened',hasResume:!!r&&r!==d,path:r?pathOf(r):'',notOpened:o===0,goResume:()=>this.go(r||d,null),goTop:()=>this.go(d,null)};
+  });
+  const opened=Object.keys(s.visited).length;
+  const empWhy='Built from your age band and '+(opened===0?'no opened topics yet':(opened===1?'1 opened topic':opened+' opened topics'))+'. Income is never asked.';
+  const bars=BR.map((b,i)=>({n:b,nl:BRL[i],w:Math.round(W[i]*100),hint:W[i]>=0.35?'Leading':(W[i]>=0.2?'Present':'Quieter'),aria:b+' weighting about '+Math.round(W[i]*100)+' percent',boost:()=>this.setState({beh:s.beh.map((v,j)=>j===i?v+3:v)})}));
+
+  let refs=[]; let refIntro='Open a topic to see support that fits the concern, your state and the current emphasis.'; let refsMore=false;
+  if(s.focus){
+    const list=D.orgs.filter(o=>o.dom.indexOf('*')>=0||o.dom.indexOf(dm)>=0).map(o=>({o:o,sc:dot(o.tg)})).sort((a,b)=>b.sc-a.sc);
+    const shown=s.allRefs?list:list.slice(0,4);
+    refsMore=list.length>4;
+    refIntro='For '+by[dm].t.toLowerCase()+' in '+S.n+'. Ordered by fit with the current emphasis; everything relevant stays listed.';
+    refs=shown.map(x=>{ const o=x.o; return {name:o.sk?S[o.sk]:o.n,kind:o.kind,note:o.note,ph:o.ph,hasPh:!!o.ph}; });
+  }
+  const refsLabel=s.allRefs?'Show fewer':'Show all support options';
+  const layer=!s.focus?(s.who?2:1):Math.min(4,D.depth(s.focus)+3);
+
+  return {
+    quickOn:!guided,guidedOn:guided,quickBg:guided?'#fff':'#0B6A61',quickFg:guided?'#10302C':'#fff',guidedBg:guided?'#0B6A61':'#fff',guidedFg:guided?'#fff':'#10302C',
+    setQuick:()=>this.setState({mode:'quick',q:'',showAll:false}),setGuided:()=>this.setState({mode:'guided',q:'',showAll:false}),
+    st:s.st,onSt:e=>this.setState({st:e.target.value}),
+    stateOpts:Object.keys(D.S).map(k=>({k:k,label:k+' · '+D.S[k].n})),
+    back2:()=>this.shift(-1),fwd2:()=>this.shift(1),
+    stageH:stageH,edges:edges,people:people,pills:pills,extra:extra,hasExtra:extra.length>0,adders:adders,fam:fam,
+    layer:layer,q:s.q,onQ:e=>this.setState({q:e.target.value}),
+    showSearch:showSearch,results:results,resultCount:resultCount,
+    showStep1:showStep1,whoOpts:whoOpts,
+    showStep2:showStep2,whoName:subj.label,whoBand:bl(subj.age),stage:stageOf(fAge),clearWho:()=>this.setState({who:null,showAll:false}),
+    domCards:domCards,domMore:domMore,allLabel:allLabel,toggleAll:()=>this.setState({showAll:!s.showAll}),
+    showQuickHome:showQuickHome,allTopics:allTopics,
+    hasFocus:hasFocus,goHome:()=>this.setState({focus:null,via:null,showAll:false}),crumbs:crumbs,node:n,
+    viaCard:viaCard,via:via,hasStateNote:hasStateNote,stateNote:stateNote,stateName:S.n,
+    hasResume:hasResume,resume:resume,hasKids:hasKids,kidCards:kidCards,kidsMore:kidsMore,isLeaf:isLeaf,
+    adj:adjShown,hasV:hasV,vItems:vItems,
+    figKicker:figKicker,figTitle:figTitle,figNote:figNote,figUrl:figUrl,figLinkText:figLinkText,figWho:figWho,
+    cons:cons,hasCons:hasCons,noCons:noCons,noConsText:noConsText,consDraft:consDraft,consDraftText:consDraftText,
+    hasInc:hasInc,noInc:noInc,incGroup:incGroup,scen:scen,
+    figs:figs,hasFigs:hasFigs,noFigs:noFigs,figMore:figMore,figsLabel:figsLabel,toggleFigs:()=>this.setState({figAll:!s.figAll}),
+    trail:trail,empWhy:empWhy,bars:bars,resetBeh:()=>this.setState({beh:[0,0,0,0]}),
+    refs:refs,refIntro:refIntro,refsMore:refsMore,refsLabel:refsLabel,toggleRefs:()=>this.setState({allRefs:!s.allRefs})
+  };
+}
+}
+</script>
+
+
+</body></html>

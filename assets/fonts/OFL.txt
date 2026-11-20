@@ -1,0 +1,17 @@
+Fonts bundled in this folder (WOFF2, as exported from Claude Design / Google Fonts):
+
+  Bricolage Grotesque
+    Copyright 2022 The Bricolage Grotesque Project Authors
+    (https://github.com/ateliertriay/bricolage)
+    Files: bricolage-grotesque-latin.woff2, -latin-ext.woff2, -vietnamese.woff2
+
+  Instrument Sans
+    Copyright 2022 The Instrument Sans Project Authors
+    (https://github.com/Instrument/instrument-sans)
+    Files: instrument-sans-latin.woff2, -latin-ext.woff2
+
+Both fonts are licensed under the SIL Open Font License, Version 1.1.
+Licence text and FAQ: https://openfontlicense.org (https://scripts.sil.org/OFL)
+
+The copyright and licence details above were read from the "name" tables of the
+font files themselves. This notice is not a substitute for the full licence text.
