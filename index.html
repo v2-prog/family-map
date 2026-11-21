@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-AU"><head>
 <meta charset="utf-8">
-<title>Family Life-Stage Map</title>
+<title>Family Map · Australian Life-Stage Planner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Interactive Australian family life-stage map for ages 0 to 99: two-year age bands, household links, state support services (ACT by default) and sourced figures. General information only, not personal advice. Data stays in your browser.">
+<meta name="theme-color" content="#1E4D38">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <!--
   Fonts: Bricolage Grotesque and Instrument Sans, SIL Open Font License 1.1.
   Copyright 2022 The Bricolage Grotesque Project Authors; Copyright 2022 The Instrument Sans Project Authors.
@@ -137,166 +141,176 @@
 }
 </style>
 <style>
-body{margin:0;background:#F1F5F3}
+body{margin:0;background:#F3EFE4}
 button{font-family:inherit;cursor:pointer}
 button:hover{filter:brightness(0.96)}
 button:disabled{cursor:not-allowed}
-button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #0B6A61;outline-offset:2px}
-a{color:#0B6A61}a:hover{color:#08463F}
-@keyframes ring{0%{box-shadow:0 0 0 0 rgba(11,106,97,.45)}100%{box-shadow:0 0 0 14px rgba(11,106,97,0)}}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #1E4D38;outline-offset:2px}
+a{color:#1E4D38}a:hover{color:#163A2A}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(30,77,56,.45)}100%{box-shadow:0 0 0 14px rgba(30,77,56,0)}}
 .pulse{animation:ring 2.4s ease-out infinite}
 @media (prefers-reduced-motion:reduce){.pulse{animation:none}}
+.fm-nav a{font-weight:600;text-decoration:none}.fm-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:640px){.fm-root{padding:16px 14px 32px !important}.fm-root h1{font-size:30px !important}.fm-root h2{font-size:20px !important}.fm-root section[aria-label="Controls"]>div{flex:1 1 100% !important}}
 </style>
 </helmet>
-<div style="box-sizing:border-box;padding:28px 32px 48px;background:#F1F5F3;color:#10302C;font-family:'Instrument Sans',system-ui,sans-serif;display:flex;flex-direction:column;gap:20px">
+<div class="fm-root" style="box-sizing:border-box;padding:28px 32px 48px;background:#F3EFE4;color:#1C2416;font-family:'Instrument Sans',system-ui,sans-serif;display:flex;flex-direction:column;gap:20px">
+<nav aria-label="Family Map pages" class="fm-nav" style="display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:space-between;font-size:15px"><a href="index.html" style="display:flex;align-items:center;gap:8px;color:#1E4D38;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:700;font-size:17px"><img src="assets/favicon.svg" alt="" width="26" height="26">Family Map</a><span style="display:flex;flex-wrap:wrap;gap:6px 18px"><a href="index.html" aria-current="page">Family map</a><a href="model.html">Model and privacy</a><a href="register.html">Needs-checking register</a></span></nav>
+<p role="note" style="margin:0;padding:10px 14px;border-radius:10px;background:#F3E6CF;border:1px solid #D9BF94;color:#6B4419;font-size:14px;font-weight:600;line-height:1.4">General information only. Verify current rules on official sites. Not personal advice.</p>
+
 
 <header style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between">
 <div style="display:flex;flex-direction:column;gap:6px;max-width:780px">
-<div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#44605B">Australian Life-Stage Planner · Family map · ages 0 to 99</div>
+<div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#4A5444">Australian Life-Stage Planner · Family map · ages 0 to 99</div>
 <h1 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:40px;line-height:1.05;font-weight:700">Your stage, and the people connected to it</h1>
-<p style="margin:0;font-size:16px;line-height:1.5;color:#44605B">Add as many parents, grandparents, a partner, children and grandchildren as your household has. Each sits at their own two-year age band and living arrangement. Where lives overlap, a linked node appears. Figures come from coeconomics.com and are shown for whoever you select.</p>
+<p style="margin:0;font-size:16px;line-height:1.5;color:#4A5444">Add as many parents, grandparents, a partner, children and grandchildren as your household has. Each sits at their own two-year age band and living arrangement. Where lives overlap, a linked node appears. Figures come from coeconomics.com and are shown for whoever you select.</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:8px">
-<div style="padding:8px 14px;border-radius:999px;background:#DDEFEA;color:#08463F;font-size:14px;font-weight:600">Private to this household</div>
-<div style="padding:8px 14px;border-radius:999px;background:#F7E6D5;color:#7A3A08;font-size:14px;font-weight:600">General information, not personal advice</div>
+<div style="padding:8px 14px;border-radius:999px;background:#DCE8DF;color:#163A2A;font-size:14px;font-weight:600">Private to this household</div>
+<div style="padding:8px 14px;border-radius:999px;background:#F3E6CF;color:#6B4419;font-size:14px;font-weight:600">General information, not personal advice</div>
 </div>
 </header>
 
 <section aria-label="Controls" style="display:flex;flex-wrap:wrap;gap:16px;align-items:stretch">
-<div style="flex:1 1 440px;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:14px 16px">
-<div style="font-size:14px;font-weight:600;color:#44605B">How do you want to explore?</div>
+<div style="flex:1 1 440px;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:14px 16px">
+<div style="font-size:14px;font-weight:600;color:#4A5444">How do you want to explore?</div>
 <div style="display:flex;flex-wrap:wrap;gap:10px">
-<button type="button" aria-pressed="{{quickOn}}" sc-camel-on-click="{{setQuick}}" style="flex:1 1 200px;min-height:56px;text-align:left;padding:8px 14px;border-radius:10px;border:1.5px solid #0B6A61;background:{{quickBg}};color:{{quickFg}};font-size:15px;font-weight:600;line-height:1.3">Quick path<br><span style="font-weight:400;font-size:13px">Jump straight to specifics</span></button>
-<button type="button" aria-pressed="{{guidedOn}}" sc-camel-on-click="{{setGuided}}" style="flex:1 1 200px;min-height:56px;text-align:left;padding:8px 14px;border-radius:10px;border:1.5px solid #0B6A61;background:{{guidedBg}};color:{{guidedFg}};font-size:15px;font-weight:600;line-height:1.3">Guided path<br><span style="font-weight:400;font-size:13px">Start broad, narrow gently</span></button>
+<button type="button" aria-pressed="{{quickOn}}" sc-camel-on-click="{{setQuick}}" style="flex:1 1 200px;min-height:56px;text-align:left;padding:8px 14px;border-radius:10px;border:1.5px solid #1E4D38;background:{{quickBg}};color:{{quickFg}};font-size:15px;font-weight:600;line-height:1.3">Quick path<br><span style="font-weight:400;font-size:13px">Jump straight to specifics</span></button>
+<button type="button" aria-pressed="{{guidedOn}}" sc-camel-on-click="{{setGuided}}" style="flex:1 1 200px;min-height:56px;text-align:left;padding:8px 14px;border-radius:10px;border:1.5px solid #1E4D38;background:{{guidedBg}};color:{{guidedFg}};font-size:15px;font-weight:600;line-height:1.3">Guided path<br><span style="font-weight:400;font-size:13px">Start broad, narrow gently</span></button>
 </div>
-<div style="font-size:13px;color:#44605B;line-height:1.4">Both paths reach the same topics at the same depth. Switching keeps your place.</div>
+<div style="font-size:13px;color:#4A5444;line-height:1.4">Both paths reach the same topics at the same depth. Switching keeps your place.</div>
 </div>
-<div style="flex:0 1 240px;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:14px 16px">
-<label for="st" style="font-size:14px;font-weight:600;color:#44605B">Where you live</label>
-<sc-raw-select id="st" value="{{st}}" sc-camel-on-change="{{onSt}}" style="min-height:44px;border-radius:10px;border:1.5px solid #6F8A84;padding:0 10px;font-size:15px;font-family:inherit;background:#fff;color:#10302C">
+<div style="flex:0 1 240px;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:14px 16px">
+<label for="st" style="font-size:14px;font-weight:600;color:#4A5444">Where you live</label>
+<sc-raw-select id="st" value="{{st}}" sc-camel-on-change="{{onSt}}" style="min-height:44px;border-radius:10px;border:1.5px solid #6E7565;padding:0 10px;font-size:15px;font-family:inherit;background:#fff;color:#1C2416">
 <sc-for list="{{stateOpts}}" as="o" hint-placeholder-count="8"><option value="{{o.k}}">{{o.label}}</option></sc-for>
 </sc-raw-select>
-<div style="font-size:13px;color:#44605B;line-height:1.4">Sets state law notes, revenue office and support services.</div>
+<div style="font-size:13px;color:#4A5444;line-height:1.4">Sets state law notes, revenue office and support services. Starts on the ACT; other states and territories are comparisons.</div>
 </div>
-<div style="flex:0 1 300px;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:14px 16px">
-<div style="font-size:14px;font-weight:600;color:#44605B">Let years pass for everyone</div>
+<div style="flex:0 1 300px;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:14px 16px">
+<div style="font-size:14px;font-weight:600;color:#4A5444">Let years pass for everyone</div>
 <div style="display:flex;gap:10px">
-<button type="button" sc-camel-on-click="{{back2}}" style="flex:1;min-height:44px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:15px;font-weight:600">Back 2 years</button>
-<button type="button" sc-camel-on-click="{{fwd2}}" style="flex:1;min-height:44px;border-radius:10px;border:1.5px solid #0B6A61;background:#0B6A61;color:#fff;font-size:15px;font-weight:600">Forward 2 years</button>
+<button type="button" sc-camel-on-click="{{back2}}" style="flex:1;min-height:44px;border-radius:10px;border:1.5px solid #6E7565;background:#fff;color:#1C2416;font-size:15px;font-weight:600">Back 2 years</button>
+<button type="button" sc-camel-on-click="{{fwd2}}" style="flex:1;min-height:44px;border-radius:10px;border:1.5px solid #1E4D38;background:#1E4D38;color:#fff;font-size:15px;font-weight:600">Forward 2 years</button>
 </div>
-<div style="font-size:13px;color:#44605B;line-height:1.4">Watch the pills, emphasis and figures shift.</div>
+<div style="font-size:13px;color:#4A5444;line-height:1.4">Watch the pills, emphasis and figures shift.</div>
 </div>
 </section>
 
 <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
 
 <section aria-label="Relationship map" style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:16px">
-<div style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<div style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:22px;font-weight:700">Household map</h2>
-<div style="font-size:13px;color:#44605B;max-width:340px;line-height:1.4">Solid pills fit your current emphasis most. Dashed pills are still here, just less typical for now.</div>
+<div style="font-size:13px;color:#4A5444;max-width:340px;line-height:1.4">Solid pills fit your current emphasis most. Dashed pills are still here, just less typical for now.</div>
 </div>
-<div style="overflow-x:auto;border-radius:10px;border:1px solid #C9D6D1;background:#F8FAF9">
-<div style="position:relative;width:720px;height:{{stageH}}px;background-image:radial-gradient(#C9D6D1 1.2px,transparent 1.2px);background-size:24px 24px">
-<sc-for list="{{edges}}" as="e" hint-placeholder-count="6"><div style="position:absolute;left:{{e.x}}px;top:{{e.y}}px;width:{{e.len}}px;height:{{e.h}}px;background:#0B6A61;opacity:{{e.op}};transform-origin:0 50%;transform:rotate({{e.deg}}deg)"></div></sc-for>
-<sc-for list="{{people}}" as="p" hint-placeholder-count="4"><button type="button" sc-camel-on-click="{{p.go}}" aria-label="{{p.aria}}" style="position:absolute;left:{{p.x}}px;top:{{p.y}}px;width:{{p.d}}px;height:{{p.d}}px;margin:{{p.m}}px 0 0 {{p.m}}px;border-radius:50%;padding:0 4px;background:{{p.bg}};border:{{p.bd}};box-shadow:{{p.ring}};color:#10302C;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;z-index:2;overflow:hidden"><span style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:14px;font-weight:700;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{p.name}}</span><span style="font-size:12px;font-weight:500">{{p.band}}</span><span style="font-size:11px;font-weight:600;color:#44605B">{{p.homeShort}}</span></button></sc-for>
+<div style="overflow-x:auto;border-radius:10px;border:1px solid #D6CFBD;background:#FAF8F2">
+<div style="position:relative;width:720px;height:{{stageH}}px;background-image:radial-gradient(#D6CFBD 1.2px,transparent 1.2px);background-size:24px 24px">
+<sc-for list="{{edges}}" as="e" hint-placeholder-count="6"><div style="position:absolute;left:{{e.x}}px;top:{{e.y}}px;width:{{e.len}}px;height:{{e.h}}px;background:#1E4D38;opacity:{{e.op}};transform-origin:0 50%;transform:rotate({{e.deg}}deg)"></div></sc-for>
+<sc-for list="{{people}}" as="p" hint-placeholder-count="4"><button type="button" sc-camel-on-click="{{p.go}}" aria-label="{{p.aria}}" style="position:absolute;left:{{p.x}}px;top:{{p.y}}px;width:{{p.d}}px;height:{{p.d}}px;margin:{{p.m}}px 0 0 {{p.m}}px;border-radius:50%;padding:0 4px;background:{{p.bg}};border:{{p.bd}};box-shadow:{{p.ring}};color:#1C2416;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;z-index:2;overflow:hidden"><span style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:14px;font-weight:700;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{p.name}}</span><span style="font-size:12px;font-weight:500">{{p.band}}</span><span style="font-size:11px;font-weight:600;color:#4A5444">{{p.homeShort}}</span></button></sc-for>
 <sc-for list="{{pills}}" as="o" hint-placeholder-count="6"><button type="button" class="pill {{o.pulse}}" sc-camel-on-click="{{o.go}}" style="position:absolute;left:{{o.x}}px;top:{{o.y}}px;width:{{o.w}}px;min-height:52px;margin:-26px 0 0 {{o.mx}}px;padding:6px 8px;border-radius:12px;background:{{o.bg}};color:{{o.fg}};border:{{o.bd}};box-shadow:{{o.ring}};font-size:{{o.fs}}px;font-weight:600;line-height:1.25;text-align:center;z-index:3">{{o.label}}</button></sc-for>
 </div>
 </div>
 <sc-if value="{{hasExtra}}" hint-placeholder-val="{{false}}">
 <div style="display:flex;flex-direction:column;gap:8px">
-<div style="font-size:14px;font-weight:600;color:#44605B">More links not drawn, to keep the map readable</div>
+<div style="font-size:14px;font-weight:600;color:#4A5444">More links not drawn, to keep the map readable</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px">
-<sc-for list="{{extra}}" as="x" hint-placeholder-count="2"><button type="button" sc-camel-on-click="{{x.go}}" style="min-height:44px;padding:6px 12px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:14px;font-weight:600;text-align:left">{{x.label}}</button></sc-for>
+<sc-for list="{{extra}}" as="x" hint-placeholder-count="2"><button type="button" sc-camel-on-click="{{x.go}}" style="min-height:44px;padding:6px 12px;border-radius:10px;border:1.5px solid #6E7565;background:#fff;color:#1C2416;font-size:14px;font-weight:600;text-align:left">{{x.label}}</button></sc-for>
 </div>
 </div>
 </sc-if>
-<div style="display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:#44605B">
-<span>Ochre: parents and grandparents</span><span>Teal: you and a partner</span><span>Blue: children and grandchildren</span><span>Click a person to centre the paths and figures on them</span>
+<div style="display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:#4A5444">
+<span>Brass: parents and grandparents</span><span>Green: you and a partner</span><span>Blue: children and grandchildren</span><span>Click a person to centre the paths and figures on them</span>
 </div>
 </div>
 
-<div style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<div style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:20px;font-weight:700">Who is in the household</h2>
-<div style="font-size:14px;color:#44605B;line-height:1.45">You enter your family yourself. Nobody else's account is read, and nothing here is shared unless you invite them. Pick a label, an age band and where each person lives.</div>
+<div style="font-size:14px;color:#4A5444;line-height:1.45">You enter your family yourself. Nobody else's account is read, and nothing here is shared unless you invite them. Pick a label, an age band and where each person lives.</div>
 <div style="display:flex;flex-wrap:wrap;gap:8px">
-<sc-for list="{{adders}}" as="a" hint-placeholder-count="5"><button type="button" disabled="{{a.dis}}" sc-camel-on-click="{{a.go}}" style="min-height:44px;padding:6px 12px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600;opacity:{{a.op}}">{{a.label}} <span style="font-weight:500;color:#44605B">{{a.sub}}</span></button></sc-for>
+<sc-for list="{{adders}}" as="a" hint-placeholder-count="5"><button type="button" disabled="{{a.dis}}" sc-camel-on-click="{{a.go}}" style="min-height:44px;padding:6px 12px;border-radius:10px;border:1.5px solid #1E4D38;background:#fff;color:#1E4D38;font-size:14px;font-weight:600;opacity:{{a.op}}">{{a.label}} <span style="font-weight:500;color:#4A5444">{{a.sub}}</span></button></sc-for>
+</div>
+<div role="status" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:#EEF4EF;border:1px solid #D6CFBD">
+<div style="flex:1 1 260px;font-size:13px;line-height:1.45;color:#4A5444"><strong style="color:#1C2416">{{saveHead}}</strong> {{saveText}}</div>
+<sc-if value="{{noConfirm}}" hint-placeholder-val="{{true}}"><button type="button" id="fm-reset" sc-camel-on-click="{{askReset}}" style="min-height:44px;padding:0 12px;border-radius:10px;border:1.5px solid #8A5A22;background:#fff;color:#6B4419;font-size:14px;font-weight:600">Reset / clear saved household</button></sc-if>
+<sc-if value="{{confirmOn}}" hint-placeholder-val="{{false}}"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px"><span style="font-size:13px;font-weight:600;color:#6B4419">Remove the saved household from this browser?</span><button type="button" id="fm-reset-yes" sc-camel-on-click="{{doReset}}" style="min-height:44px;padding:0 12px;border-radius:10px;border:1.5px solid #8A5A22;background:#8A5A22;color:#fff;font-size:14px;font-weight:600">Yes, clear and reset</button><button type="button" sc-camel-on-click="{{cancelReset}}" style="min-height:44px;padding:0 12px;border-radius:10px;border:1.5px solid #6E7565;background:#fff;color:#1C2416;font-size:14px;font-weight:600">Cancel</button></div></sc-if>
 </div>
 <sc-for list="{{fam}}" as="f" hint-placeholder-count="4">
-<div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px;padding:12px 0;border-top:1px solid #E3EAE7">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px;padding:12px 0;border-top:1px solid #E7E1D2">
 <div style="flex:1 1 150px;display:flex;flex-direction:column;gap:3px">
-<span style="font-size:12px;font-weight:600;color:#44605B">{{f.relName}}</span>
-<sc-if value="{{f.editable}}" hint-placeholder-val="{{true}}"><input type="text" maxlength="14" aria-label="{{f.nameLabel}}" value="{{f.label}}" sc-camel-on-input="{{f.onLabel}}" style="min-height:44px;border-radius:10px;border:1.5px solid #6F8A84;padding:0 10px;font-size:15px;font-family:inherit;color:#10302C;background:#fff;min-width:0"></sc-if>
+<span style="font-size:12px;font-weight:600;color:#4A5444">{{f.relName}}</span>
+<sc-if value="{{f.editable}}" hint-placeholder-val="{{true}}"><input type="text" maxlength="14" aria-label="{{f.nameLabel}}" value="{{f.label}}" sc-camel-on-input="{{f.onLabel}}" style="min-height:44px;border-radius:10px;border:1.5px solid #6E7565;padding:0 10px;font-size:15px;font-family:inherit;color:#1C2416;background:#fff;min-width:0"></sc-if>
 <sc-if value="{{f.isMe}}" hint-placeholder-val="{{false}}"><span style="min-height:44px;display:flex;align-items:center;font-size:16px;font-weight:600">You</span></sc-if>
 </div>
 <div style="display:flex;align-items:center;gap:6px">
-<button type="button" sc-camel-on-click="{{f.dec}}" aria-label="{{f.decLabel}}" style="width:44px;height:44px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:20px;font-weight:600">−</button>
+<button type="button" sc-camel-on-click="{{f.dec}}" aria-label="{{f.decLabel}}" style="width:44px;height:44px;border-radius:10px;border:1.5px solid #6E7565;background:#fff;color:#1C2416;font-size:20px;font-weight:600">−</button>
 <div style="min-width:84px;text-align:center;font-size:15px;font-weight:600">{{f.band}} yrs</div>
-<button type="button" sc-camel-on-click="{{f.inc}}" aria-label="{{f.incLabel}}" style="width:44px;height:44px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:20px;font-weight:600">+</button>
+<button type="button" sc-camel-on-click="{{f.inc}}" aria-label="{{f.incLabel}}" style="width:44px;height:44px;border-radius:10px;border:1.5px solid #6E7565;background:#fff;color:#1C2416;font-size:20px;font-weight:600">+</button>
 </div>
 <div style="flex:1 1 150px;display:flex;flex-direction:column;gap:3px">
-<span style="font-size:12px;font-weight:600;color:#44605B">Lives</span>
-<sc-raw-select aria-label="{{f.homeLabel}}" value="{{f.home}}" sc-camel-on-change="{{f.onHome}}" style="min-height:44px;border-radius:10px;border:1.5px solid #6F8A84;padding:0 8px;font-size:14px;font-family:inherit;background:#fff;color:#10302C">
+<span style="font-size:12px;font-weight:600;color:#4A5444">Lives</span>
+<sc-raw-select aria-label="{{f.homeLabel}}" value="{{f.home}}" sc-camel-on-change="{{f.onHome}}" style="min-height:44px;border-radius:10px;border:1.5px solid #6E7565;padding:0 8px;font-size:14px;font-family:inherit;background:#fff;color:#1C2416">
 <sc-for list="{{f.opts}}" as="h" hint-placeholder-count="8"><option value="{{h.v}}">{{h.t}}</option></sc-for>
 </sc-raw-select>
 </div>
-<sc-if value="{{f.editable}}" hint-placeholder-val="{{true}}"><button type="button" sc-camel-on-click="{{f.remove}}" aria-label="{{f.removeLabel}}" style="min-height:44px;padding:0 12px;border-radius:10px;border:1.5px solid #9A4A0C;background:#fff;color:#7A3A08;font-size:14px;font-weight:600">Remove</button></sc-if>
+<sc-if value="{{f.editable}}" hint-placeholder-val="{{true}}"><button type="button" sc-camel-on-click="{{f.remove}}" aria-label="{{f.removeLabel}}" style="min-height:44px;padding:0 12px;border-radius:10px;border:1.5px solid #8A5A22;background:#fff;color:#6B4419;font-size:14px;font-weight:600">Remove</button></sc-if>
 </div>
 </sc-for>
 </div>
 </section>
 
-<section aria-label="Explore" style="flex:1 1 420px;min-width:0;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px">
+<section aria-label="Explore" style="flex:1 1 420px;min-width:0;background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px">
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:22px;font-weight:700">Explore</h2>
-<sc-if value="{{guidedOn}}" hint-placeholder-val="{{true}}"><div style="font-size:13px;font-weight:600;color:#08463F;background:#DDEFEA;border-radius:999px;padding:6px 12px">Layer {{layer}} of 4</div></sc-if>
+<sc-if value="{{guidedOn}}" hint-placeholder-val="{{true}}"><div style="font-size:13px;font-weight:600;color:#163A2A;background:#DCE8DF;border-radius:999px;padding:6px 12px">Layer {{layer}} of 4</div></sc-if>
 </div>
 
 <sc-if value="{{quickOn}}" hint-placeholder-val="{{false}}">
 <div style="display:flex;flex-direction:column;gap:6px">
-<label for="q" style="font-size:14px;font-weight:600;color:#44605B">Jump to any topic</label>
-<input id="q" type="text" value="{{q}}" sc-camel-on-input="{{onQ}}" placeholder="For example: testamentary, retirement village, rent assistance" style="min-height:44px;border-radius:10px;border:1.5px solid #6F8A84;padding:0 12px;font-size:15px;font-family:inherit;color:#10302C;background:#fff">
+<label for="q" style="font-size:14px;font-weight:600;color:#4A5444">Jump to any topic</label>
+<input id="q" type="text" value="{{q}}" sc-camel-on-input="{{onQ}}" placeholder="For example: testamentary, retirement village, rent assistance" style="min-height:44px;border-radius:10px;border:1.5px solid #6E7565;padding:0 12px;font-size:15px;font-family:inherit;color:#1C2416;background:#fff">
 </div>
 </sc-if>
 <sc-if value="{{guidedOn}}" hint-placeholder-val="{{true}}">
-<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:14px;color:#44605B">Already know what you need? <button type="button" sc-camel-on-click="{{setQuick}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">Switch to quick path</button></div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:14px;color:#4A5444">Already know what you need? <button type="button" sc-camel-on-click="{{setQuick}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #1E4D38;background:#fff;color:#1E4D38;font-size:14px;font-weight:600">Switch to quick path</button></div>
 </sc-if>
 
 <sc-if value="{{showSearch}}" hint-placeholder-val="{{false}}">
 <div style="display:flex;flex-direction:column;gap:8px">
-<div style="font-size:14px;font-weight:600;color:#44605B">{{resultCount}}</div>
-<sc-for list="{{results}}" as="r" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{r.go}}" style="min-height:44px;text-align:left;padding:10px 14px;border-radius:10px;border:1px solid #C9D6D1;background:#fff;color:#10302C;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">{{r.title}}</span><span style="font-size:13px;color:#44605B">{{r.path}}</span></button></sc-for>
+<div style="font-size:14px;font-weight:600;color:#4A5444">{{resultCount}}</div>
+<sc-for list="{{results}}" as="r" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{r.go}}" style="min-height:44px;text-align:left;padding:10px 14px;border-radius:10px;border:1px solid #D6CFBD;background:#fff;color:#1C2416;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">{{r.title}}</span><span style="font-size:13px;color:#4A5444">{{r.path}}</span></button></sc-for>
 </div>
 </sc-if>
 
 <sc-if value="{{showStep1}}" hint-placeholder-val="{{false}}">
 <div style="display:flex;flex-direction:column;gap:10px">
 <div style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:19px;font-weight:700">Whose stage are you thinking about?</div>
-<div style="font-size:14px;color:#44605B;line-height:1.45">Pick one person in the household. You can change this at any time.</div>
-<sc-for list="{{whoOpts}}" as="w" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{w.go}}" style="min-height:56px;text-align:left;padding:10px 14px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:600">{{w.name}}, {{w.band}}</span><span style="font-size:13px;color:#44605B">{{w.stage}}</span></button></sc-for>
+<div style="font-size:14px;color:#4A5444;line-height:1.45">Pick one person in the household. You can change this at any time.</div>
+<sc-for list="{{whoOpts}}" as="w" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{w.go}}" style="min-height:56px;text-align:left;padding:10px 14px;border-radius:10px;border:1.5px solid #6E7565;background:#fff;color:#1C2416;display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:600">{{w.name}}, {{w.band}}</span><span style="font-size:13px;color:#4A5444">{{w.stage}}</span></button></sc-for>
 </div>
 </sc-if>
 
 <sc-if value="{{showStep2}}" hint-placeholder-val="{{false}}">
 <div style="display:flex;flex-direction:column;gap:12px">
-<div style="background:#F1F5F3;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px">
-<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#44605B">{{whoName}}, {{whoBand}} · {{stage.name}}</div>
+<div style="background:#F3EFE4;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px">
+<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#4A5444">{{whoName}}, {{whoBand}} · {{stage.name}}</div>
 <div style="font-size:14px;line-height:1.45"><strong>Family:</strong> {{stage.rel}}</div>
 <div style="font-size:14px;line-height:1.45"><strong>Money:</strong> {{stage.fin}}</div>
-<div><button type="button" sc-camel-on-click="{{clearWho}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:14px;font-weight:600">Choose someone else</button></div>
+<div><button type="button" sc-camel-on-click="{{clearWho}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #6E7565;background:#fff;color:#1C2416;font-size:14px;font-weight:600">Choose someone else</button></div>
 </div>
 <div style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:19px;font-weight:700">What is on your mind?</div>
-<sc-for list="{{domCards}}" as="k" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{k.go}}" style="min-height:56px;text-align:left;padding:12px 14px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;display:flex;flex-direction:column;gap:4px"><span style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:16px;font-weight:600">{{k.title}}</span><sc-if value="{{k.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:{{k.badgeBg}};color:#08463F">{{k.badge}}</span></sc-if><sc-if value="{{k.visited}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;color:#44605B">Opened</span></sc-if></span><span style="font-size:14px;color:#44605B;line-height:1.4">{{k.short}}</span></button></sc-for>
-<sc-if value="{{domMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleAll}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">{{allLabel}}</button></sc-if>
+<sc-for list="{{domCards}}" as="k" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{k.go}}" style="min-height:56px;text-align:left;padding:12px 14px;border-radius:10px;border:1.5px solid #6E7565;background:#fff;color:#1C2416;display:flex;flex-direction:column;gap:4px"><span style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:16px;font-weight:600">{{k.title}}</span><sc-if value="{{k.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:{{k.badgeBg}};color:#163A2A">{{k.badge}}</span></sc-if><sc-if value="{{k.visited}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;color:#4A5444">Opened</span></sc-if></span><span style="font-size:14px;color:#4A5444;line-height:1.4">{{k.short}}</span></button></sc-for>
+<sc-if value="{{domMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleAll}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #1E4D38;background:#fff;color:#1E4D38;font-size:14px;font-weight:600">{{allLabel}}</button></sc-if>
 </div>
 </sc-if>
 
 <sc-if value="{{showQuickHome}}" hint-placeholder-val="{{false}}">
 <div style="display:flex;flex-direction:column;gap:4px">
-<div style="font-size:14px;font-weight:600;color:#44605B">All topics, in order of the tree</div>
+<div style="font-size:14px;font-weight:600;color:#4A5444">All topics, in order of the tree</div>
 <div style="max-height:520px;overflow-y:auto;display:flex;flex-direction:column;gap:4px;padding-right:4px">
-<sc-for list="{{allTopics}}" as="t" hint-placeholder-count="8"><button type="button" sc-camel-on-click="{{t.go}}" style="min-height:44px;text-align:left;padding:8px 12px 8px {{t.pad}}px;border-radius:8px;border:1px solid #E3EAE7;background:{{t.bg}};color:#10302C;font-size:{{t.fs}}px;font-weight:{{t.fw}}">{{t.title}}<sc-if value="{{t.visited}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;color:#44605B"> · opened</span></sc-if></button></sc-for>
+<sc-for list="{{allTopics}}" as="t" hint-placeholder-count="8"><button type="button" sc-camel-on-click="{{t.go}}" style="min-height:44px;text-align:left;padding:8px 12px 8px {{t.pad}}px;border-radius:8px;border:1px solid #E7E1D2;background:{{t.bg}};color:#1C2416;font-size:{{t.fs}}px;font-weight:{{t.fw}}">{{t.title}}<sc-if value="{{t.visited}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;color:#4A5444"> · opened</span></sc-if></button></sc-for>
 </div>
 </div>
 </sc-if>
@@ -304,18 +318,18 @@ a{color:#0B6A61}a:hover{color:#08463F}
 <sc-if value="{{hasFocus}}" hint-placeholder-val="{{true}}">
 <div style="display:flex;flex-direction:column;gap:14px">
 <nav aria-label="Where you are" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px">
-<button type="button" sc-camel-on-click="{{goHome}}" style="min-height:44px;padding:0 10px;border-radius:8px;border:none;background:transparent;color:#0B6A61;font-size:14px;font-weight:600;text-decoration:underline">All areas</button>
-<sc-for list="{{crumbs}}" as="c" hint-placeholder-count="3"><span style="display:flex;align-items:center;gap:4px"><span aria-hidden="true" style="color:#44605B">›</span><button type="button" sc-camel-on-click="{{c.go}}" style="min-height:44px;padding:0 10px;border-radius:8px;border:none;background:transparent;color:{{c.fg}};font-size:14px;font-weight:600;text-decoration:{{c.deco}}">{{c.t}}</button></span></sc-for>
+<button type="button" sc-camel-on-click="{{goHome}}" style="min-height:44px;padding:0 10px;border-radius:8px;border:none;background:transparent;color:#1E4D38;font-size:14px;font-weight:600;text-decoration:underline">All areas</button>
+<sc-for list="{{crumbs}}" as="c" hint-placeholder-count="3"><span style="display:flex;align-items:center;gap:4px"><span aria-hidden="true" style="color:#4A5444">›</span><button type="button" sc-camel-on-click="{{c.go}}" style="min-height:44px;padding:0 10px;border-radius:8px;border:none;background:transparent;color:{{c.fg}};font-size:14px;font-weight:600;text-decoration:{{c.deco}}">{{c.t}}</button></span></sc-for>
 </nav>
 
 <h3 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:26px;line-height:1.1;font-weight:700">{{node.t}}</h3>
 
 <sc-if value="{{viaCard}}" hint-placeholder-val="{{false}}">
-<div style="border:1.5px solid #0B6A61;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;background:#F4FAF8">
-<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#08463F">Why these lives connect</div>
+<div style="border:1.5px solid #1E4D38;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;background:#EEF4EF">
+<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#163A2A">Why these lives connect</div>
 <div style="display:flex;flex-wrap:wrap;gap:12px">
-<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:4px"><div style="font-size:14px;font-weight:700;color:#7A3A08">{{via.aHead}}</div><div style="font-size:14px;line-height:1.5">{{via.aText}}</div></div>
-<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:4px"><div style="font-size:14px;font-weight:700;color:#08463F">{{via.bHead}}</div><div style="font-size:14px;line-height:1.5">{{via.bText}}</div></div>
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:4px"><div style="font-size:14px;font-weight:700;color:#6B4419">{{via.aHead}}</div><div style="font-size:14px;line-height:1.5">{{via.aText}}</div></div>
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:4px"><div style="font-size:14px;font-weight:700;color:#163A2A">{{via.bHead}}</div><div style="font-size:14px;line-height:1.5">{{via.bText}}</div></div>
 </div>
 </div>
 </sc-if>
@@ -323,55 +337,57 @@ a{color:#0B6A61}a:hover{color:#08463F}
 <p style="margin:0;font-size:16px;line-height:1.55">{{node.s}}</p>
 
 <sc-if value="{{hasStateNote}}" hint-placeholder-val="{{false}}">
-<div style="border-radius:12px;padding:12px 14px;background:#E0EAF8;display:flex;flex-direction:column;gap:4px">
-<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#1F4580">In {{stateName}}</div>
+<div style="border-radius:12px;padding:12px 14px;background:#E2E8F0;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#2C4766">In {{stateName}}</div>
 <div style="font-size:14px;line-height:1.5">{{stateNote}}</div>
+<sc-if value="{{hasStateLink}}" hint-placeholder-val="{{false}}"><a href="{{stateLink}}" target="_blank" rel="noopener noreferrer" style="font-size:14px;font-weight:600">{{stateLinkText}}</a></sc-if>
+<div style="font-size:12px;font-weight:600;color:#6B4419">Needs checking: confirm against the official source before relying on it.</div>
 </div>
 </sc-if>
 
 <sc-if value="{{hasResume}}" hint-placeholder-val="{{false}}">
-<button type="button" sc-camel-on-click="{{resume.go}}" style="min-height:56px;text-align:left;padding:10px 14px;border-radius:10px;border:1.5px solid #9A4A0C;background:#FBF1E6;color:#10302C;display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;font-weight:600;color:#7A3A08">Return to the branch you were on</span><span style="font-size:14px;line-height:1.4">{{resume.path}}</span></button>
+<button type="button" sc-camel-on-click="{{resume.go}}" style="min-height:56px;text-align:left;padding:10px 14px;border-radius:10px;border:1.5px solid #8A5A22;background:#F8F0E0;color:#1C2416;display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;font-weight:600;color:#6B4419">Return to the branch you were on</span><span style="font-size:14px;line-height:1.4">{{resume.path}}</span></button>
 </sc-if>
 
 <sc-if value="{{hasKids}}" hint-placeholder-val="{{true}}">
 <div style="display:flex;flex-direction:column;gap:8px">
-<div style="font-size:14px;font-weight:700;color:#44605B">Narrow it down</div>
-<sc-for list="{{kidCards}}" as="k" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{k.go}}" style="min-height:56px;text-align:left;padding:12px 14px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;display:flex;flex-direction:column;gap:4px"><span style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:16px;font-weight:600">{{k.title}}</span><sc-if value="{{k.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:{{k.badgeBg}};color:#08463F">{{k.badge}}</span></sc-if><sc-if value="{{k.visited}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;color:#44605B">Opened</span></sc-if></span><span style="font-size:14px;color:#44605B;line-height:1.4">{{k.short}}</span></button></sc-for>
-<sc-if value="{{kidsMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleAll}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">{{allLabel}}</button></sc-if>
+<div style="font-size:14px;font-weight:700;color:#4A5444">Narrow it down</div>
+<sc-for list="{{kidCards}}" as="k" hint-placeholder-count="3"><button type="button" sc-camel-on-click="{{k.go}}" style="min-height:56px;text-align:left;padding:12px 14px;border-radius:10px;border:1.5px solid #6E7565;background:#fff;color:#1C2416;display:flex;flex-direction:column;gap:4px"><span style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:16px;font-weight:600">{{k.title}}</span><sc-if value="{{k.hasBadge}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:{{k.badgeBg}};color:#163A2A">{{k.badge}}</span></sc-if><sc-if value="{{k.visited}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;color:#4A5444">Opened</span></sc-if></span><span style="font-size:14px;color:#4A5444;line-height:1.4">{{k.short}}</span></button></sc-for>
+<sc-if value="{{kidsMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleAll}}" style="min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid #1E4D38;background:#fff;color:#1E4D38;font-size:14px;font-weight:600">{{allLabel}}</button></sc-if>
 </div>
 </sc-if>
 <sc-if value="{{isLeaf}}" hint-placeholder-val="{{false}}">
-<div style="font-size:14px;color:#44605B;line-height:1.5;background:#F1F5F3;border-radius:10px;padding:12px 14px">This is the narrowest level for this branch. The paths below sit beside it.</div>
+<div style="font-size:14px;color:#4A5444;line-height:1.5;background:#F3EFE4;border-radius:10px;padding:12px 14px">This is the narrowest level for this branch. The paths below sit beside it.</div>
 </sc-if>
 
 <div style="display:flex;flex-direction:column;gap:8px">
-<div style="font-size:14px;font-weight:700;color:#44605B">Paths next to this one</div>
-<sc-for list="{{adj}}" as="a" hint-placeholder-count="4"><button type="button" sc-camel-on-click="{{a.go}}" style="min-height:44px;text-align:left;padding:10px 14px;border-radius:10px;border:1px solid #C9D6D1;background:#fff;color:#10302C;display:flex;flex-direction:column;gap:2px"><span style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:15px;font-weight:600">{{a.title}}</span><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:{{a.tagBg}};color:#10302C">{{a.tag}}</span></span><span style="font-size:13px;color:#44605B">{{a.path}}</span></button></sc-for>
+<div style="font-size:14px;font-weight:700;color:#4A5444">Paths next to this one</div>
+<sc-for list="{{adj}}" as="a" hint-placeholder-count="4"><button type="button" sc-camel-on-click="{{a.go}}" style="min-height:44px;text-align:left;padding:10px 14px;border-radius:10px;border:1px solid #D6CFBD;background:#fff;color:#1C2416;display:flex;flex-direction:column;gap:2px"><span style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:15px;font-weight:600">{{a.title}}</span><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:{{a.tagBg}};color:#1C2416">{{a.tag}}</span></span><span style="font-size:13px;color:#4A5444">{{a.path}}</span></button></sc-for>
 </div>
 
-<div style="border-radius:12px;padding:12px 14px;background:#FFF3E0;border:1px solid #E7C79A;display:flex;flex-direction:column;gap:6px">
-<div style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#7A3A08"><svg aria-hidden="true" width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="#7A3A08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"></path><path d="M5 4h12l-2 4 2 4H5"></path></svg>Needs human verification</div>
+<div style="border-radius:12px;padding:12px 14px;background:#F8EEDB;border:1px solid #D9BF94;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#6B4419"><svg aria-hidden="true" width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="#6B4419" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"></path><path d="M5 4h12l-2 4 2 4H5"></path></svg>Needs human verification</div>
 <sc-if value="{{hasV}}" hint-placeholder-val="{{true}}">
 <sc-for list="{{vItems}}" as="v" hint-placeholder-count="2"><div style="font-size:14px;line-height:1.45"><strong>{{v.src}}:</strong> {{v.what}}</div></sc-for>
 </sc-if>
-<div style="font-size:13px;color:#44605B;line-height:1.45">General information only. Confirm figures and eligibility with the source before anyone acts on them. <a href="register.html">See the needs-checking register</a>.</div>
+<div style="font-size:13px;color:#4A5444;line-height:1.45">General information only. Confirm figures and eligibility with the source before anyone acts on them. <a href="register.html">See the needs-checking register</a>.</div>
 </div>
 </div>
 </sc-if>
 </section>
 </div>
 
-<section aria-label="Figures for this age band" style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:16px">
+<section aria-label="Figures for this age band" style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:16px">
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end">
 <div style="display:flex;flex-direction:column;gap:4px;max-width:780px">
-<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#44605B">{{figKicker}}</div>
+<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#4A5444">{{figKicker}}</div>
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:26px;line-height:1.1;font-weight:700">{{figTitle}}</h2>
-<div style="font-size:14px;color:#44605B;line-height:1.5">{{figNote}}</div>
+<div style="font-size:14px;color:#4A5444;line-height:1.5">{{figNote}}</div>
 </div>
 <a href="{{figUrl}}" style="font-size:14px;font-weight:600">{{figLinkText}}</a>
 </div>
 <div role="group" aria-label="Show figures for" style="display:flex;flex-wrap:wrap;gap:8px">
-<sc-for list="{{figWho}}" as="w" hint-placeholder-count="4"><button type="button" aria-pressed="{{w.on}}" sc-camel-on-click="{{w.go}}" style="min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid #0B6A61;background:{{w.bg}};color:{{w.fg}};font-size:14px;font-weight:600">{{w.label}}, {{w.band}}</button></sc-for>
+<sc-for list="{{figWho}}" as="w" hint-placeholder-count="4"><button type="button" aria-pressed="{{w.on}}" sc-camel-on-click="{{w.go}}" style="min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid #1E4D38;background:{{w.bg}};color:{{w.fg}};font-size:14px;font-weight:600">{{w.label}}, {{w.band}}</button></sc-for>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start">
 
@@ -379,27 +395,27 @@ a{color:#0B6A61}a:hover{color:#08463F}
 <h3 style="margin:0;font-size:18px;font-weight:700">What people at this age weigh up</h3>
 <sc-if value="{{hasCons}}" hint-placeholder-val="{{true}}">
 <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.45">
-<sc-for list="{{cons}}" as="c" hint-placeholder-count="5"><li><strong>{{c.t}}.</strong> {{c.s}} <span style="color:#44605B;font-size:13px">({{c.src}})</span></li></sc-for>
+<sc-for list="{{cons}}" as="c" hint-placeholder-count="5"><li><strong>{{c.t}}.</strong> {{c.s}} <span style="color:#4A5444;font-size:13px">({{c.src}})</span></li></sc-for>
 </ol>
 </sc-if>
-<sc-if value="{{noCons}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;color:#44605B;line-height:1.5;background:#F1F5F3;border-radius:10px;padding:12px 14px">{{noConsText}}</div></sc-if>
-<sc-if value="{{consDraft}}" hint-placeholder-val="{{false}}"><div style="font-size:13px;color:#7A3A08;font-weight:600;line-height:1.45">{{consDraftText}}</div></sc-if>
+<sc-if value="{{noCons}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;color:#4A5444;line-height:1.5;background:#F3EFE4;border-radius:10px;padding:12px 14px">{{noConsText}}</div></sc-if>
+<sc-if value="{{consDraft}}" hint-placeholder-val="{{false}}"><div style="font-size:13px;color:#6B4419;font-weight:600;line-height:1.45">{{consDraftText}}</div></sc-if>
 </div>
 
 <div style="flex:1.4 1 380px;min-width:0;display:flex;flex-direction:column;gap:10px">
 <h3 style="margin:0;font-size:18px;font-weight:700">Three income scenarios</h3>
 <sc-if value="{{hasInc}}" hint-placeholder-val="{{true}}">
-<div style="font-size:13px;color:#44605B;line-height:1.45">{{incGroup}} who lodged a 2022–23 return. Annual taxable income in 2022–23 dollars. Percentiles are interpolated, and tax-free super payments from 60 are not counted. The highlighted scenario is the one closest to the current emphasis; the planner never asks for income.</div>
+<div style="font-size:13px;color:#4A5444;line-height:1.45">{{incGroup}} who lodged a 2022–23 return. Annual taxable income in 2022–23 dollars. Percentiles are interpolated, and tax-free super payments from 60 are not counted. The highlighted scenario is the one closest to the current emphasis; the planner never asks for income.</div>
 <sc-for list="{{scen}}" as="s" hint-placeholder-count="3">
 <div style="border:{{s.bd}};background:{{s.bg}};border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px">
-<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:16px;font-weight:700">{{s.name}}</span><span style="font-size:13px;color:#44605B">{{s.pct}}</span><sc-if value="{{s.best}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:#0B6A61;color:#fff">Closest to current emphasis</span></sc-if></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:16px;font-weight:700">{{s.name}}</span><span style="font-size:13px;color:#4A5444">{{s.pct}}</span><sc-if value="{{s.best}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:#1E4D38;color:#fff">Closest to current emphasis</span></sc-if></div>
 <div style="font-size:18px;font-weight:700;font-family:'Bricolage Grotesque',system-ui,sans-serif">{{s.range}}</div>
 <sc-if value="{{s.hasFocus}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;line-height:1.45">{{s.focus}}</div></sc-if>
-<div style="font-size:13px;color:#44605B;line-height:1.45"><strong>Who to ask:</strong> {{s.pros}}</div>
+<div style="font-size:13px;color:#4A5444;line-height:1.45"><strong>Who to ask:</strong> {{s.pros}}</div>
 </div>
 </sc-for>
 </sc-if>
-<sc-if value="{{noInc}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;color:#44605B;line-height:1.5;background:#F1F5F3;border-radius:10px;padding:12px 14px">coeconomics.com gives no income scenario for ages under 12. Household income is what shapes most options at this age.</div></sc-if>
+<sc-if value="{{noInc}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;color:#4A5444;line-height:1.5;background:#F3EFE4;border-radius:10px;padding:12px 14px">coeconomics.com gives no income scenario for ages under 12. Household income is what shapes most options at this age.</div></sc-if>
 </div>
 
 <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:10px">
@@ -407,73 +423,120 @@ a{color:#0B6A61}a:hover{color:#08463F}
 <sc-if value="{{hasFigs}}" hint-placeholder-val="{{true}}">
 <div style="display:flex;flex-direction:column;gap:0">
 <sc-for list="{{figs}}" as="f" hint-placeholder-count="8">
-<div style="padding:8px 0;border-top:1px solid #E3EAE7;display:flex;flex-direction:column;gap:2px">
-<sc-if value="{{f.showTopic}}" hint-placeholder-val="{{true}}"><div style="font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#08463F">{{f.topic}}</div></sc-if>
+<div style="padding:8px 0;border-top:1px solid #E7E1D2;display:flex;flex-direction:column;gap:2px">
+<sc-if value="{{f.showTopic}}" hint-placeholder-val="{{true}}"><div style="font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#163A2A">{{f.topic}}</div></sc-if>
 <div style="font-size:14px;line-height:1.45"><strong>{{f.group}}:</strong> {{f.text}}</div>
-<div style="font-size:12px;color:#44605B">{{f.src}}</div>
+<div style="font-size:12px;color:#4A5444">{{f.src}}</div>
 </div>
 </sc-for>
 </div>
-<sc-if value="{{figMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleFigs}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">{{figsLabel}}</button></sc-if>
+<sc-if value="{{figMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleFigs}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #1E4D38;background:#fff;color:#1E4D38;font-size:14px;font-weight:600">{{figsLabel}}</button></sc-if>
 </sc-if>
-<sc-if value="{{noFigs}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;color:#44605B;line-height:1.5;background:#F1F5F3;border-radius:10px;padding:12px 14px">coeconomics.com lists no figures for this age group.</div></sc-if>
+<sc-if value="{{noFigs}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;color:#4A5444;line-height:1.5;background:#F3EFE4;border-radius:10px;padding:12px 14px">coeconomics.com lists no figures for this age group.</div></sc-if>
 </div>
 </div>
-<div style="font-size:13px;color:#7A3A08;font-weight:600;line-height:1.5">Copied from coeconomics.com, which says it checked them on 23 October 2026 and describes groups, not individuals. We have not checked them against ABS, AIHW, ATO, ASFA or Services Australia. See the register.</div>
+<div style="font-size:13px;color:#6B4419;font-weight:600;line-height:1.5">Copied from coeconomics.com, which says it checked them on 23 October 2026 and describes groups, not individuals. We have not checked them against ABS, AIHW, ATO, ASFA or Services Australia. See the register.</div>
 </section>
 
 <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
 
-<section aria-label="Your branches" style="flex:1 1 380px;min-width:0;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<section aria-label="Your branches" style="flex:1 1 380px;min-width:0;background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:20px;font-weight:700">Your branches</h2>
-<div style="font-size:14px;color:#44605B;line-height:1.45">Every area stays listed. Return to where you left off, or open one you have not touched.</div>
+<div style="font-size:14px;color:#4A5444;line-height:1.45">Every area stays listed. Return to where you left off, or open one you have not touched.</div>
 <sc-for list="{{trail}}" as="t" hint-placeholder-count="8">
-<div style="display:flex;flex-direction:column;gap:6px;padding:10px 0;border-top:1px solid #E3EAE7">
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px"><div style="font-size:16px;font-weight:600">{{t.title}}</div><div style="font-size:13px;color:#44605B">{{t.count}}</div></div>
-<sc-if value="{{t.hasResume}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{t.goResume}}" style="min-height:44px;text-align:left;padding:8px 12px;border-radius:10px;border:1.5px solid #9A4A0C;background:#FBF1E6;color:#10302C;font-size:14px;line-height:1.4">Resume: {{t.path}}</button></sc-if>
-<sc-if value="{{t.notOpened}}" hint-placeholder-val="{{true}}"><button type="button" sc-camel-on-click="{{t.goTop}}" style="min-height:44px;text-align:left;padding:8px 12px;border-radius:10px;border:1px solid #C9D6D1;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">Not opened yet. Start here</button></sc-if>
+<div style="display:flex;flex-direction:column;gap:6px;padding:10px 0;border-top:1px solid #E7E1D2">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px"><div style="font-size:16px;font-weight:600">{{t.title}}</div><div style="font-size:13px;color:#4A5444">{{t.count}}</div></div>
+<sc-if value="{{t.hasResume}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{t.goResume}}" style="min-height:44px;text-align:left;padding:8px 12px;border-radius:10px;border:1.5px solid #8A5A22;background:#F8F0E0;color:#1C2416;font-size:14px;line-height:1.4">Resume: {{t.path}}</button></sc-if>
+<sc-if value="{{t.notOpened}}" hint-placeholder-val="{{true}}"><button type="button" sc-camel-on-click="{{t.goTop}}" style="min-height:44px;text-align:left;padding:8px 12px;border-radius:10px;border:1px solid #D6CFBD;background:#fff;color:#1E4D38;font-size:14px;font-weight:600">Not opened yet. Start here</button></sc-if>
 </div>
 </sc-for>
 </section>
 
-<section aria-label="What the map emphasises" style="flex:1 1 380px;min-width:0;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<section aria-label="What the map emphasises" style="flex:1 1 380px;min-width:0;background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:20px;font-weight:700">What the map is emphasising</h2>
-<div style="font-size:14px;color:#44605B;line-height:1.45">{{empWhy}} It only changes the order and weight of topics. Nothing is removed, and it fades as you move through life stages.</div>
+<div style="font-size:14px;color:#4A5444;line-height:1.45">{{empWhy}} It only changes the order and weight of topics. Nothing is removed, and it fades as you move through life stages.</div>
 <sc-for list="{{bars}}" as="b" hint-placeholder-count="4">
 <div style="display:flex;flex-direction:column;gap:6px">
-<div style="display:flex;justify-content:space-between;gap:8px;font-size:14px;font-weight:600"><span>{{b.n}}</span><span style="color:#44605B;font-weight:500">{{b.hint}}</span></div>
-<div role="img" aria-label="{{b.aria}}" style="height:12px;border-radius:6px;background:#E3EAE7;overflow:hidden"><div style="height:12px;width:{{b.w}}%;background:#0B6A61"></div></div>
-<button type="button" sc-camel-on-click="{{b.boost}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #6F8A84;background:#fff;color:#10302C;font-size:14px;font-weight:600">Show me more {{b.nl}}</button>
+<div style="display:flex;justify-content:space-between;gap:8px;font-size:14px;font-weight:600"><span>{{b.n}}</span><span style="color:#4A5444;font-weight:500">{{b.hint}}</span></div>
+<div role="img" aria-label="{{b.aria}}" style="height:12px;border-radius:6px;background:#E7E1D2;overflow:hidden"><div style="height:12px;width:{{b.w}}%;background:#1E4D38"></div></div>
+<button type="button" sc-camel-on-click="{{b.boost}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #6E7565;background:#fff;color:#1C2416;font-size:14px;font-weight:600">Show me more {{b.nl}}</button>
 </div>
 </sc-for>
-<button type="button" sc-camel-on-click="{{resetBeh}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">Reset to age-band default</button>
+<button type="button" sc-camel-on-click="{{resetBeh}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #1E4D38;background:#fff;color:#1E4D38;font-size:14px;font-weight:600">Reset to age-band default</button>
 </section>
 
-<section aria-label="Support and referrals" style="flex:1 1 380px;min-width:0;background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<section aria-label="Support and referrals" style="flex:1 1 380px;min-width:0;background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:20px;font-weight:700">Support for this concern</h2>
-<div style="font-size:14px;color:#44605B;line-height:1.45">{{refIntro}}</div>
+<div style="font-size:14px;color:#4A5444;line-height:1.45">{{refIntro}}</div>
 <sc-for list="{{refs}}" as="r" hint-placeholder-count="4">
-<div style="display:flex;flex-direction:column;gap:4px;padding:10px 0;border-top:1px solid #E3EAE7">
-<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:15px;font-weight:600">{{r.name}}</span><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:#EEF1F0">{{r.kind}}</span></div>
-<div style="font-size:14px;color:#44605B;line-height:1.45">{{r.note}}</div>
+<div style="display:flex;flex-direction:column;gap:4px;padding:10px 0;border-top:1px solid #E7E1D2">
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:15px;font-weight:600">{{r.name}}</span><span style="font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:#EEEADF">{{r.kind}}</span></div>
+<div style="font-size:14px;color:#4A5444;line-height:1.45">{{r.note}}</div>
 <sc-if value="{{r.hasPh}}" hint-placeholder-val="{{false}}"><div style="font-size:14px;font-weight:600">{{r.ph}}</div></sc-if>
-<div style="font-size:12px;font-weight:600;color:#7A3A08">Verify details before use · last checked [DATE]</div>
+<sc-if value="{{r.hasUrl}}" hint-placeholder-val="{{false}}"><a href="{{r.url}}" target="_blank" rel="noopener noreferrer" style="font-size:14px;font-weight:600">{{r.urlText}}</a></sc-if>
+<div style="font-size:12px;font-weight:600;color:#6B4419">{{r.check}}</div>
 </div>
 </sc-for>
-<sc-if value="{{refsMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleRefs}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #0B6A61;background:#fff;color:#0B6A61;font-size:14px;font-weight:600">{{refsLabel}}</button></sc-if>
+<sc-if value="{{refsMore}}" hint-placeholder-val="{{false}}"><button type="button" sc-camel-on-click="{{toggleRefs}}" style="min-height:44px;align-self:flex-start;padding:0 14px;border-radius:10px;border:1.5px solid #1E4D38;background:#fff;color:#1E4D38;font-size:14px;font-weight:600">{{refsLabel}}</button></sc-if>
 </section>
 </div>
 
-<footer style="font-size:13px;color:#44605B;line-height:1.5;max-width:900px">Prototype: everything on this page lives in the browser's memory and nothing is saved or sent. The weights, age priors and linked-node rules are design assumptions. Figures and band notes for ages 12 to 81 come from coeconomics.com; ages 0 to 11 and 82 to 99 have no band page there. See <a href="model.html">the model</a> and <a href="register.html">the register</a>.</footer>
+<footer style="font-size:13px;color:#4A5444;line-height:1.5;max-width:900px">Privacy: your household (labels, age bands, living arrangements, state, path and selected person) is saved only in this browser's localStorage so it survives a reload. Nothing is sent to a server, and there is no account. Use “Reset / clear saved household” to remove it. The weights, age priors and linked-node rules are design assumptions. Figures and band notes for ages 12 to 81 come from coeconomics.com; ages 0 to 11 and 82 to 99 have no band page there. See <a href="model.html">the model</a> and <a href="register.html">the register</a>.</footer>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1360,&quot;height&quot;:4000}}">
 class Component extends DCLogic {
 constructor(props){
   super(props);
-  this.state={mode:'guided',st:'NSW',meAge:40,meHome:'',
+  this._storageOk=true;
+  let saved=null;
+  try{ const raw=window.localStorage.getItem(this._key()); if(raw) saved=this._clean(JSON.parse(raw)); }catch(e){ this._storageOk=false; }
+  this.state=Object.assign({},this._defaults(),saved||{},this._transient());
+  this._last=this._snap(this.state);
+}
+
+// ----- browser-only persistence (localStorage, this device only; nothing is sent anywhere)
+_key(){ return 'familymap.au.household.v1'; }
+_defaults(){
+  return {mode:'guided',st:'ACT',meAge:40,meHome:'',
     members:[{id:'m1',rel:'parent',label:'Mum',age:68,home:''},{id:'m2',rel:'parent',label:'Dad',age:70,home:''},{id:'m3',rel:'child',label:'Child 1',age:12,home:'with-you'}],
-    nid:4,who:null,focus:null,via:null,beh:[0,0,0,0],visited:{},deepest:{},showAll:false,q:'',allRefs:false,figAll:false};
+    nid:4,who:null};
+}
+_transient(){ return {focus:null,via:null,beh:[0,0,0,0],visited:{},deepest:{},showAll:false,q:'',allRefs:false,figAll:false,confirmReset:false}; }
+_snap(s){ return JSON.stringify({v:1,mode:s.mode,st:s.st,meAge:s.meAge,meHome:s.meHome,members:s.members,nid:s.nid,who:s.who}); }
+_clean(o){
+  if(!o||typeof o!=='object'||o.v!==1) return null;
+  const ST=['ACT','NSW','VIC','QLD','WA','SA','TAS','NT'];
+  const RELS=['parent','grandparent','partner','child','grandchild'];
+  const HOMES=['','with-you','own','alone','renting','share','village','care'];
+  const CAP={parent:4,grandparent:4,partner:1,child:6,grandchild:6};
+  const age=a=>{ a=Math.round(Number(a)); return isFinite(a)?Math.max(0,Math.min(98,a)):null; };
+  const seen={}; const count={}; let maxId=0;
+  const members=(Array.isArray(o.members)?o.members:[]).filter(m=>{
+    if(!m||typeof m.id!=='string'||!/^m[0-9]{1,6}$/.test(m.id)||seen[m.id]) return false;
+    if(RELS.indexOf(m.rel)<0||age(m.age)===null) return false;
+    count[m.rel]=(count[m.rel]||0)+1; if(count[m.rel]>CAP[m.rel]) return false;
+    seen[m.id]=1; maxId=Math.max(maxId,parseInt(m.id.slice(1),10)); return true;
+  }).map(m=>({id:m.id,rel:m.rel,label:String(m.label==null?'':m.label).slice(0,14),age:age(m.age),home:HOMES.indexOf(m.home)>=0?m.home:''}));
+  const me=age(o.meAge);
+  return {mode:o.mode==='quick'?'quick':'guided',st:ST.indexOf(o.st)>=0?o.st:'ACT',meAge:me===null?40:me,
+    meHome:HOMES.indexOf(o.meHome)>=0?o.meHome:'',members:members,
+    nid:Math.max(maxId+1,Number.isInteger(o.nid)?o.nid:0,1),
+    who:(o.who==='me'||seen[o.who])?o.who:null};
+}
+componentDidUpdate(){
+  if(!this._storageOk) return;
+  const j=this._snap(this.state);
+  if(j===this._last) return;
+  this._last=j;
+  try{
+    if(j===this._snap(this._defaults())) window.localStorage.removeItem(this._key());
+    else window.localStorage.setItem(this._key(),j);
+  }catch(e){ this._storageOk=false; this.forceUpdate(); }
+}
+resetHousehold(){
+  try{ window.localStorage.removeItem(this._key()); }catch(e){}
+  this.setState(Object.assign({},this._defaults(),this._transient()));
 }
 
 getData(){
@@ -574,13 +637,13 @@ getData(){
    O('fis','Services Australia Financial Information Service','','Government',['d_income','d_super','d_agedcare','d_living'],[.9,.7,.4,.2],'Free information on payments and retirement planning.')
   ];
   const S={
+   ACT:{n:'Australian Capital Territory',legal:'Legal Aid ACT (includes the Tenancy Advice Service ACT)',legalUrl:'https://www.legalaidact.org.au/',trustee:'Public Trustee and Guardian (ACT)',trusteeUrl:'https://www.ptg.act.gov.au/',revenue:'ACT Revenue Office',revenueUrl:'https://www.revenue.act.gov.au/',seniors:'ADACAS (ACT Disability, Aged and Carer Advocacy Service), the OPAN member service in the ACT',seniorsUrl:'https://adacas.org.au/',cota:'COTA ACT',cotaUrl:'https://www.cotaact.org.au/',fair:'Access Canberra (fair trading and consumer rights)',fairUrl:'https://www.accesscanberra.act.gov.au/',fp:'Family Provision Act 1969 (ACT).',fpUrl:'https://www.legislation.act.gov.au/a/1969-12/',revX:'Since 2012 the ACT has been cutting conveyance (stamp) duty and raising general rates to replace it. The 2026–27 ACT Budget says conveyance duty will be removed for all first home buyers; confirm the Home Buyer Concession Scheme rules and start date. First Home Owner Grant payments ceased on 1 July 2019.',revXUrl:'https://www.revenue.act.gov.au/home-buyer-assistance/home-buyer-concession-scheme'},
    NSW:{n:'New South Wales',legal:'Legal Aid NSW',trustee:'NSW Trustee and Guardian',revenue:'Revenue NSW',seniors:'Seniors Rights Service',cota:'COTA NSW',fair:'NSW Fair Trading',fp:'Succession Act 2006 (NSW). It can reach "notional estate" assets that were moved out of the estate.'},
    VIC:{n:'Victoria',legal:'Victoria Legal Aid',trustee:'State Trustees Victoria',revenue:'State Revenue Office Victoria',seniors:'Seniors Rights Victoria',cota:'COTA Victoria',fair:'Consumer Affairs Victoria',fp:'Administration and Probate Act 1958 (Vic), Part IV.'},
    QLD:{n:'Queensland',legal:'Legal Aid Queensland',trustee:'Public Trustee of Queensland',revenue:'Queensland Revenue Office',seniors:'OPAN member service (1800 700 600)',cota:'COTA Queensland',fair:'Queensland Office of Fair Trading',fp:'Succession Act 1981 (Qld), Part 4.'},
    WA:{n:'Western Australia',legal:'Legal Aid WA',trustee:'Public Trustee WA',revenue:'RevenueWA',seniors:'Advocare',cota:'COTA WA',fair:'Consumer Protection (WA)',fp:'Family Provision Act 1972 (WA).'},
    SA:{n:'South Australia',legal:'Legal Services Commission of SA',trustee:'Public Trustee SA',revenue:'RevenueSA',seniors:'Aged Rights Advocacy Service',cota:'COTA SA',fair:'Consumer and Business Services (SA)',fp:'Inheritance (Family Provision) Act 1972 (SA).'},
    TAS:{n:'Tasmania',legal:'Legal Aid Commission of Tasmania',trustee:'Public Trustee (Tasmania)',revenue:'State Revenue Office Tasmania',seniors:'OPAN member service (1800 700 600)',cota:'COTA Tasmania',fair:'Consumer, Building and Occupational Services (Tas)',fp:'Testators Family Maintenance Act 1912 (Tas).'},
-   ACT:{n:'Australian Capital Territory',legal:'Legal Aid ACT',trustee:'Public Trustee and Guardian ACT',revenue:'ACT Revenue Office',seniors:'ADACAS',cota:'COTA ACT',fair:'Access Canberra',fp:'Family Provision Act 1969 (ACT).'},
    NT:{n:'Northern Territory',legal:'NT Legal Aid Commission',trustee:'Public Trustee NT',revenue:'Territory Revenue Office',seniors:'OPAN member service (1800 700 600)',cota:'COTA NT',fair:'Consumer Affairs (NT)',fp:'Family Provision Act 1970 (NT).'}
   };
   const stages=[
@@ -859,7 +922,7 @@ renderVals(){
     const arr=ids.map(card).sort((a,b)=>b.score-a.score);
     arr.forEach((c,i)=>{
       c.badge=(i===0&&arr.length>1)?'Most relevant now':(c.match<0.2?'Less typical for now, still here':'');
-      c.hasBadge=!!c.badge; c.badgeBg=i===0?'#DDEFEA':'#EEF1F0';
+      c.hasBadge=!!c.badge; c.badgeBg=i===0?'#DCE8DF':'#EEEADF';
     });
     return arr;
   };
@@ -929,8 +992,8 @@ renderVals(){
   const pills=drawn.map(o=>{
     const r=order.indexOf(o); const kind=r<2?'hi':(r<4?'mid':'lo');
     const sel=s.via===o.id;
-    const st={hi:{bg:'#0B6A61',fg:'#FFFFFF',bd:'2px solid #0B6A61'},mid:{bg:'#FFFFFF',fg:'#10302C',bd:'2px solid #0B6A61'},lo:{bg:'#F8FAF9',fg:'#44605B',bd:'2px dashed #6F8A84'}}[kind];
-    return {x:o.x,y:o.y,w:o.w,mx:-o.w/2,fs:o.fs,label:o.label,bg:st.bg,fg:st.fg,bd:st.bd,pulse:r===0?'pulse':'',ring:sel?'0 0 0 4px #F7E6D5, 0 0 0 6px #9A4A0C':'none',go:()=>this.go(o.root,o.solo?null:o.id)};
+    const st={hi:{bg:'#1E4D38',fg:'#FFFFFF',bd:'2px solid #1E4D38'},mid:{bg:'#FFFFFF',fg:'#1C2416',bd:'2px solid #1E4D38'},lo:{bg:'#FAF8F2',fg:'#4A5444',bd:'2px dashed #6E7565'}}[kind];
+    return {x:o.x,y:o.y,w:o.w,mx:-o.w/2,fs:o.fs,label:o.label,bg:st.bg,fg:st.fg,bd:st.bd,pulse:r===0?'pulse':'',ring:sel?'0 0 0 4px #F3E6CF, 0 0 0 6px #8A5A22':'none',go:()=>this.go(o.root,o.solo?null:o.id)};
   });
   const edges=[];
   drawn.forEach(o=>{
@@ -941,13 +1004,13 @@ renderVals(){
     });
   });
   const colour=m=>{
-    if(m.rel==='parent'||m.rel==='grandparent') return {bg:'#F7E6D5',bd:'2.5px solid #9A4A0C'};
-    if(m.rel==='child'||m.rel==='grandchild') return {bg:'#E0EAF8',bd:'2.5px solid #2A5AA6'};
-    return {bg:'#DDEFEA',bd:'3px solid #0B6A61'};
+    if(m.rel==='parent'||m.rel==='grandparent') return {bg:'#F3E6CF',bd:'2.5px solid #8A5A22'};
+    if(m.rel==='child'||m.rel==='grandchild') return {bg:'#E2E8F0',bd:'2.5px solid #3B5C80'};
+    return {bg:'#DCE8DF',bd:'3px solid #1E4D38'};
   };
   const people=all.map(m=>{
     const c=colour(m); const d=m.id==='me'?96:84;
-    return {x:pos[m.id].x,y:pos[m.id].y,d:d,m:-d/2,name:m.label,band:bl(m.age),homeShort:homeShort(m.home),bg:c.bg,bd:c.bd,ring:s.who===m.id?'0 0 0 4px #fff, 0 0 0 7px #0B6A61':'none',aria:m.label+', age band '+bl(m.age)+'. Centre the paths and figures on this person.',go:()=>this.setState({who:m.id})};
+    return {x:pos[m.id].x,y:pos[m.id].y,d:d,m:-d/2,name:m.label,band:bl(m.age),homeShort:homeShort(m.home),bg:c.bg,bd:c.bd,ring:s.who===m.id?'0 0 0 4px #fff, 0 0 0 7px #1E4D38':'none',aria:m.label+', age band '+bl(m.age)+'. Centre the paths and figures on this person.',go:()=>this.setState({who:m.id})};
   });
   const extra=extraList.map(o=>({label:o.label+(o.others.length?' ('+nmL(o.others)+')':''),go:()=>this.go(o.root,o.solo?null:o.id)}));
 
@@ -986,11 +1049,11 @@ renderVals(){
   const domCards=limit(allDom);
   const domMore=allDom.length>3&&guided;
   const allLabel=s.showAll?'Show fewer options':'Show all options';
-  const allTopics=D.flat.map(id=>{ const d=D.depth(id); return {title:by[id].t,pad:12+d*18,bg:d===0?'#EEF1F0':'#fff',fs:d===0?15:14,fw:d===0?700:500,visited:!!s.visited[id],go:()=>this.go(id,null)}; });
+  const allTopics=D.flat.map(id=>{ const d=D.depth(id); return {title:by[id].t,pad:12+d*18,bg:d===0?'#EEEADF':'#fff',fs:d===0?15:14,fw:d===0?700:500,visited:!!s.visited[id],go:()=>this.go(id,null)}; });
 
   const n=s.focus?by[s.focus]:by[D.doms[0]];
   const crumbIds=s.focus?D.chain(s.focus):[];
-  const crumbs=crumbIds.map((id,i)=>{ const last=i===crumbIds.length-1; return {t:by[id].t,fg:last?'#10302C':'#0B6A61',deco:last?'none':'underline',go:()=>this.go(id,s.via)}; });
+  const crumbs=crumbIds.map((id,i)=>{ const last=i===crumbIds.length-1; return {t:by[id].t,fg:last?'#1C2416':'#1E4D38',deco:last?'none':'underline',go:()=>this.go(id,s.via)}; });
   const allKids=rank(D.kids[n.id]||[]);
   const kidCards=limit(allKids);
   const hasKids=allKids.length>0;
@@ -1000,7 +1063,7 @@ renderVals(){
   const sibs=(n.p?D.kids[n.p]:D.doms).filter(i=>i!==n.id);
   const adjIds=[];
   cross.concat(sibs).forEach(i=>{ if(i!==n.id&&adjIds.indexOf(i)<0) adjIds.push(i); });
-  const adj=adjIds.map(i=>({title:by[i].t,path:pathOf(i),visited:!!s.visited[i],tag:s.visited[i]?'Opened':(cross.indexOf(i)>=0?'Linked topic, not opened':'Not opened'),tagBg:s.visited[i]?'#EEF1F0':'#F7E6D5',go:()=>this.go(i,null)}));
+  const adj=adjIds.map(i=>({title:by[i].t,path:pathOf(i),visited:!!s.visited[i],tag:s.visited[i]?'Opened':(cross.indexOf(i)>=0?'Linked topic, not opened':'Not opened'),tagBg:s.visited[i]?'#EEEADF':'#F3E6CF',go:()=>this.go(i,null)}));
   adj.sort((a,b)=>(a.visited?1:0)-(b.visited?1:0));
   const adjShown=adj.slice(0,6);
   const dm=s.focus?D.dom(s.focus):'';
@@ -1013,10 +1076,13 @@ renderVals(){
   const stateNote=(()=>{
     if(n.st==='fp') return S.fp+' Claim time limits and which assets count are state-specific.';
     if(n.st==='tt') return 'Family provision: '+S.fp+' Ask '+S.revenue+' how land tax treats trust-held property, and note that how long a trust can last differs by state.';
-    if(n.st==='rev') return 'Check current thresholds and concessions with '+S.revenue+'.';
+    if(n.st==='rev') return 'Check current thresholds and concessions with '+S.revenue+'.'+(S.revX&&n.id==='p_home'?' '+S.revX:'');
     return '';
   })();
   const hasStateNote=!!(s.focus&&stateNote);
+  const stateLink=n.st==='rev'?((n.id==='p_home'&&S.revXUrl)||S.revenueUrl||''):((n.st==='fp'||n.st==='tt')?(S.fpUrl||''):'');
+  const hasStateLink=hasStateNote&&!!stateLink;
+  const stateLinkText=n.st==='rev'?('Open '+S.revenue+(n.id==='p_home'&&S.revXUrl?': Home Buyer Concession Scheme':'')):'Read the Act on the official legislation register';
   const vItems=(n.v?[n.v]:[]).concat(s.focus&&dm&&by[dm].v&&dm!==n.id?[by[dm].v]:[]).map(t=>{ const p=t.split('|'); return {src:p[0],what:p[1]}; });
   const hasV=vItems.length>0;
 
@@ -1029,7 +1095,7 @@ renderVals(){
   const figKicker='Figures for '+subj.label+' · '+stageOf(a0).name+(hasPage?' · '+rowName+' row on coeconomics.com':'');
   const figTitle='Ages '+bl(a0);
   const figNote=hasPage?'Considerations, scenarios and figures below are from the matching coeconomics.com band page. Several figures cover a wider age group than the two-year band; the group is named on each line.':'coeconomics.com has no band page for this age. Figures shown are the wider age groups that include it, and the considerations are carried over from the nearest page and marked as drafts.';
-  const figWho=all.map(m=>({label:m.label,band:bl(m.age),on:subj.id===m.id,bg:subj.id===m.id?'#0B6A61':'#fff',fg:subj.id===m.id?'#fff':'#10302C',go:()=>this.setState({who:m.id,figAll:false})}));
+  const figWho=all.map(m=>({label:m.label,band:bl(m.age),on:subj.id===m.id,bg:subj.id===m.id?'#1E4D38':'#fff',fg:subj.id===m.id?'#fff':'#1C2416',go:()=>this.setState({who:m.id,figAll:false})}));
   let consRaw=null, consDraft=false, consDraftText='', noConsText='';
   const bd=D.B[a0];
   if(bd&&bd.c){ consRaw=bd.c; }
@@ -1048,7 +1114,7 @@ renderVals(){
   const sc=[['Lower income','bottom 10%'],['Middle income','40th to 60th percentile'],['Higher income','top 10%']];
   const scen=inc?[0,1,2].map(i=>{
     const f=bd&&bd.f?bd.f[i]:'';
-    return {name:sc[i][0],pct:sc[i][1],range:inc[2+i],focus:f,hasFocus:!!f,pros:D.PROS[proKey][i].join('; '),best:i===bestIdx,bg:i===bestIdx?'#F4FAF8':'#fff',bd:i===bestIdx?'2px solid #0B6A61':'1px solid #C9D6D1'};
+    return {name:sc[i][0],pct:sc[i][1],range:inc[2+i],focus:f,hasFocus:!!f,pros:D.PROS[proKey][i].join('; '),best:i===bestIdx,bg:i===bestIdx?'#EEF4EF':'#fff',bd:i===bestIdx?'2px solid #1E4D38':'1px solid #D6CFBD'};
   }):[];
   const incGroup=inc?inc[5]:'';
 
@@ -1077,13 +1143,13 @@ renderVals(){
     const shown=s.allRefs?list:list.slice(0,4);
     refsMore=list.length>4;
     refIntro='For '+by[dm].t.toLowerCase()+' in '+S.n+'. Ordered by fit with the current emphasis; everything relevant stays listed.';
-    refs=shown.map(x=>{ const o=x.o; return {name:o.sk?S[o.sk]:o.n,kind:o.kind,note:o.note,ph:o.ph,hasPh:!!o.ph}; });
+    refs=shown.map(x=>{ const o=x.o; const url=o.sk?(S[o.sk+'Url']||''):''; return {name:o.sk?S[o.sk]:o.n,kind:o.kind,note:o.note,ph:o.ph,hasPh:!!o.ph,url:url,hasUrl:!!url,urlText:'Official site',check:url?'Needs checking · link added 21 Nov 2026, details not yet verified by a person':'Needs checking · not yet verified by a person'}; });
   }
   const refsLabel=s.allRefs?'Show fewer':'Show all support options';
   const layer=!s.focus?(s.who?2:1):Math.min(4,D.depth(s.focus)+3);
 
   return {
-    quickOn:!guided,guidedOn:guided,quickBg:guided?'#fff':'#0B6A61',quickFg:guided?'#10302C':'#fff',guidedBg:guided?'#0B6A61':'#fff',guidedFg:guided?'#fff':'#10302C',
+    quickOn:!guided,guidedOn:guided,quickBg:guided?'#fff':'#1E4D38',quickFg:guided?'#1C2416':'#fff',guidedBg:guided?'#1E4D38':'#fff',guidedFg:guided?'#fff':'#1C2416',
     setQuick:()=>this.setState({mode:'quick',q:'',showAll:false}),setGuided:()=>this.setState({mode:'guided',q:'',showAll:false}),
     st:s.st,onSt:e=>this.setState({st:e.target.value}),
     stateOpts:Object.keys(D.S).map(k=>({k:k,label:k+' · '+D.S[k].n})),
@@ -1104,6 +1170,10 @@ renderVals(){
     hasInc:hasInc,noInc:noInc,incGroup:incGroup,scen:scen,
     figs:figs,hasFigs:hasFigs,noFigs:noFigs,figMore:figMore,figsLabel:figsLabel,toggleFigs:()=>this.setState({figAll:!s.figAll}),
     trail:trail,empWhy:empWhy,bars:bars,resetBeh:()=>this.setState({beh:[0,0,0,0]}),
+    hasStateLink:hasStateLink,stateLink:stateLink,stateLinkText:stateLinkText,
+    saveHead:!this._storageOk?'Not saved.':(this._snap(s)===this._snap(this._defaults())?'Example household.':'Saved in this browser only.'),
+    saveText:!this._storageOk?'This browser is blocking local storage, so the household resets when you reload.':(this._snap(s)===this._snap(this._defaults())?'Change anything and it is kept in this browser (localStorage on this device). Nothing is sent anywhere. Use role labels such as Mum or Child 1, not real names.':'Your household is kept in localStorage on this device so it survives a reload. Nothing is sent anywhere. Use role labels such as Mum or Child 1, not real names.'),
+    noConfirm:!s.confirmReset,confirmOn:!!s.confirmReset,askReset:()=>this.setState({confirmReset:true}),cancelReset:()=>this.setState({confirmReset:false}),doReset:()=>this.resetHousehold(),
     refs:refs,refIntro:refIntro,refsMore:refsMore,refsLabel:refsLabel,toggleRefs:()=>this.setState({allRefs:!s.allRefs})
   };
 }

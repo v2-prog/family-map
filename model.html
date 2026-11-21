@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-AU"><head>
 <meta charset="utf-8">
-<title>Backbone and Privacy Model</title>
+<title>Model and privacy · Family Map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How the Family Map works: fifty two-year age bands, twelve life stages, the emphasis weighting and the browser-only privacy model. General information only.">
+<meta name="theme-color" content="#1E4D38">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <!--
   Fonts: Bricolage Grotesque and Instrument Sans, SIL Open Font License 1.1.
   Copyright 2022 The Bricolage Grotesque Project Authors; Copyright 2022 The Instrument Sans Project Authors.
@@ -137,71 +141,76 @@
 }
 </style>
 <style>
-body{margin:0;background:#F1F5F3}
-a{color:#0B6A61}a:hover{color:#08463F}
+body{margin:0;background:#F3EFE4}
+a{color:#1E4D38}a:hover{color:#163A2A}
+.fm-nav a{font-weight:600;text-decoration:none}.fm-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:640px){.fm-root{padding:16px 14px 32px !important}.fm-root h1{font-size:30px !important}.fm-root h2{font-size:20px !important}.fm-root section[aria-label="Controls"]>div{flex:1 1 100% !important}}
 </style>
 </helmet>
-<div style="box-sizing:border-box;padding:28px 32px 48px;background:#F1F5F3;color:#10302C;font-family:'Instrument Sans',system-ui,sans-serif;display:flex;flex-direction:column;gap:20px">
+<div class="fm-root" style="box-sizing:border-box;padding:28px 32px 48px;background:#F3EFE4;color:#1C2416;font-family:'Instrument Sans',system-ui,sans-serif;display:flex;flex-direction:column;gap:20px">
+<nav aria-label="Family Map pages" class="fm-nav" style="display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:space-between;font-size:15px"><a href="index.html" style="display:flex;align-items:center;gap:8px;color:#1E4D38;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:700;font-size:17px"><img src="assets/favicon.svg" alt="" width="26" height="26">Family Map</a><span style="display:flex;flex-wrap:wrap;gap:6px 18px"><a href="index.html">Family map</a><a href="model.html" aria-current="page">Model and privacy</a><a href="register.html">Needs-checking register</a></span></nav>
+<p role="note" style="margin:0;padding:10px 14px;border-radius:10px;background:#F3E6CF;border:1px solid #D9BF94;color:#6B4419;font-size:14px;font-weight:600;line-height:1.4">General information only. Verify current rules on official sites. Not personal advice.</p>
+
 
 <header style="display:flex;flex-direction:column;gap:6px;max-width:820px">
-<div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#44605B">Australian Life-Stage Planner · Model</div>
+<div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#4A5444">Australian Life-Stage Planner · Model</div>
 <h1 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:40px;line-height:1.05;font-weight:700">How the backbone, the weighting and the privacy rules fit together</h1>
-<p style="margin:0;font-size:16px;line-height:1.5;color:#44605B">This page specifies what the interactive map assumes. Nothing here is built as a backend yet.</p>
+<p style="margin:0;font-size:16px;line-height:1.5;color:#4A5444">This page specifies what the interactive map assumes. Nothing here is built as a backend yet.</p>
 </header>
 
-<section style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px">
+<section style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:24px;font-weight:700">The backbone: fifty two-year bands, 0 to 99</h2>
-<p style="margin:0;font-size:15px;line-height:1.5;color:#44605B;max-width:820px">Each band is a cell. Twelve stages group them, and each stage carries a relational layer (who is around you and what they need) and a financial-progression layer. The last line in each cell is the emphasis the age prior alone would lead with, before any behaviour is counted.</p>
+<p style="margin:0;font-size:15px;line-height:1.5;color:#4A5444;max-width:820px">Each band is a cell. Twelve stages group them, and each stage carries a relational layer (who is around you and what they need) and a financial-progression layer. The last line in each cell is the emphasis the age prior alone would lead with, before any behaviour is counted.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(112px,100%),1fr));gap:8px">
 <sc-for list="{{bands}}" as="b" hint-placeholder-count="30">
-<div style="border-radius:10px;border:1px solid #C9D6D1;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+<div style="border-radius:10px;border:1px solid #D6CFBD;overflow:hidden;background:#fff;display:flex;flex-direction:column">
 <div style="height:8px;background:{{b.bar}}"></div>
 <div style="padding:8px 10px;display:flex;flex-direction:column;gap:2px">
 <div style="font-size:16px;font-weight:700">{{b.label}}</div>
-<div style="font-size:12px;color:#44605B;line-height:1.3">{{b.stage}}</div>
-<div style="font-size:12px;font-weight:600;color:#08463F;line-height:1.3">{{b.lead}}</div>
+<div style="font-size:12px;color:#4A5444;line-height:1.3">{{b.stage}}</div>
+<div style="font-size:12px;font-weight:600;color:#163A2A;line-height:1.3">{{b.lead}}</div>
 </div>
 </div>
 </sc-for>
 </div>
 </section>
 
-<section style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<section style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:24px;font-weight:700">Layers added to each stage</h2>
 <div style="overflow-x:auto">
 <div style="min-width:860px;display:grid;grid-template-columns:140px 70px minmax(0,1fr) minmax(0,1fr);gap:0;font-size:14px;line-height:1.5">
-<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #10302C">Stage</div>
-<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #10302C">Ages</div>
-<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #10302C">Relational layer</div>
-<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #10302C">Financial-progression layer</div>
+<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #1C2416">Stage</div>
+<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #1C2416">Ages</div>
+<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #1C2416">Relational layer</div>
+<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #1C2416">Financial-progression layer</div>
 <sc-for list="{{stages}}" as="s" hint-placeholder-count="8">
-<div style="padding:10px;border-bottom:1px solid #E3EAE7;font-weight:600">{{s.name}}</div>
-<div style="padding:10px;border-bottom:1px solid #E3EAE7">{{s.ages}}</div>
-<div style="padding:10px;border-bottom:1px solid #E3EAE7">{{s.rel}}</div>
-<div style="padding:10px;border-bottom:1px solid #E3EAE7">{{s.fin}}</div>
+<div style="padding:10px;border-bottom:1px solid #E7E1D2;font-weight:600">{{s.name}}</div>
+<div style="padding:10px;border-bottom:1px solid #E7E1D2">{{s.ages}}</div>
+<div style="padding:10px;border-bottom:1px solid #E7E1D2">{{s.rel}}</div>
+<div style="padding:10px;border-bottom:1px solid #E7E1D2">{{s.fin}}</div>
 </sc-for>
 </div>
 </div>
 </section>
 
-<section style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px">
+<section style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:24px;font-weight:700">Income awareness without asking about income</h2>
-<p style="margin:0;font-size:15px;line-height:1.5;color:#44605B;max-width:860px">Four emphasis weights (safety net, building, established, structuring) start from an age prior. Opened topics add to them, and the behavioural share grows with use but is capped. A floor keeps every weight above zero, and behaviour decays whenever time moves on, so no one is locked into a bracket. The columns show the same eight areas ranked from the age prior alone, at five ages.</p>
+<p style="margin:0;font-size:15px;line-height:1.5;color:#4A5444;max-width:860px">Four emphasis weights (safety net, building, established, structuring) start from an age prior. Opened topics add to them, and the behavioural share grows with use but is capped. A floor keeps every weight above zero, and behaviour decays whenever time moves on, so no one is locked into a bracket. The columns show the same eight areas ranked from the age prior alone, at five ages.</p>
 <div style="display:flex;flex-wrap:wrap;gap:16px">
 <sc-for list="{{samples}}" as="c" hint-placeholder-count="3">
-<div style="flex:1 1 280px;border:1px solid #C9D6D1;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:8px">
+<div style="flex:1 1 280px;border:1px solid #D6CFBD;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:8px">
 <div style="font-size:15px;font-weight:700">Age {{c.band}}</div>
-<div style="font-size:13px;color:#44605B">{{c.lead}} leads the emphasis</div>
+<div style="font-size:13px;color:#4A5444">{{c.lead}} leads the emphasis</div>
 <ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.4">
 <sc-for list="{{c.rows}}" as="r" hint-placeholder-count="6"><li>{{r.t}}</li></sc-for>
 </ol>
 </div>
 </sc-for>
 </div>
-<div style="font-size:14px;color:#44605B;line-height:1.5;max-width:860px">All eight areas appear in every column. Only their order moves. The three income scenarios on the map (lower, middle, higher) are highlighted by the same weights: lower leans on safety net plus half of building, middle on half of building and half of established, higher on half of established plus structuring. The age priors are design assumptions and are listed in the register for calibration against ABS income data.</div>
+<div style="font-size:14px;color:#4A5444;line-height:1.5;max-width:860px">All eight areas appear in every column. Only their order moves. The three income scenarios on the map (lower, middle, higher) are highlighted by the same weights: lower leans on safety net plus half of building, middle on half of building and half of established, higher on half of established plus structuring. The age priors are design assumptions and are listed in the register for calibration against ABS income data.</div>
 </section>
 
-<section style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px">
+<section style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:24px;font-weight:700">Household isolation</h2>
 <div style="display:flex;flex-wrap:wrap;align-items:stretch;gap:10px">
 <sc-for list="{{chain}}" as="c" hint-placeholder-count="4">
@@ -210,7 +219,7 @@ a{color:#0B6A61}a:hover{color:#08463F}
 <div style="font-size:16px;font-weight:700">{{c.t}}</div>
 <div style="font-size:14px;line-height:1.45">{{c.d}}</div>
 </div>
-<div aria-hidden="true" style="align-self:center;font-size:22px;color:#44605B">›</div>
+<div aria-hidden="true" style="align-self:center;font-size:22px;color:#4A5444">›</div>
 </div>
 </sc-for>
 </div>
@@ -237,14 +246,19 @@ a{color:#0B6A61}a:hover{color:#08463F}
 </div>
 </section>
 
-<section style="background:#fff;border:1px solid #C9D6D1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px">
+<section style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px">
 <h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:24px;font-weight:700">What is real and what is not yet</h2>
 <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.5;max-width:900px">
 <li>Working in the prototype: the family map, linked nodes that appear and disappear with age bands, emphasis that shifts with age and use, branch memory, adjacent paths, the quick and guided paths, and state-aware support lists.</li>
 <li>Specified only: the household tables, the isolation policies, invitations between related users, and the figure registry that would block stale numbers from showing.</li>
 <li>Carried over from coeconomics.com, the original planner: considerations, income scenarios and group figures for bands 12 to 81. The 64 to 65 considerations could not be read when copied. Ages 0 to 11 and 82 to 99 have no pages there, so the map shows planner drafts marked as such. None of it has been checked against primary sources.</li>
 </ul>
-<div style="font-size:14px;color:#44605B">See the <a href="register.html">needs-checking register</a> and the <a href="index.html">interactive map</a>.</div>
+<section aria-label="Saved in this browser" style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px">
+<h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:22px;font-weight:700">This version: saved in your browser only</h2>
+<p style="margin:0;font-size:15px;line-height:1.5;color:#4A5444;max-width:820px">The published map has no backend and no account. The household you build (role labels, age bands, living arrangements, chosen state, quick or guided path, and the selected person) is stored in this browser's localStorage under the key <code>familymap.au.household.v1</code>, on this device only. Nothing is sent to a server, and the site makes no network requests beyond its own files.</p>
+<p style="margin:0;font-size:15px;line-height:1.5;color:#4A5444;max-width:820px">Use “Reset / clear saved household” on the map, or clear this site's data in your browser settings, to remove it. Anyone using the same browser profile can see it. Use role labels such as Mum or Child 1, not real names. The household tables and isolation rules above describe a possible future version and are not built.</p>
+</section>
+<div style="font-size:14px;color:#4A5444">See the <a href="register.html">needs-checking register</a> and the <a href="index.html">interactive map</a>.</div>
 </section>
 </div>
 </x-dc>
@@ -267,7 +281,7 @@ renderVals(){
    {from:76,to:85,name:'Later life',rel:'Family help and communication become central, and executors and families may need practical guidance.',fin:'Aged care costs, village or home care choices, settling the estate, gifts and legacy.'},
    {from:86,to:99,name:'Advanced age',rel:'Family or professionals often manage decisions, so documents and attorneys matter most.',fin:'Aged care fees and accommodation payments, estate and legacy.'}
   ];
-  const ramp=['#EEF7F4','#E4F2EE','#D2EAE4','#BDE0D8','#9DCFC5','#6DB5A9','#3F978B','#1F7A6F','#0B6A61','#095A53','#08463F','#062F2B'];
+  const ramp=['#EFF4EE','#E6EEE6','#D8E5DA','#C6D9CA','#A9C6B1','#7FA88C','#4F8668','#2F6A4E','#1E4D38','#1A4430','#163A2A','#0F2A1D'];
   const lead=a=>{ const p=prior(a); let m=0; p.forEach((v,i)=>{ if(v>p[m]) m=i; }); return BR[m]; };
   const stIdx=a=>{ for(let i=0;i<stages.length;i++){ if(a>=stages[i].from&&a<=stages[i].to) return i; } return stages.length-1; };
   const bands=[]; for(let a=0;a<=98;a+=2){ const i=stIdx(a); bands.push({label:a+'–'+(a+1),stage:stages[i].name,bar:ramp[i],lead:lead(a)}); }
@@ -287,10 +301,10 @@ renderVals(){
     return {band:a+'–'+(a+1),lead:lead(a),rows:rows};
   });
   const chain=[
-   {t:'Household',d:'The only tenant. One sign-in, one private space, one set of policies.',bg:'#DDEFEA',bd:'#0B6A61'},
-   {t:'People',d:'You, plus any parents, grandparents, partner, children and grandchildren you add. Each has an age band, a label and a living arrangement, nothing more.',bg:'#F7E6D5',bd:'#9A4A0C'},
-   {t:'Interactions',d:'Which topics were opened and when. Used for branch memory and the emphasis.',bg:'#E0EAF8',bd:'#2A5AA6'},
-   {t:'Derived emphasis',d:'Four weights per person, recomputed from age and interactions, decaying over time.',bg:'#EEF1F0',bd:'#6F8A84'}
+   {t:'Household',d:'The only tenant. One sign-in, one private space, one set of policies.',bg:'#DCE8DF',bd:'#1E4D38'},
+   {t:'People',d:'You, plus any parents, grandparents, partner, children and grandchildren you add. Each has an age band, a label and a living arrangement, nothing more.',bg:'#F3E6CF',bd:'#8A5A22'},
+   {t:'Interactions',d:'Which topics were opened and when. Used for branch memory and the emphasis.',bg:'#E2E8F0',bd:'#3B5C80'},
+   {t:'Derived emphasis',d:'Four weights per person, recomputed from age and interactions, decaying over time.',bg:'#EEEADF',bd:'#6E7565'}
   ];
   const st=stages.map(s=>({name:s.name,ages:s.from+'–'+s.to,rel:s.rel,fin:s.fin}));
   return {bands:bands,stages:st,samples:samples,chain:chain};
