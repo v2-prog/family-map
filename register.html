@@ -1,258 +1,94 @@
 <!DOCTYPE html>
-<html lang="en-AU"><head>
-<meta charset="utf-8">
-<title>Needs-checking register · Family Map</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Every figure, link and helpline number in the Family Map that still needs a person to verify it against an official Australian source.">
-<meta name="theme-color" content="#1E4D38">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<!--
-  Fonts: Bricolage Grotesque and Instrument Sans, SIL Open Font License 1.1.
-  Copyright 2022 The Bricolage Grotesque Project Authors; Copyright 2022 The Instrument Sans Project Authors.
-  See assets/fonts/OFL.txt and https://openfontlicense.org
-  React 18.3.1 (MIT) is served from assets/ so no CDN is needed.
--->
-<script src="assets/react.production.min.js"></script>
-<script src="assets/react-dom.production.min.js"></script>
-<script src="assets/dc-runtime.js"></script>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Needs-checking register · Family Map</title>
+  <meta name="description" content="Every figure, link and helpline number in the Family Map that still needs a person to verify it.">
+  <meta name="theme-color" content="#1E4D38">
+  <link rel="icon" href="assets/favicon.v1.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/instrument-sans-latin.v1.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.v1.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/styles.v1.css">
+  <script src="assets/core.v1.js"></script>
 </head>
-<body>
-<x-dc>
-<helmet>
-<style>/* vietnamese */
-@font-face {
-  font-family: 'Bricolage Grotesque';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/bricolage-grotesque-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Bricolage Grotesque';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/bricolage-grotesque-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Bricolage Grotesque';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/bricolage-grotesque-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Bricolage Grotesque';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/bricolage-grotesque-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Bricolage Grotesque';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/bricolage-grotesque-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Bricolage Grotesque';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/bricolage-grotesque-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Instrument Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/instrument-sans-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Instrument Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/instrument-sans-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Instrument Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/instrument-sans-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Instrument Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/instrument-sans-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Instrument Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/instrument-sans-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Instrument Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("assets/fonts/instrument-sans-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-</style>
-<style>
-body{margin:0;background:#F3EFE4}
-button{font-family:inherit;cursor:pointer}
-button:focus-visible{outline:3px solid #1E4D38;outline-offset:2px}
-a{color:#1E4D38}a:hover{color:#163A2A}
-.fm-nav a{font-weight:600;text-decoration:none}.fm-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px}
-@media (max-width:640px){.fm-root{padding:16px 14px 32px !important}.fm-root h1{font-size:30px !important}.fm-root h2{font-size:20px !important}.fm-root section[aria-label="Controls"]>div{flex:1 1 100% !important}}
-</style>
-</helmet>
-<div class="fm-root" style="box-sizing:border-box;padding:28px 32px 48px;background:#F3EFE4;color:#1C2416;font-family:'Instrument Sans',system-ui,sans-serif;display:flex;flex-direction:column;gap:20px">
-<nav aria-label="Family Map pages" class="fm-nav" style="display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:space-between;font-size:15px"><a href="index.html" style="display:flex;align-items:center;gap:8px;color:#1E4D38;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:700;font-size:17px"><img src="assets/favicon.svg" alt="" width="26" height="26">Family Map</a><span style="display:flex;flex-wrap:wrap;gap:6px 18px"><a href="index.html">Family map</a><a href="model.html">Model and privacy</a><a href="register.html" aria-current="page">Needs-checking register</a></span></nav>
-<p role="note" style="margin:0;padding:10px 14px;border-radius:10px;background:#F3E6CF;border:1px solid #D9BF94;color:#6B4419;font-size:14px;font-weight:600;line-height:1.4">General information only. Verify current rules on official sites. Not personal advice.</p>
+<body data-page="register">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="disclaimer-bar" role="note"><p><strong>Australia only.</strong> General information only. Verify current rules on official sites. Not personal advice.</p></div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="assets/favicon.v1.svg" alt="" width="32" height="32"><span>Family Map<span class="brand-sub">Australian life-stage planner, ages 0 to 99</span></span></a>
+      <nav class="site-nav" aria-label="Family Map pages"><ul><li><a href="index.html">Family map</a></li><li><a href="model.html">Model and privacy</a></li><li><a href="register.html" aria-current="page">Needs-checking register</a></li></ul></nav>
+    </div>
+  </header>
+  <div id="notices"></div>
+  <main id="main" tabindex="-1">
+    <div class="wrap">
 
-
-<header style="display:flex;flex-direction:column;gap:6px;max-width:860px">
-<div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#4A5444">Australian Life-Stage Planner · Needs-checking register</div>
-<h1 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:40px;line-height:1.05;font-weight:700">Every figure and name that can go out of date</h1>
-<p style="margin:0;font-size:16px;line-height:1.5;color:#4A5444">Nothing below has been verified. Each row is something a person must check against the named source before the planner is published, and again on its trigger. Release timings are expected patterns to confirm, not promises.</p>
-</header>
-
-<section style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px">
-<div role="group" aria-label="Filter by source" style="display:flex;flex-wrap:wrap;gap:8px">
-<sc-for list="{{chips}}" as="c" hint-placeholder-count="7"><button type="button" aria-pressed="{{c.on}}" sc-camel-on-click="{{c.pick}}" style="min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #1E4D38;background:{{c.bg}};color:{{c.fg}};font-size:14px;font-weight:600">{{c.label}}</button></sc-for>
-</div>
-<div style="font-size:14px;color:#4A5444">{{countText}}</div>
-<div style="overflow-x:auto">
-<div style="min-width:1000px;display:grid;grid-template-columns:56px 150px minmax(0,2fr) minmax(0,1.2fr) minmax(0,1.3fr) 130px;font-size:14px;line-height:1.5">
-<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #1C2416">ID</div>
-<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #1C2416">Source</div>
-<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #1C2416">What to check</div>
-<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #1C2416">Where it shows in the planner</div>
-<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #1C2416">Recheck when</div>
-<div style="padding:8px 10px;font-weight:700;border-bottom:2px solid #1C2416">Status</div>
-<sc-for list="{{rows}}" as="r" hint-placeholder-count="10">
-<div style="padding:10px;border-bottom:1px solid #E7E1D2;font-weight:600">{{r.id}}</div>
-<div style="padding:10px;border-bottom:1px solid #E7E1D2;font-weight:600">{{r.src}}</div>
-<div style="padding:10px;border-bottom:1px solid #E7E1D2">{{r.what}}</div>
-<div style="padding:10px;border-bottom:1px solid #E7E1D2">{{r.where}}</div>
-<div style="padding:10px;border-bottom:1px solid #E7E1D2">{{r.when}}</div>
-<div style="padding:10px;border-bottom:1px solid #E7E1D2"><span style="display:inline-block;font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:#F8EEDB;color:#6B4419;border:1px solid #D9BF94">Unverified</span><div style="font-size:12px;color:#4A5444;margin-top:4px">Unverified — not yet checked</div></div>
-</sc-for>
-</div>
-</div>
-</section>
-
-<section style="background:#fff;border:1px solid #D6CFBD;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px">
-<h2 style="margin:0;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:22px;font-weight:700">How the register is meant to work</h2>
-<ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.5;max-width:900px">
-<li>Every figure shown in the planner points to one row here. A figure with no verified date does not display; the topic shows the rule in words and the flag instead.</li>
-<li>A row past its recheck trigger turns stale and raises the same flag on every topic that uses it.</li>
-<li>Referral names, phone numbers and eligibility notes are rows too. The planner currently shows five helpline numbers (OPAN, My Aged Care, 1800 ELDERHelp, National Debt Helpline, Carer Gateway) that no one has checked yet, so each carries a verify flag.</li>
-<li>Figures for ages 12 to 81 are copied from coeconomics.com, the original planner. They display with a note that they have not been checked against ABS, AIHW, ATO, ASFA or Services Australia, and rows C24 to C34 track that.</li>
-<li>The map and its topics are general information only. The flag on a topic never means a figure is wrong, only that no person has confirmed it yet.</li>
-</ul>
-<div style="font-size:14px;color:#4A5444">Back to the <a href="index.html">interactive map</a> or the <a href="model.html">model and privacy page</a>.</div>
-</section>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1360,&quot;height&quot;:1500}}">
-class Component extends DCLogic {
-constructor(props){
-  super(props);
-  this.state={f:'All'};
-}
-renderVals(){
-  const R=(id,src,what,where,when)=>({id:id,src:src,what:what,where:where,when:when});
-  const all=[
-   R('C01','ATO','Super guarantee rate, concessional and non-concessional caps, carry-forward balance limit','Contributions and catch-ups','Each 1 July; on legislative change'),
-   R('C02','ATO','Low income super tax offset threshold and maximum, super co-contribution thresholds','Low-income super concessions','Each 1 July'),
-   R('C03','ATO','Threshold for the extra tax on high-income super contributions','Contributions and catch-ups','Each 1 July'),
-   R('C04','ATO','Tax rates and components for super death benefits, and who counts as a tax dependant','Tax on benefits paid to adult children','On legislative change'),
-   R('C05','ATO','Minimum pension drawdown rates and the transfer balance cap','Drawing down in retirement','Cap indexation and any drawdown change'),
-   R('C06','ATO','Testamentary trust rules for income paid to minors, and conditions','Tax on income paid to minors','On legislative change'),
-   R('C07','ATO','Negative gearing and capital gains treatment, including deceased estate rules','Investment property, CGT and inherited property','Budget and legislative change'),
-   R('C08','ATO','Family trust distribution and tax rules','Family (discretionary) trusts','On legislative change or ATO guidance update'),
-   R('C09','ATO','Eligibility and operation of the Tax Help volunteer program','Support lists','Before each tax season'),
-   R('C10','Services Australia','Age Pension rates, income test and assets test thresholds, taper rates, pension age','Age Pension and income and assets tests','March and September indexation; confirm which thresholds move on 1 July'),
-   R('C11','Services Australia','Youth Allowance and ABSTUDY rates, age rules, parental income test','Youth Allowance and ABSTUDY','Indexation dates; policy change'),
-   R('C12','Services Australia','JobSeeker rates, waiting periods and obligations','JobSeeker','Indexation dates; policy change'),
-   R('C13','Services Australia','Gifting limits and the period gifts are counted','Gifting and deprivation rules','On policy change'),
-   R('C14','Services Australia','Carer payment and allowance rules, family payment and child care subsidy rates','Caring for a parent; costs of kids and teens','Indexation dates; policy change'),
-   R('C15','Services Australia','Aged care fee rules, means test thresholds and caps, how the home is treated, and the reformed program names and start dates','Aged care topics','Confirm the reform timetable; recheck on each fee change'),
-   R('C16','Services Australia','Concession and seniors card eligibility','Concession cards and state concessions','On policy change'),
-   R('C17','State revenue offices','First home buyer duty concessions, grants and thresholds in every state and territory','First home buyers','State budgets; confirm per jurisdiction'),
-   R('C18','State revenue offices','Land tax thresholds and trust surcharges in every state and territory','Land tax and trusts; state variations for testamentary trusts','Annually; state budgets'),
-   R('C19','ABS','Household and personal income distribution behind the age priors for the emphasis weights','Emphasis engine, age bands','When a new income release lands'),
-   R('C20','ABS','Population and life expectancy figures used for stage narratives','Stage descriptions','When a new release lands'),
-   R('C21','AIHW','Aged care use, transitions and cost context if any statistic is shown (none is shown yet)','Aged care topics','Check AIHW release cycle before showing any figure'),
-   R('C22','Legal','State succession and family provision statutes, claim time limits, trust duration rules, power of attorney forms','Wills, family provision, state variations, powers of attorney','On law change; review with a solicitor in each state'),
-   R('C23','Referrals','Names, phone numbers, websites and eligibility of every organisation in the support lists, including state legal aid, public trustee, seniors services, revenue offices, fair trading bodies, COTA branches, Carer Gateway, NDIS, Child Care Subsidy and school-cost schemes','Support for this concern','Quarterly; any time an organisation changes'),
-   R('C24','coeconomics.com','Every considerations line, income scenario note and "who to ask" list copied from the band pages for ages 12 to 81. Copied from the site, which says it checked them on 23 October 2026. Not compared with primary sources.','Figures for this age band','Before publishing; whenever coeconomics.com updates'),
-   R('C25','coeconomics.com','Band 64 to 65: the page could not be read on 28 October 2026 (server error), so its considerations and scenario notes are missing','Figures for this age band, ages 64 and 65','Retry the page and copy it in'),
-   R('C26','coeconomics.com','Ages 0 to 11 and 82 to 99 have no band page. The planner shows drafts adapted from the 12 to 13 and 80 to 81 pages, marked as drafts','Figures for this age band, ages 0 to 11 and 82 to 99','Replace with sourced content or remove'),
-   R('C27','ATO','Taxation statistics 2022-23, Table 3: income percentiles behind the lower, middle and higher scenarios. Percentiles are interpolated and exclude tax-free super','Three income scenarios','Each new taxation statistics release'),
-   R('C28','ABS','Household Income and Wealth 2019-20 net worth and household income by age. This is an older survey, so check for a newer release','Household net worth and income figures','When a new release lands'),
-   R('C29','ABS','Disability, Ageing and Carers 2022, Census 2021, Births 2024, Retirement and Retirement Intentions 2024-25, casual work and education and work releases used in the figures list','Figures for this age group','Each new release'),
-   R('C30','ABS','Life tables 2021-23 and AIHW life expectancy at 65, and AIHW Age Pension shares by age (2023)','Life expectancy and Age Pension figures','When a new release lands'),
-   R('C31','ASFA','Super account balances by age, ASFA using ATO data at 30 June 2024','Super account balance figures','Each annual update'),
-   R('C32','RBA','Consumer Payments Survey 2025 card share of payments','How people pay','Next survey'),
-   R('C33','National Anti-Scam Centre','Scam loss figures by age group, 2025','Scam losses reported','Annual report'),
-   R('C35','Referrals','ACT support links added on 21 November 2026 as the default jurisdiction: Legal Aid ACT (legalaidact.org.au), Public Trustee and Guardian (ptg.act.gov.au), ACT Revenue Office (revenue.act.gov.au), ADACAS (adacas.org.au), COTA ACT (cotaact.org.au), Access Canberra (accesscanberra.act.gov.au). Pages were reachable on that date; names, roles and eligibility not checked by a person. Other states still have names only, no links','Support for this concern (ACT)','Quarterly; when any ACT agency renames or moves a page'),
-   R('C36','State revenue offices','ACT tax reform note: conveyance duty being cut and replaced by general rates since 2012, 2026–27 ACT Budget removing duty for all first home buyers, Home Buyer Concession Scheme rules and start date, First Home Owner Grant ceased 1 July 2019. Sources: revenue.act.gov.au and the 2026–27 ACT Budget Outlook (treasury.act.gov.au). No dollar thresholds are shown','First home buyers and stamp duty topics, ACT state note','Each ACT Budget; 1 July'),
-   R('C37','Legal','Family Provision Act 1969 (ACT) link (legislation.act.gov.au/a/1969-12/) and the ACT claim time limit, which the planner does not state','Family provision state note, ACT','On law change; review with an ACT solicitor'),
-   R('C34','Other surveys','eSafety Commissioner (2024) social media use and Roy Morgan Youth Barometer (2025) financial difficulty, AIFS living arrangements from Census 2021','Online life, financial difficulty and living alone figures','Each new release')
-  ];
-  const labels=['All','ATO','Services Australia','State revenue offices','ABS','AIHW','Legal','Referrals','coeconomics.com','ASFA','RBA','National Anti-Scam Centre','Other surveys'];
-  const f=this.state.f;
-  const rows=all.filter(r=>f==='All'||r.src===f);
-  const chips=labels.map(l=>({label:l,on:f===l,bg:f===l?'#1E4D38':'#fff',fg:f===l?'#fff':'#1C2416',pick:()=>this.setState({f:l})}));
-  return {chips:chips,rows:rows,countText:rows.length+(rows.length===1?' item':' items')+(f==='All'?' across all sources':' from '+f)};
-}
-}
-</script>
-
-
-</body></html>
+      <header class="hero"><div><p class="eyebrow">Australian Life-Stage Planner &middot; Needs-checking register</p><h1>Every figure and name that can go out of date</h1><p class="lede">Nothing below has been verified. Each row is something a person must check against the named source before the planner is published, and again on its trigger. Release timings are expected patterns to confirm, not promises.</p></div></header>
+      <div id="reg-filters"></div>
+      <p class="result-count" id="reg-count" role="status">37 items across all sources</p>
+      <div class="table-outer"><div class="table-wrap" tabindex="0" role="region" aria-label="Needs-checking register"><table class="stack reg-table"><caption>Needs-checking register</caption>
+        <thead><tr><th scope="col">ID</th><th scope="col">Source</th><th scope="col">What to check</th><th scope="col">Where it shows</th><th scope="col">Recheck when</th><th scope="col">Status</th></tr></thead><tbody>
+        <tr data-source="ATO" id="c01"><th scope="row" data-label="ID">C01</th><td data-label="Source">ATO</td><td data-label="What to check">Super guarantee rate, concessional and non-concessional caps, carry-forward balance limit</td><td data-label="Where it shows">Contributions and catch-ups</td><td data-label="Recheck when">Each 1 July; on legislative change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ATO" id="c02"><th scope="row" data-label="ID">C02</th><td data-label="Source">ATO</td><td data-label="What to check">Low income super tax offset threshold and maximum, super co-contribution thresholds</td><td data-label="Where it shows">Low-income super concessions</td><td data-label="Recheck when">Each 1 July</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ATO" id="c03"><th scope="row" data-label="ID">C03</th><td data-label="Source">ATO</td><td data-label="What to check">Threshold for the extra tax on high-income super contributions</td><td data-label="Where it shows">Contributions and catch-ups</td><td data-label="Recheck when">Each 1 July</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ATO" id="c04"><th scope="row" data-label="ID">C04</th><td data-label="Source">ATO</td><td data-label="What to check">Tax rates and components for super death benefits, and who counts as a tax dependant</td><td data-label="Where it shows">Tax on benefits paid to adult children</td><td data-label="Recheck when">On legislative change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ATO" id="c05"><th scope="row" data-label="ID">C05</th><td data-label="Source">ATO</td><td data-label="What to check">Minimum pension drawdown rates and the transfer balance cap</td><td data-label="Where it shows">Drawing down in retirement</td><td data-label="Recheck when">Cap indexation and any drawdown change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ATO" id="c06"><th scope="row" data-label="ID">C06</th><td data-label="Source">ATO</td><td data-label="What to check">Testamentary trust rules for income paid to minors, and conditions</td><td data-label="Where it shows">Tax on income paid to minors</td><td data-label="Recheck when">On legislative change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ATO" id="c07"><th scope="row" data-label="ID">C07</th><td data-label="Source">ATO</td><td data-label="What to check">Negative gearing and capital gains treatment, including deceased estate rules</td><td data-label="Where it shows">Investment property, CGT and inherited property</td><td data-label="Recheck when">Budget and legislative change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ATO" id="c08"><th scope="row" data-label="ID">C08</th><td data-label="Source">ATO</td><td data-label="What to check">Family trust distribution and tax rules</td><td data-label="Where it shows">Family (discretionary) trusts</td><td data-label="Recheck when">On legislative change or ATO guidance update</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ATO" id="c09"><th scope="row" data-label="ID">C09</th><td data-label="Source">ATO</td><td data-label="What to check">Eligibility and operation of the Tax Help volunteer program</td><td data-label="Where it shows">Support lists</td><td data-label="Recheck when">Before each tax season</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Services Australia" id="c10"><th scope="row" data-label="ID">C10</th><td data-label="Source">Services Australia</td><td data-label="What to check">Age Pension rates, income test and assets test thresholds, taper rates, pension age</td><td data-label="Where it shows">Age Pension and income and assets tests</td><td data-label="Recheck when">March and September indexation; confirm which thresholds move on 1 July</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Services Australia" id="c11"><th scope="row" data-label="ID">C11</th><td data-label="Source">Services Australia</td><td data-label="What to check">Youth Allowance and ABSTUDY rates, age rules, parental income test</td><td data-label="Where it shows">Youth Allowance and ABSTUDY</td><td data-label="Recheck when">Indexation dates; policy change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Services Australia" id="c12"><th scope="row" data-label="ID">C12</th><td data-label="Source">Services Australia</td><td data-label="What to check">JobSeeker rates, waiting periods and obligations</td><td data-label="Where it shows">JobSeeker</td><td data-label="Recheck when">Indexation dates; policy change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Services Australia" id="c13"><th scope="row" data-label="ID">C13</th><td data-label="Source">Services Australia</td><td data-label="What to check">Gifting limits and the period gifts are counted</td><td data-label="Where it shows">Gifting and deprivation rules</td><td data-label="Recheck when">On policy change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Services Australia" id="c14"><th scope="row" data-label="ID">C14</th><td data-label="Source">Services Australia</td><td data-label="What to check">Carer payment and allowance rules, family payment and child care subsidy rates</td><td data-label="Where it shows">Caring for a parent; costs of kids and teens</td><td data-label="Recheck when">Indexation dates; policy change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Services Australia" id="c15"><th scope="row" data-label="ID">C15</th><td data-label="Source">Services Australia</td><td data-label="What to check">Aged care fee rules, means test thresholds and caps, how the home is treated, and the reformed program names and start dates</td><td data-label="Where it shows">Aged care topics</td><td data-label="Recheck when">Confirm the reform timetable; recheck on each fee change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Services Australia" id="c16"><th scope="row" data-label="ID">C16</th><td data-label="Source">Services Australia</td><td data-label="What to check">Concession and seniors card eligibility</td><td data-label="Where it shows">Concession cards and state concessions</td><td data-label="Recheck when">On policy change</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="State revenue offices" id="c17"><th scope="row" data-label="ID">C17</th><td data-label="Source">State revenue offices</td><td data-label="What to check">First home buyer duty concessions, grants and thresholds in every state and territory</td><td data-label="Where it shows">First home buyers</td><td data-label="Recheck when">State budgets; confirm per jurisdiction</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="State revenue offices" id="c18"><th scope="row" data-label="ID">C18</th><td data-label="Source">State revenue offices</td><td data-label="What to check">Land tax thresholds and trust surcharges in every state and territory</td><td data-label="Where it shows">Land tax and trusts; state variations for testamentary trusts</td><td data-label="Recheck when">Annually; state budgets</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ABS" id="c19"><th scope="row" data-label="ID">C19</th><td data-label="Source">ABS</td><td data-label="What to check">Household and personal income distribution behind the age priors for the emphasis weights</td><td data-label="Where it shows">Emphasis engine, age bands</td><td data-label="Recheck when">When a new income release lands</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ABS" id="c20"><th scope="row" data-label="ID">C20</th><td data-label="Source">ABS</td><td data-label="What to check">Population and life expectancy figures used for stage narratives</td><td data-label="Where it shows">Stage descriptions</td><td data-label="Recheck when">When a new release lands</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="AIHW" id="c21"><th scope="row" data-label="ID">C21</th><td data-label="Source">AIHW</td><td data-label="What to check">Aged care use, transitions and cost context if any statistic is shown (none is shown yet)</td><td data-label="Where it shows">Aged care topics</td><td data-label="Recheck when">Check AIHW release cycle before showing any figure</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Legal" id="c22"><th scope="row" data-label="ID">C22</th><td data-label="Source">Legal</td><td data-label="What to check">State succession and family provision statutes, claim time limits, trust duration rules, power of attorney forms</td><td data-label="Where it shows">Wills, family provision, state variations, powers of attorney</td><td data-label="Recheck when">On law change; review with a solicitor in each state</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Referrals" id="c23"><th scope="row" data-label="ID">C23</th><td data-label="Source">Referrals</td><td data-label="What to check">Names, phone numbers, websites and eligibility of every organisation in the support lists, including state legal aid, public trustee, seniors services, revenue offices, fair trading bodies, COTA branches, Carer Gateway, NDIS, Child Care Subsidy and school-cost schemes</td><td data-label="Where it shows">Support for this concern</td><td data-label="Recheck when">Quarterly; any time an organisation changes</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="coeconomics.com" id="c24"><th scope="row" data-label="ID">C24</th><td data-label="Source">coeconomics.com</td><td data-label="What to check">Every considerations line, income scenario note and &quot;who to ask&quot; list copied from the band pages for ages 12 to 81. Copied from the site, which says it checked them on 23 October 2026. Not compared with primary sources.</td><td data-label="Where it shows">Figures for this age band</td><td data-label="Recheck when">Before publishing; whenever coeconomics.com updates</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="coeconomics.com" id="c25"><th scope="row" data-label="ID">C25</th><td data-label="Source">coeconomics.com</td><td data-label="What to check">Band 64 to 65: the page could not be read on 28 October 2026 (server error), so its considerations and scenario notes are missing</td><td data-label="Where it shows">Figures for this age band, ages 64 and 65</td><td data-label="Recheck when">Retry the page and copy it in</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="coeconomics.com" id="c26"><th scope="row" data-label="ID">C26</th><td data-label="Source">coeconomics.com</td><td data-label="What to check">Ages 0 to 11 and 82 to 99 have no band page. The planner shows drafts adapted from the 12 to 13 and 80 to 81 pages, marked as drafts</td><td data-label="Where it shows">Figures for this age band, ages 0 to 11 and 82 to 99</td><td data-label="Recheck when">Replace with sourced content or remove</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ATO" id="c27"><th scope="row" data-label="ID">C27</th><td data-label="Source">ATO</td><td data-label="What to check">Taxation statistics 2022-23, Table 3: income percentiles behind the lower, middle and higher scenarios. Percentiles are interpolated and exclude tax-free super</td><td data-label="Where it shows">Three income scenarios</td><td data-label="Recheck when">Each new taxation statistics release</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ABS" id="c28"><th scope="row" data-label="ID">C28</th><td data-label="Source">ABS</td><td data-label="What to check">Household Income and Wealth 2019-20 net worth and household income by age. This is an older survey, so check for a newer release</td><td data-label="Where it shows">Household net worth and income figures</td><td data-label="Recheck when">When a new release lands</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ABS" id="c29"><th scope="row" data-label="ID">C29</th><td data-label="Source">ABS</td><td data-label="What to check">Disability, Ageing and Carers 2022, Census 2021, Births 2024, Retirement and Retirement Intentions 2024-25, casual work and education and work releases used in the figures list</td><td data-label="Where it shows">Figures for this age group</td><td data-label="Recheck when">Each new release</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ABS" id="c30"><th scope="row" data-label="ID">C30</th><td data-label="Source">ABS</td><td data-label="What to check">Life tables 2021-23 and AIHW life expectancy at 65, and AIHW Age Pension shares by age (2023)</td><td data-label="Where it shows">Life expectancy and Age Pension figures</td><td data-label="Recheck when">When a new release lands</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="ASFA" id="c31"><th scope="row" data-label="ID">C31</th><td data-label="Source">ASFA</td><td data-label="What to check">Super account balances by age, ASFA using ATO data at 30 June 2024</td><td data-label="Where it shows">Super account balance figures</td><td data-label="Recheck when">Each annual update</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="RBA" id="c32"><th scope="row" data-label="ID">C32</th><td data-label="Source">RBA</td><td data-label="What to check">Consumer Payments Survey 2025 card share of payments</td><td data-label="Where it shows">How people pay</td><td data-label="Recheck when">Next survey</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="National Anti-Scam Centre" id="c33"><th scope="row" data-label="ID">C33</th><td data-label="Source">National Anti-Scam Centre</td><td data-label="What to check">Scam loss figures by age group, 2025</td><td data-label="Where it shows">Scam losses reported</td><td data-label="Recheck when">Annual report</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Referrals" id="c35"><th scope="row" data-label="ID">C35</th><td data-label="Source">Referrals</td><td data-label="What to check">ACT support links added on 21 November 2026 as the default jurisdiction: Legal Aid ACT (legalaidact.org.au), Public Trustee and Guardian (ptg.act.gov.au), ACT Revenue Office (revenue.act.gov.au), ADACAS (adacas.org.au), COTA ACT (cotaact.org.au), Access Canberra (accesscanberra.act.gov.au). Pages were reachable on that date; names, roles and eligibility not checked by a person. Other states still have names only, no links</td><td data-label="Where it shows">Support for this concern (ACT)</td><td data-label="Recheck when">Quarterly; when any ACT agency renames or moves a page</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="State revenue offices" id="c36"><th scope="row" data-label="ID">C36</th><td data-label="Source">State revenue offices</td><td data-label="What to check">ACT tax reform note: conveyance duty being cut and replaced by general rates since 2012, 2026–27 ACT Budget removing duty for all first home buyers, Home Buyer Concession Scheme rules and start date, First Home Owner Grant ceased 1 July 2019. Sources: revenue.act.gov.au and the 2026–27 ACT Budget Outlook (treasury.act.gov.au). No dollar thresholds are shown</td><td data-label="Where it shows">First home buyers and stamp duty topics, ACT state note</td><td data-label="Recheck when">Each ACT Budget; 1 July</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Legal" id="c37"><th scope="row" data-label="ID">C37</th><td data-label="Source">Legal</td><td data-label="What to check">Family Provision Act 1969 (ACT) link (legislation.act.gov.au/a/1969-12/) and the ACT claim time limit, which the planner does not state</td><td data-label="Where it shows">Family provision state note, ACT</td><td data-label="Recheck when">On law change; review with an ACT solicitor</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+        <tr data-source="Other surveys" id="c34"><th scope="row" data-label="ID">C34</th><td data-label="Source">Other surveys</td><td data-label="What to check">eSafety Commissioner (2024) social media use and Roy Morgan Youth Barometer (2025) financial difficulty, AIFS living arrangements from Census 2021</td><td data-label="Where it shows">Online life, financial difficulty and living alone figures</td><td data-label="Recheck when">Each new release</td><td data-label="Status"><span class="badge badge--check" data-icon="!">Unverified</span></td></tr>
+      </tbody></table></div></div>
+      <section aria-labelledby="r-how"><h2 id="r-how">How the register is meant to work</h2><ul>
+        <li>Every figure shown in the planner points to one row here. A figure with no verified date does not display; the topic shows the rule in words and the flag instead.</li>
+        <li>A row past its recheck trigger turns stale and raises the same flag on every topic that uses it.</li>
+        <li>Referral names, phone numbers and eligibility notes are rows too. The planner shows five helpline numbers (OPAN, My Aged Care, 1800 ELDERHelp, National Debt Helpline, Carer Gateway) that no one has checked yet, so each carries a verify flag.</li>
+        <li>Figures for ages 12 to 81 are copied from coeconomics.com, the original planner. They display with a note that they have not been checked against ABS, AIHW, ATO, ASFA or Services Australia, and rows C24 to C34 track that.</li>
+        <li>The map and its topics are general information only. The flag on a topic never means a figure is wrong, only that no person has confirmed it yet.</li></ul>
+        <p>Back to the <a href="index.html">interactive map</a> or the <a href="model.html">model and privacy page</a>.</p></section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="disclaimer-line">General information only. Verify current rules on official sites. Not personal advice.</p>
+      <div class="footer-grid">
+        <section aria-labelledby="ft-priv"><h2 id="ft-priv">Privacy</h2><p>Your household (role labels, age bands, living arrangements, state, path and selected person) is saved only in this browser, under the name &ldquo;familymap.au.household.v1&rdquo;. Nothing is sent to a server. There is no account, no cookies and no analytics.</p></section>
+        <section aria-labelledby="ft-src"><h2 id="ft-src">Sources</h2><p>Band notes, income scenarios and figures for ages 12 to 81 are copied from <a href="https://coeconomics.com/" rel="noopener noreferrer">coeconomics.com</a> and have not been checked against primary sources. Ages 0 to 11 and 82 to 99 use planner drafts.</p></section>
+        <section aria-labelledby="ft-more"><h2 id="ft-more">More</h2><ul><li><a href="model.html">How the model works</a></li><li><a href="register.html">Needs-checking register</a></li><li><a href="https://stur.au/" rel="noopener noreferrer">STUR hub</a></li></ul></section>
+      </div>
+    </div>
+  </footer>
+  <div id="live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+  <script src="assets/data/register.v1.js"></script>
+  <script src="assets/register.v1.js"></script>
+</body>
+</html>
