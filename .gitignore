@@ -1,0 +1,2 @@
+# Private names for the validator's name check (never commit real names)
+tools/name-deny-list.local.txt
